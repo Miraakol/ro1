@@ -11,30 +11,37 @@
 //= 1.2 Small 11.1 spawn update [Playtester]
 //= 1.3 More accurate spawns [Playtester]
 //= 1.4 Corrected MVP spawn variance. [L0ne_W0lf]
+//= 1.5 Reverted to EP4. [Mirakol-]
 //============================================================
 
 //==================================================
 // beach_dun - Karu, the West Cave
 //==================================================
-beach_dun,0,0	monster	Medusa	1148,60
-beach_dun,0,0	monster	Merman	1264,3,10000,5000
-beach_dun,0,0	monster	Nereid	1255,20
-beach_dun,0,0	monster	Pest	1256,20
-beach_dun,0,0,0,0	boss_monster	Tao Gunka	1583,1,18000000,600000,0
+beach_dun,0,0	monster	Pest	1256,25
+beach_dun,0,0	monster	Neraid	1255,25
+beach_dun,0,0	monster	Merman	1264,15,5000
+beach_dun,0,0	monster	Megalith	1274,8
+beach_dun,0,0	monster	Tri Joint	1279,8
+beach_dun,0,0	monster	Penomena	1216,8,5000,60000
+beach_dun,0,0	monster	Chimera	1283,1,3600000,10800000
 
 //==================================================
 // beach_dun2 - Ruande, the North Cave
 //==================================================
-beach_dun2,0,0	monster	Megalith	1274,15
-beach_dun2,0,0	monster	Nereid	1255,10
-beach_dun2,0,0	monster	Stalactic Golem	1278,65,5000
+beach_dun2,0,0	monster	Stalactic Golem	1278,40,5000
+beach_dun2,0,0	monster	Megalith	1274,30
 beach_dun2,0,0	monster	Tri Joint	1279,20
-beach_dun2,0,0	monster	Hydra	1068,10
+beach_dun2,0,0	monster	Hydra	1068,15
+beach_dun2,0,0	monster	Merman	1264,5
+beach_dun2,0,0	monster	Nereid	1255,5
 
 //==================================================
 // beach_dun3 - Mao, the East Cave
 //==================================================
-beach_dun3,0,0	monster	Nereid	1255,1,200000,100000
-beach_dun3,0,0	monster	Thara Frog	1034,50
-beach_dun3,0,0	monster	Hydra	1068,30
+beach_dun3,0,0	monster	Cornutus	1067,30
 beach_dun3,0,0	monster	Megalodon	1064,30
+beach_dun3,0,0	monster	Shellfish	1074,25
+beach_dun3,0,0	monster	Hydra	1068,20
+beach_dun3,0,0	monster	Tri Joint	1279,5
+beach_dun3,0,0	monster	Nereid	1255,2
+beach_dun3,0,0	monster	Pest	1256,2,5000,60000
