@@ -27,6 +27,7 @@ orcsdun01,0,0	monster	Drainliar	1111,5
 //==================================================
 // orcsdun02 - Orc Dungeon F2
 //==================================================
+
 orcsdun02,0,0	monster	Zenorc	1177,35,5000
 orcsdun02,0,0	monster	Orc Skeleton	1152,30,5000
 orcsdun02,0,0	monster	Familiar	1005,15
