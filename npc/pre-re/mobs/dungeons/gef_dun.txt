@@ -15,61 +15,55 @@
 //==================================================
 // gef_dun00 - Geffen Dungeon F1
 //==================================================
-gef_dun00,0,0	monster	Hunter Fly	1035,30,60000,30000
+gef_dun00,0,0	monster	Poison Spore	1077,40
+gef_dun00,0,0	monster	Familiar	1005,20
 gef_dun00,0,0	monster	Poporing	1031,15
-gef_dun00,0,0	monster	Poison Spore	1077,25
-gef_dun00,91,106	monster	Red Plant	1078,1,300000,150000
-gef_dun00,92,108	monster	Yellow Plant	1081,1,300000,150000
-gef_dun00,114,106	monster	Green Plant	1080,1,300000,150000
-gef_dun00,0,0	monster	Red Plant	1078,1,300000,150000
-gef_dun00,0,0	monster	Shining Plant	1083,1,3000000,1500000
-gef_dun00,0,0	monster	Red Plant	1078,10,180000,90000
-gef_dun00,89,111,3,3	monster	Black Mushroom	1084,3,180000,90000
-gef_dun00,121,109,3,3	monster	Black Mushroom	1084,3,180000,90000
+gef_dun00,0,0	monster	Dustiness	1114,15
+gef_dun00,0,0	monster	Red Plant	1078,10,120000,300000
+gef_dun00,109,121	monster	Red Plant	1078,1,120000,300000
+gef_dun00,91,106	monster	Red Plant	1078,1,120000,300000
+gef_dun00,121,109,3,3	monster	Black Mushroom	1084,3,120000,300000
+gef_dun00,89,111,3,3	monster	Black Mushroom	1084,3,120000,300000
+gef_dun00,114,106	monster	Green Plant	1080,1,180000,480000
+gef_dun00,92,108	monster	Yellow Plant	1081,1,180000,480000
+gef_dun00,109,121	monster	Shining Plant	1083,1,1500000,4500000
 
 //==================================================
 // gef_dun01 - Geffen Dungeon F2
 //==================================================
-gef_dun01,0,0	monster	Drainliar	1111,20
-gef_dun01,0,0	monster	Nightmare	1061,30
-gef_dun01,0,0	monster	Ogretooth	1204,1,1800000,1200000
-gef_dun01,0,0	monster	Zombie	1015,25
-gef_dun01,0,0	monster	Ghoul	1036,40
-gef_dun01,0,0	monster	Jakk	1130,40,300000,100000
-gef_dun01,234,121	monster	Blue Plant	1079,1,300000,100000
-gef_dun01,0,0,0,0	boss_monster	Dracula	1389,1,3600000,600000,1
-gef_dun01,0,0	monster	Black Mushroom	1084,5,180000,90000
-gef_dun01,188,104,10,10	monster	White Plant	1082,3,180000,90000
-gef_dun01,263,115,10,10	monster	White Plant	1082,3,180000,90000
-gef_dun01,48,67,10,10	monster	White Plant	1082,2,180000,90000
-gef_dun01,150,237,10,10	monster	White Plant	1082,2,180000,90000
+gef_dun01,0,0	monster	Whisper	1179,30
+gef_dun01,0,0	monster	Argos	1100,25
+gef_dun01,0,0	monster	Familiar	1005,20
+gef_dun01,0,0	monster	Poison Spore	1077,20
+gef_dun01,0,0	monster	Dustiness	1114,20
+gef_dun01,0,0	monster	Jakk	1130,20,120000,420000
+gef_dun01,0,0	monster	White Plant	1082,10,120000,300000
+gef_dun01,0,0	monster	Black Mushroom	1084,5,120000,300000
+gef_dun01,234,121	monster	Blue Plant	1079,1,120000,300000
+gef_dun01,0,0	monster	Bathory	1102,1
 
 //==================================================
 // gef_dun02 - Geffenia
 //==================================================
-gef_dun02,0,0	monster	Ghoul	1036,10
 gef_dun02,0,0	monster	Whisper	1179,20
-gef_dun02,0,0	monster	Hunter Fly	1035,10
-gef_dun02,0,0	monster	Marionette	1143,20
-gef_dun02,0,0	monster	Deviruchi	1109,35
-gef_dun02,0,0	monster	Nightmare	1061,40,60000
-gef_dun02,0,0,0,0	boss_monster	Doppelganger	1046,1,7200000,600000,1
-gef_dun02,214,212,10,10	monster	White Plant	1082,3,180000,90000
-gef_dun02,215,67,10,10	monster	White Plant	1082,3,180000,90000
-gef_dun02,72,210,20,20	monster	White Plant	1082,3,180000,90000
-gef_dun02,106,151,20,7	monster	White Plant	1082,3,180000,90000
-gef_dun02,58,167,10,10	monster	Shining Plant	1083,1,1800000,900000
-gef_dun02,185,83,3,3	monster	Shining Plant	1083,1,1800000,900000
+gef_dun02,0,0	monster	Argos	1100,20
+gef_dun02,0,0	monster	White Plant	1082,15,120000,300000
+gef_dun02,0,0	monster	Marionette	1143,14
+gef_dun02,0,0	monster	Jakk	1130,12,60000,180000
+gef_dun02,0,0	monster	Myst	1151,10
+gef_dun02,0,0	monster	Nightmare	1061,8,120000,420000
+gef_dun02,0,0	monster	Bathory	1102,4,120000,420000
+gef_dun02,0,0,0,0	boss_monster	Doppelganger	1046,1,3600000,10800000
 
 //==================================================
 // gef_dun03 - Geffenia (Event Map)
 //==================================================
-gef_dun03,0,0	monster	Hellion Revenant	1626,1,600000,300000
-gef_dun03,0,0	monster	Wraith	1192,8,60000,30000
-gef_dun03,0,0	monster	Wraith Dead	1291,2,60000,30000
-gef_dun03,0,0	monster	Wind Ghost	1263,3,60000,30000
-gef_dun03,0,0	monster	Shining Plant	1083,3,1800000,900000
-gef_dun03,0,0	monster	White Plant	1082,10,180000,90000
+//gef_dun03,0,0	monster	Hellion Revenant	1626,1,600000,300000
+//gef_dun03,0,0	monster	Wraith	1192,8,60000,30000
+//gef_dun03,0,0	monster	Wraith Dead	1291,2,60000,30000
+//gef_dun03,0,0	monster	Wind Ghost	1263,3,60000,30000
+//gef_dun03,0,0	monster	Shining Plant	1083,3,1800000,900000
+//gef_dun03,0,0	monster	White Plant	1082,10,180000,90000
 
 //==================================================
 // Old Event Spawn in case you want to use them
