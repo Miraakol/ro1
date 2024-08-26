@@ -108,25 +108,23 @@ glast_01,233,209,15,15	monster	Shining Plant	1083,1,1800000,900000
 //==================================================
 // gl_church - Glast Heim St. Abbey
 //==================================================
-gl_church,0,0	monster	Wraith	1192,5
-gl_church,0,0	monster	Evil Druid	1117,60
-gl_church,0,0	monster	Ghoul	1036,50
-gl_church,0,0	monster	Dark Illusion	1302,1,3600000,1800000
-gl_church,0,0	monster	Mimic	1191,5
-gl_church,155,92,10,10	monster	Mimic	1191,1,30000,15000
-gl_church,155,75,10,10	monster	Mimic	1191,2,60000,30000
-gl_church,155,54,10,10	monster	Mimic	1191,1,30000,15000
+gl_church,0,0	monster	Brilight	1211,45
+gl_church,0,0	monster	Nightmare	1061,30
+gl_church,0,0	monster	Ghoul	1036,25
+gl_church,0,0	monster	Evil Druid	1117,25
+gl_church,0,0	monster	Whisper	1179,20
+gl_church,0,0	monster	Joker	1131,5
 
 //==================================================
 // gl_chyard - Glast Heim Churchyard
 //==================================================
-gl_chyard,0,0	monster	Ghoul	1036,35
+gl_chyard,0,0	monster	Zombie Prisoner	1197,30
+gl_chyard,0,0	monster	Skeleton Prisoner	1196,30
+gl_chyard,0,0	monster	Ghoul	1036,25
 gl_chyard,0,0	monster	Zombie	1015,20
-gl_chyard,0,0	monster	Wraith	1192,45
-gl_chyard,0,0	monster	Evil Druid	1117,10
-gl_chyard,0,0	monster	Hunter Fly	1035,3
-gl_chyard,0,0	monster	Mimic	1191,3
-gl_chyard,0,0,0,0	boss_monster	Dark Lord	1272,1,3600000,600000,1
+gl_chyard,0,0	monster	Wraith	1192,15
+gl_chyard,0,0	monster	Hunter Fly	1035,2
+gl_chyard,0,0,0,0	boss_monster	Dark Lord	1272,1,7200000,10800000,1
 
 //==================================================
 // gl_sew01 - Glast Heim Culvert F1
@@ -214,11 +212,12 @@ gl_knt02,232,132,5,5	monster	Khalitzburg	1132,1,1800000,900000
 //==================================================
 // gl_dun01 - The Lowest Cave in Glast Heim F1
 //==================================================
-gl_dun01,0,0	monster	Arclouze	1194,50
-gl_dun01,0,0	monster	Sting	1207,40
+gl_dun01,0,0	monster	Arclouze	1194,100
+gl_dun01,0,0	monster	Stalactic Golem	1278,40
 
 //==================================================
 // gl_dun02 - The Lowest Cave in Glast Heim F2
 //==================================================
-gl_dun02,0,0	monster	Majoruros	1310,45
-gl_dun02,0,0	monster	Gargoyle	1253,15
+gl_dun02,0,0	monster	Majoruros	1310,90
+gl_dun02,0,0	monster	Gargoyle	1253,20
+gl_dun02,0,0	monster	Minorous	1149,20
