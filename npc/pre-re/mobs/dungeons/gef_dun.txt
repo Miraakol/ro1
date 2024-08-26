@@ -53,7 +53,7 @@ gef_dun02,0,0	monster	Jakk	1130,12,60000,180000
 gef_dun02,0,0	monster	Myst	1151,10
 gef_dun02,0,0	monster	Nightmare	1061,8,120000,420000
 gef_dun02,0,0	monster	Bathory	1102,4,120000,420000
-gef_dun02,0,0,0,0	boss_monster	Doppelganger	1046,1,3600000,10800000
+gef_dun02,0,0,0,0	boss_monster	Doppelganger	1046,1,3600000,10800000,1
 
 //==================================================
 // gef_dun03 - Geffenia (Event Map)

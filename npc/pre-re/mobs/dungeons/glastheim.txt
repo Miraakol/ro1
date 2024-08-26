@@ -17,51 +17,43 @@
 //==================================================
 // gl_cas01 - Glast Heim F1
 //==================================================
-gl_cas01,0,0	monster	Sage Worm	1281,10
 gl_cas01,0,0	monster	Carat	1267,50
+gl_cas01,0,0	monster	Joker	1131,40
+gl_cas01,0,0	monster	Sage Worm	1281,40
+gl_cas01,0,0	monster	Dark Frame	1260,40
+gl_cas01,0,0	monster	Whisper	1179,20
+gl_cas01,0,0	monster	Khalitzburg	1132,15
 gl_cas01,0,0	monster	Rideword	1195,15
-gl_cas01,0,0	monster	Dark Frame	1260,20
-gl_cas01,0,0	monster	Whisper	1179,10
+gl_cas01,0,0	monster	Owl Duke	1320,6
 gl_cas01,0,0	monster	Alice	1275,1
-gl_cas01,0,0	monster	Ogretooth	1204,1,7200000,3600000
-gl_cas01,0,0	monster	Owl Baron	1295,6
-gl_cas01,0,0	monster	Owl Duke	1320,20
 
 //==================================================
 // gl_cas02 - Glast Heim F2
 //==================================================
-gl_cas02,0,0	monster	Wanderer	1208,40
-gl_cas02,0,0	monster	Raydric	1163,30
-gl_cas02,0,0	monster	Rideword	1195,10
+gl_cas02,0,0	monster	Raydric	1163,45
+gl_cas02,0,0	monster	Wanderer	1208,20
+gl_cas02,190,23,1,1	monster	Wanderer	1208,1
+gl_cas02,0,0	monster	Mimic	1191,19,60000,180000
+gl_cas02,83,84,2,2	monster	Mimic	1191,1,60000,180000
+gl_cas02,83,80,2,2	monster	Mimic	1191,1,60000,180000
+gl_cas02,0,0	monster	Khalitzburg	1132,14
+gl_cas02,133,83,3,3	monster	Khalitzburg	1132,1
+gl_cas02,173,127,3,3	monster	Khalitzburg	1132,1
+gl_cas02,173,167,3,3	monster	Khalitzburg	1132,1
+gl_cas02,182,65,3,3	monster	Khalitzburg	1132,1
+gl_cas02,189,20,1,1	monster	Khalitzburg	1132,1
+gl_cas02,45,177,3,3	monster	Khalitzburg	1132,1
 gl_cas02,0,0	monster	Raydric Archer	1276,19
-gl_cas02,0,0	monster	Chimera	1283,2,1800000,900000
-gl_cas02,0,0	monster	Abysmal Knight	1219,3,1800000,900000
-gl_cas02,193,167,5,5	monster	Raydric	1163,3,300000,120000
-gl_cas02,193,135,5,5	monster	Raydric	1163,3,300000,120000
-gl_cas02,104,145,5,5	monster	Mysteltainn	1203,1,7200000,3600000
-gl_cas02,102,180	monster	Whisper	1185,1,1800000,900000
-gl_cas02,105,180	monster	Whisper	1185,1,1800000,900000
-gl_cas02,182,12,3,3	monster	Chimera	1283,1,3600000,1800000
-gl_cas02,185,11,8,8	monster	Rideword	1195,4,120000,60000
-gl_cas02,174,11,8,8	monster	Evil Druid	1117,4,120000,60000
-gl_cas02,104,38,4,4	monster	Abysmal Knight	1219,1,1800000,900000
-gl_cas02,24,35,4,4	monster	Abysmal Knight	1219,1,1800000,900000
-gl_cas02,46,124,15,15	monster	Rideword	1195,15,360000,180000
-gl_cas02,16,186,10,10	monster	Evil Druid	1117,5,360000,180000
-gl_cas02,133,83,3,3	monster	Khalitzburg	1132,1,360000,180000
-gl_cas02,45,177,3,3	monster	Khalitzburg	1132,1,360000,180000
-gl_cas02,182,65,3,3	monster	Khalitzburg	1132,1,360000,180000
-gl_cas02,173,127,3,3	monster	Khalitzburg	1132,1,360000,180000
-gl_cas02,173,167,3,3	monster	Khalitzburg	1132,1,360000,180000
-gl_cas02,93,177,3,3	monster	Abysmal Knight	1219,1,1800000,900000
-gl_cas02,115,177,3,3	monster	Abysmal Knight	1219,1,1800000,900000
-gl_cas02,83,84,2,2	monster	Mimic	1191,1,360000,180000
-gl_cas02,83,80,2,2	monster	Mimic	1191,1,360000,180000
-gl_cas02,0,0	monster	Ogretooth	1204,1,7200000,3600000
+gl_cas02,190,38,1,1	monster	Raydric Archer	1276,1
+gl_cas02,0,0	monster	Nightmare	1061,10
+gl_cas02,16,186,10,10	monster	Marionette	1143,8,180000,540000
+gl_cas02,174,11,8,8	monster	Deviruchi	1109,4,60000,180000
+gl_cas02,102,180	monster	Whisper	1185,1,900000,2700000
+gl_cas02,105,180	monster	Whisper	1185,1,900000,2700000
+gl_cas02,0,0	monster	Mysteltainn	1203,1,3600000,10800000
+gl_cas02,104,145,5,5	monster	Mysteltainn	1203,1,3600000,10800000
 gl_cas02,0,0	monster	Alice	1275,1
-gl_cas02,189,20,1,1	monster	Khalitzburg	1132,1,360000,180000
-gl_cas02,190,23,1,1	monster	Wanderer	1208,1,360000,180000
-gl_cas02,190,38,1,1	monster	Raydric Archer	1276,1,360000,180000
+gl_cas02,182,12,3,3	boss_monster	Baphomet	1039,1,7200000,10800000,1
 
 //==================================================
 // gl_in01 - Inside Glast Heim
