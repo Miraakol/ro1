@@ -34,4 +34,5 @@ orcsdun02,0,0	monster	Chonchon	1011,10
 orcsdun02,0,0	monster	Steel Chonchon	1042,10
 orcsdun02,0,0	monster	Black Mushroom	1084,5,120000,300000
 orcsdun02,0,0	monster	Orc Archer	1189,3,900000,2700000
+orcsdun02,0,0	monster	White Plant	1082,5,120000,300000
 orcsdun02,0,0,0,0	boss_monster	Orc Lord	1190,1,7200000,10800000,0
