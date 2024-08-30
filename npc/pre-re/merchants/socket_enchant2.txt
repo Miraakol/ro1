@@ -15,4 +15,4 @@
 //= 1.1a Added 'disable_items' command. [Euphy]
 //============================================================ 
 
-moc_ruins,154,86,3	duplicate(SocketEnchant2)	Leablem#moc	86
+//moc_ruins,154,86,3	duplicate(SocketEnchant2)	Leablem#moc	86
