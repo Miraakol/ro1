@@ -15,8 +15,8 @@
 //==================================================
 // prt_fild00 - Prontera Field
 //==================================================
-prt_fild00,0,0 monster	Poring	1002,55
-prt_fild00,0,0 monster	Fabre	1007,50
+prt_fild00,0,0	monster	Poring	1002,55
+prt_fild00,0,0	monster	Fabre	1007,50
 prt_fild00,0,0	monster	Lunatic	1063,40
 prt_fild00,0,0	monster	Hornet	1004,20
 prt_fild00,0,0	monster	Creamy	1018,20
