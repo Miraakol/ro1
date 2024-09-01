@@ -287,6 +287,7 @@ geffen_in,110,172,0	script	Christopher#1	63,{
 
 // Paul Spanner: Einbroch Blacksmith Supplier
 //============================================================
+/*
 ein_in01,38,29,0	script	Paul Spanner	63,{
 	if (checkweight(1201,1) == 0) {
 		mes "- Wait a minute !! -";
@@ -520,6 +521,7 @@ ein_in01,38,29,0	script	Paul Spanner	63,{
 		close;
 	}
 }
+*/
 
 // Weapon/Armor Refiners
 //============================================================
@@ -579,6 +581,7 @@ alberta_in,28,58,0	script	Fredrik	4_M_03,{
 	}
 }
 
+/*
 yuno_in01,171,21,4	script	Lambert	4_M_ORIENT01,{
 	if( getbattleflag( "feature.refineui" ) ){
 		mes "[Lambert]";
@@ -620,6 +623,7 @@ lhz_in02,282,20,7	script	Fulerr	4_M_LGTMAN,{
 		end;
 	}
 }
+*/
 
 //============================================================
 //= Main Refiner Function
@@ -983,6 +987,7 @@ alberta_in,13,71,3	script	Kahlamanlith	86,{
 	callfunc "phramain","Kahlamanlith";
 	end;
 }
+/*
 yuno_in01,171,27,4	script	Dilemma	88,{
 	callfunc "phramain","Dilemma";
 	end;
@@ -995,6 +1000,7 @@ lhz_in02,278,24,3	script	Krugg	86,{
 	callfunc "phramain","Krugg";
 	end;
 }
+*/
 
 // Material Salesmen Functions
 //============================================================
@@ -1097,6 +1103,7 @@ alberta_in,21,63,5	script	Xenophon	84,{
 	callfunc "orimain","Xenophon Zolotas";
 	end;
 }
+/*
 yuno_in01,164,27,4	script	Delight	88,{
 	callfunc "orimain","Delight";
 	end;
@@ -1109,6 +1116,7 @@ lhz_in02,281,24,5	script	Fruel	84,{
 	callfunc "orimain","Fruel";
 	end;
 }
+*/
 
 // Ori/Elu Functions
 //============================================================
@@ -1202,10 +1210,12 @@ prt_in,63,54,2	script	Repairman#prt	86,{
 	end;
 }
 
+/*
 yuno_in01,175,28,3	script	Repairman#juno	86,{
 	callfunc "repairmain","Repairman";
 	end;
 }
+*/
 
 geffen_in,34,166,3	script	Repairman#gef	99,{
 	callfunc "repairmain","Repairman";
@@ -1217,10 +1227,12 @@ aldeba_in,38,60,3	script	Repairman#alde	86,{
 	end;
 }
 
+/*
 lhz_in02,284,14,3	script	Repairman#lhz	86,{
 	callfunc "repairmain","Repairman";
 	end;
 }
+*/
 
 prt_gld,139,117,4	script	Repairman#prt_gld	86,{
 	callfunc "repairmain","Repairman";
@@ -1242,6 +1254,7 @@ alde_gld,220,152,4	script	Repairman#alde_gld	86,{
 	end;
 }
 
+/*
 aru_gld,189,336,4	script	Repairman#aru_gld	86,{
 	callfunc "repairmain","Repairman";
 	end;
@@ -1251,6 +1264,7 @@ sch_gld,340,80,7	script	Repairman#sch_gld	86,{
 	callfunc "repairmain","Repairman";
 	end;
 }
+*/
 
 // Equipment Repair Function
 //============================================================
