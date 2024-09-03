@@ -248,6 +248,7 @@ prt_in,38,108,4	script	Teacher	53,{
 
 // Geoborg Family Curse :: prt_curse
 //============================================================
+/*
 prontera,248,212,3	script	Busy Boy#prt	706,3,3,{
 	callsub S_CheckWeight; //Check Player's weight
 	if (BaseLevel > 59) {
@@ -3693,3 +3694,4 @@ prt_in,162,99,4	script	Librarian#curse	67,{
 		close;
 	}
 }
+*/

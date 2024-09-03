@@ -40,6 +40,7 @@ gef_tower,55,142,5	script	Bulletin Board#21	837,{
 	close;
 }
 
+/*
 yuno_fild03,37,143,5	script	Bulletin Board#24	837,{
 	mes "[The Magma Dungeon, Nogg Road]";
 	mes "^6B1312Caution!^000000";
@@ -52,6 +53,7 @@ yuno_fild03,37,143,5	script	Bulletin Board#24	837,{
 	mes "Please be attentive.";
 	close;
 }
+*/
 
 mjolnir_02,76,362,5	script	Bulletin Board#10	837,{
 	mes "[Coal Mine]";

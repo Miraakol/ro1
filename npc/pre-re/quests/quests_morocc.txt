@@ -19,10 +19,11 @@ moc_ruins,118,176,4	duplicate(Alchemist)	Alchemist#moc	64
 // Resurrection of Satan Morocc
 // ============================================================
 
-morocc,176,103,3	duplicate(Continental Official)	Continental Official#mor	754
+//morocc,176,103,3	duplicate(Continental Official)	Continental Official#mor	754
 
 // Succession of the Prince
 // ============================================================
+/*
 prontera,153,353,4	script	Messenger#prince1	105,{
 	if (nk_prince == 0) {
 		if (rebirth_moc_edq > 1) {
@@ -3568,3 +3569,4 @@ OnTouch:
 	}
 	end;
 }
+*/

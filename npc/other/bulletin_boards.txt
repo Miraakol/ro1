@@ -201,6 +201,7 @@ comodo,210,148,5	script	Bulletin Board#12	837,{
 	close;
 }
 
+/*
 umbala,137,94,5	script	Bulletin Board#13	837,{
 	mes "[Umbala: The Utan Village]";
 	mes "Welcome to Umbala,";
@@ -232,6 +233,7 @@ umbala,137,94,5	script	Bulletin Board#13	837,{
 	mes "stay here in Umbala.";
 	close;
 }
+*/
 
 gef_fild09,227,29,4	script	Bulletin Board::OrcsBoard	835,{
 	mes "[Orc Village]";
@@ -270,6 +272,7 @@ gef_fild10,109,23,5	script	Bulletin Board#15	836,{
 	close;
 }
 
+/*
 yuno,154,112,5	script	Bulletin Board#17	837,{
 	mes "[Juno: Capital of]";
 	mes "[The Schwarzwald Republic]";
@@ -312,6 +315,7 @@ yuno,154,112,5	script	Bulletin Board#17	837,{
 	mes "located to the South.";
 	close;
 }
+*/
 
 aldebaran,145,105,5	script	Bulletin Board#18	837,{
 	mes "[Al De Baran: The Border City]";
@@ -359,6 +363,7 @@ xmas_fild01,75,80,5	script	Bulletin Board#22	837,{
 	close;
 }
 
+/*
 niflheim,200,191,5	script	Bulletin Board#25	837,{
 	mes "[City of the Dead, Niflheim]";
 	mes "Welcome to Niflheim, the City of the Dead.";
@@ -382,6 +387,7 @@ niflheim,200,191,5	script	Bulletin Board#25	837,{
 	mes "It is suggested to leave the area immediately in case of a new solo adventurer.";
 	close;
 }
+*/
 
 /*
 moc_fild15,267,264,5	script	Bulletin Board#26	837,{

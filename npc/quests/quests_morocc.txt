@@ -838,6 +838,7 @@ OnDisable:
 }
 */
 
+/*
 yuno_in04,180,106,3	script	Reading Girl#moc_girl1	73,{
 	mes "[" + strcharinfo(0) + "]";
 	mes "Excuse me, but may I ask";
@@ -865,7 +866,9 @@ yuno_in04,180,106,3	script	Reading Girl#moc_girl1	73,{
 	mes "ex..cuse me~!";
 	close;
 }
+*/
 
+/*
 morocc_in,46,125,5	script	Assistant#moc_ex1	729,{
 	mes "[Sephit]";
 	mes "I've always believed in Satan..";
@@ -875,7 +878,9 @@ morocc_in,46,125,5	script	Assistant#moc_ex1	729,{
 	mes "Who would've thought to actually see the Satan while alive.....?";
 	close;
 }
+*/
 
+/*
 que_job01,70,84,1	script	Girl#moc_ex002	882,{
 	mes "[Girl]";
 	mes "Oh, the world.. the world is doomed..";
@@ -888,9 +893,11 @@ que_job01,70,84,1	script	Girl#moc_ex002	882,{
 	mes "Good heavens.. I can't believe this young girl's drinking with sadness....";
 	close;
 }
+*/
 
 // Resurrection of Satan Morocc
 // ============================================================
+/*
 moc_fild20,354,183,3	script	Continental Guard#01::MocConGuard	707,3,3,{
 	if ((rebirth_moc_edq == 0) && (rebirth_moc_edq < 4)) {
 		mes "[Continental Guard]";
@@ -4301,3 +4308,4 @@ cave,105,32,7	script	Cave Settler#f_cave7	979,{
 	mes "(Whisper)";
 	close;
 }
+*/
