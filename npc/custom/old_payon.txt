@@ -1,0 +1,2033 @@
+//===== eAthena Script ======================================= 
+//= Old Payon Town
+//===== By: ================================================== 
+//= Sotto
+//===== Current Version: ===================================== 
+//= 0.2 (Added Guild Flag and Entry NPC in New Payon)
+//===== Compatible With: ===================================== 
+//= Tested on 14701
+//===== Description: ========================================= 
+//= Hopefully most official warps and npcs of Old Payon
+//===== Additional Comments: ================================= 
+//= Payon Elder gives 'reward' which is not standard.
+//= Normally he does nothing.
+//=
+//= The warps OUT of Payon are all working. The warps IN will
+//= lead you to new payon, untill you change your own eathena
+//= warps, so the only way to get there atm is via @warp payon.
+//=
+//= To use the Old Payon maps, you need to add these lines to
+//= maps_athena.conf:
+//= 
+//=    // Old Payon
+//=    map: payon
+//=    map: payon_in01
+//=    map: payon_in02
+//= 
+//= And these lines at the end of map_index.txt:
+//=    
+//=    // Old Payon
+//=    payon 1250
+//=    payon_in01
+//=    payon_in02
+//=    
+//= Make sure to leave out or change the "1250" as fits your
+//= setup.
+//=
+//= Additionally, since this script is using a duplicate of the
+//= Bunny Band Kafra staff, you'll need to change this line in
+//= the default eAthena npc\custom\old_payon.txt:
+//=    
+//=    alberta,26,229,0	script	Kafra Employee#bunny	83,{
+//=    
+//= to this:
+//=    
+//=    alberta,26,229,0	script	Kafra Employee#bunny::bunny	83,{
+//=    
+//= so it can find the label "::bunny"
+//= Also don't forget to change the mp3nametable.txt in your
+//= data folder so that you get the right music playing.
+//============================================================
+//############################################################################################################################################################
+// Warps
+//############################################################################################################################################################
+
+payon,17,151,0	warp	oldpay00	1,1,pay_gld,370,149
+payon,111,173,0	warp	oldpay01	1,2,payon_in01,15,68	
+payon,133,81,0	warp	oldpay02	2,2,payon_in01,134,171	
+payon,141,91,0	warp	oldpay03	2,2,payon_in01,98,173	
+payon,172,133,0	warp	oldpay04	1,2,payon_in01,163,108	
+payon,175,189,0	warp	oldpay05	4,2,pay_arche,81,22	
+payon,189,69,0	warp	oldpay06	2,4,pay_fild08,20,74	
+payon,22,174,0	warp	oldpay07	2,1,payon_in01,98,25	
+payon,30,176,0	warp	oldpay08	2,1,payon_in01,80,63	
+payon,38,174,0	warp	oldpay09	2,1,payon_in01,142,45	
+payon,68,173,0	warp	oldpay10	1,2,payon_in01,44,138	
+payon,90,167,0	warp	oldpay11	2,1,payon_in01,72,89	
+payon,90,25,0	warp	oldpay12	5,3,pay_fild01,333,356	
+payon_in01,101,25,0	warp	oldpay13	1,3,payon,22,171	
+payon_in01,111,177,0	warp	oldpay14	2,3,payon_in01,129,177	
+payon_in01,113,107,0	warp	oldpay15	1,2,payon_in01,63,107	
+payon_in01,113,143,0	warp	oldpay16	1,2,payon_in01,63,145	
+payon_in01,113,77,0	warp	oldpay17	1,2,payon_in01,63,99	
+payon_in01,12,68,0	warp	oldpay18	1,3,payon,108,173	
+payon_in01,122,107,0	warp	oldpay19	1,2,payon_in01,80,107	
+payon_in01,122,77,0	warp	oldpay20	1,2,payon_in01,80,99	
+payon_in01,124,143,0	warp	oldpay21	1,2,payon_in01,80,145	
+payon_in01,126,177,0	warp	oldpay22	2,3,payon_in01,108,177	
+payon_in01,130,36,0	warp	oldpay23	3,2,payon_in01,70,72	
+payon_in01,134,168,0	warp	oldpay24	3,1,payon,129,81	
+payon_in01,143,179,0	warp	oldpay25	1,3,payon_in01,167,179	
+payon_in01,145,45,0	warp	oldpay26	1,3,payon,38,171	
+payon_in01,160,108,0	warp	oldpay27	1,3,payon,169,133	
+payon_in01,164,179,0	warp	oldpay28	1,2,payon_in01,140,179	
+payon_in01,167,74,0	warp	oldpay29	1,2,payon_in01,168,50	
+payon_in01,168,53,0	warp	oldpay30	1,2,payon_in01,167,77	
+payon_in01,170,100,0	warp	oldpay31	1,2,payon_in01,170,83	
+payon_in01,170,119,0	warp	oldpay32	1,2,payon_in01,170,136	
+payon_in01,170,132,0	warp	oldpay33	1,2,payon_in01,170,115	
+payon_in01,170,87,0	warp	oldpay34	1,2,payon_in01,170,104	
+payon_in01,22,26,0	warp	oldpay35	3,2,payon_in01,30,78	
+payon_in01,26,115,0	warp	oldpay36	3,2,payon_in01,30,129	
+payon_in01,26,164,0	warp	oldpay37	3,2,payon_in01,30,148	
+payon_in01,30,126,0	warp	oldpay38	3,2,payon_in01,26,112	
+payon_in01,30,151,0	warp	oldpay39	3,2,payon_in01,26,167	
+payon_in01,30,59,0	warp	oldpay40	3,1,payon_in01,52,32	
+payon_in01,30,81,0	warp	oldpay41	3,2,payon_in01,22,29	
+payon_in01,47,138,0	warp	oldpay42	1,3,payon,71,173	
+payon_in01,52,35,0	warp	oldpay43	3,1,payon_in01,30,62	
+payon_in01,60,107,0	warp	oldpay44	1,2,payon_in01,110,107	
+payon_in01,60,145,0	warp	oldpay45	1,2,payon_in01,110,143	
+payon_in01,60,170,0	warp	oldpay46	3,1,payon_in01,72,156	
+payon_in01,60,99,0	warp	oldpay47	1,2,payon_in01,110,77	
+payon_in01,70,52,0	warp	oldpay48	3,2,payon_in01,86,34	
+payon_in01,70,75,0	warp	oldpay49	3,2,payon_in01,130,39	
+payon_in01,72,121,0	warp	oldpay50	3,1,payon_in01,72,137	
+payon_in01,72,134,0	warp	oldpay51	3,1,payon_in01,72,118	
+payon_in01,72,159,0	warp	oldpay52	3,1,payon_in01,60,173	
+payon_in01,72,86,0	warp	oldpay53	3,1,payon,90,164	
+payon_in01,83,107,0	warp	oldpay54	1,2,payon_in01,125,107	
+payon_in01,83,145,0	warp	oldpay55	1,2,payon_in01,127,143	
+payon_in01,83,63,0	warp	oldpay56	1,3,payon,30,173	
+payon_in01,83,99,0	warp	oldpay57	1,2,payon_in01,124,77	
+payon_in01,86,37,0	warp	oldpay58	3,2,payon_in01,70,55	
+payon_in01,98,170,0	warp	oldpay59	3,1,payon,141,95	
+payon_in02,10,25,0	warp	oldpay60	2,2,payon_in02,72,67	
+payon_in02,35,67,0	warp	oldpay61	2,2,payon_in02,55,67	
+payon_in02,50,4,0	warp	oldpay62	3,1,pay_arche,92,166	
+payon_in02,52,67,0	warp	oldpay63	2,2,payon_in02,32,67	
+payon_in02,61,33,0	warp	oldpay64	2,2,payon_in02,73,33
+payon_in02,64,56,0	warp	oldpay65	2,2,pay_arche,141,161	
+payon_in02,70,33,0	warp	oldpay66	2,2,payon_in02,58,33	
+payon_in02,75,67,0	warp	oldpay67	2,2,payon_in02,13,25	
+payon_in02,82,45,0	warp	oldpay68	2,2,pay_arche,74,153	
+
+// Replacement warps - disable originals if you use them! ========
+// -------- Disable in "npc\warps\cities\payon.txt" -------
+// pay_gld,374,149,0	warp	oldpay00-1	1,1,payon,21,151
+// pay_fild01,333,361,0	warp	payf005	5,3,payon,90,29
+// -------- Disable in "npc\warps\fields\payon_fild.txt" -------
+// pay_fild08,17,75,0	warp	payf006	2,4,payon,186,69
+
+//############################################################################################################################################################
+// MapFlags
+//############################################################################################################################################################
+
+//payon	mapflag	noicewall
+payon	mapflag	nopenalty
+payon	mapflag	nightenabled
+payon	mapflag	nobranch
+
+payon_in01	mapflag	pvp	off
+payon_in01	mapflag	nopenalty
+payon_in01	mapflag	noreturn
+payon_in01	mapflag	noteleport
+payon_in01	mapflag	nobranch
+payon_in01	mapflag	nomemo
+
+payon_in02	mapflag	pvp	off
+payon_in02	mapflag	nopenalty
+payon_in02	mapflag	noreturn
+payon_in02	mapflag	noteleport
+payon_in02	mapflag	nobranch
+payon_in02	mapflag	nomemo
+
+
+
+//############################################################################################################################################################
+// Guild Flags
+//############################################################################################################################################################
+
+payon,89,155,4	script	Bright Arbor#f1-OP	722,{
+	end;
+
+OnRecvCastlePy01:
+	FlagEmblem GetCastleData("payg_cas01",1);
+	end;
+}
+
+payon,82,155,4	script	Scarlet Palace#f2-OP	722,{
+	end;
+
+OnRecvCastlePy02:
+	FlagEmblem GetCastleData("payg_cas02",1);
+	end;
+}
+
+payon,97,155,4	script	Holy Shadow#f3-OP	722,{
+	end;
+
+OnRecvCastlePy03:
+	FlagEmblem GetCastleData("payg_cas03",1);
+	end;
+}
+
+payon,103,155,4	script	Sacred Altar#f4-OP	722,{
+	end;
+
+OnRecvCastlePy04:
+	FlagEmblem GetCastleData("payg_cas04",1);
+	end;
+}
+
+payon,75,155,4	script	Bamboo Grove Hill#f5-OP	722,{
+	end;
+
+OnRecvCastlePy05:
+	FlagEmblem GetCastleData("payg_cas05",1);
+	end;
+}
+
+
+
+//############################################################################################################################################################
+// Kafra
+//############################################################################################################################################################
+
+payon,99,116,4	script	Kafra Employee::kaf_oldpayon	113,{
+	cutin "kafra_05",2;
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,60,930;
+	savepoint "payon",68,99,1,1;
+	callfunc "F_KafEnd",0,1,"in the city of Payon";
+}
+
+//############################################################################################################################################################
+// Merchants
+//############################################################################################################################################################
+
+// Inn Keeper Sun Hee -------------------------------------------------
+payon_in01,137,173,5	script	Inn Keeper#oldpay	78,{
+	set @temp,0;
+	set @temp,rand(3);
+
+	mes "[Inn Keeper Sun Hee]";
+	mes "Welcome to the Inn.  It only cost 5000z to spend the night.  In the morning your HP and SP will full again.  Would you like to spend the night?";
+	next;
+	menu "Sure",M_Yes,"No thanks",M_No;
+
+	M_Yes:
+		if(Zeny < 5000) goto O_NeedZeny;
+		mes "[Inn Keeper Sun Hee]";
+		mes "Thank you and enjoy your stay here.";
+		next;
+		set Zeny,Zeny - 5000;
+		percentheal 100,100;
+		if(@temp == 2) goto O_R2;
+
+			warp "payon_in01",176,170;
+			close;
+
+		O_R2:
+			warp "payon_in01",167,170;
+			close;
+
+		O_R1:
+			warp "payon_in01",176,163;
+			close;
+
+		O_NeedZeny:
+			mes "[Inn Keeper Sun Hee]";
+			mes "I'm sorry but you do not have enough zeny to stay here.";
+			close;
+
+	M_No:
+		close;
+}
+
+// Weapon/Armor Refiners ---------------------------------------------
+payon_in01,90,31,4	script	Antonio#oldpay	88,{
+	callfunc "refinemain","Antonio",0;
+	end;
+}
+
+// Material Salesmen -------------------------------------------------
+payon_in01,84,26,4	script	Begnahd#oldpay	88,{
+	callfunc "phramain","Begnahd";
+	end;
+}
+
+// Ori/Elu Refiners --------------------------------------------------
+payon_in01,81,31,4	script	Hakhim#oldpay	88,{
+	callfunc "orimain","Hakhim";
+	end;
+}
+
+// Falcon Master -----------------------------------------------------
+payon_in01,131,77,4	script	Falcon Master#oldpay	59,{
+	mes "[Falcon Master]";
+	mes "Hellooooo, I am the Falcon Master.";
+	next;
+	menu "Speak with him",M_0, "Politely back away",M_End;
+
+	M_0:
+		mes "[Falcon Master]";
+		mes "I can train a Falcon for you, but you need to be a Hunter and have mastered the ^5555FF'Falcon Taming' skill^000000.";
+		next;
+		menu "Ok",sM_0, "No thanks",M_End;
+
+		sM_0:
+			if(Class != Job_Hunter && Class != 4012 && Class != Job_Sniper) goto sL_NotHunter;
+
+			if(checkfalcon() != 0) goto sL_GotFalc;
+			if(getskilllv(127)==0) goto sL_NoSkill;
+			mes "[Falcon Master]";
+			mes "It looks like you meet all the requirements to handle a Falcon.  Here you are";
+			setfalcon;
+			next;
+			mes "[Falcon Master]";
+			mes "Please take very good care of it.  It will prove to be a valuble companion.";
+			close;
+			
+			sL_NotHunter:
+				mes "[Falcon Master]";
+				mes "As I said, Falcons can only be given to Hunters.  Falcons are very picky about who they travel with you know.";
+				close;
+			sL_GotFalc:
+				mes "[Falcon Master]";
+				mes "You can only have 1 Falcon at a time.";
+				close;
+			sL_NoSkill:
+				mes "[Falcon Master]";
+				mes "I'm sorry but you do not have the Falcon Taming skill.  Please come back when you have learned it.";
+				close;
+	M_End:
+		mes "[Falcon Master]";
+		mes "Have a nice day.";
+		close;
+}
+
+//in_hunter.gat,146,100,2	duplicate(Falcon Master)	Falcon Master	59
+
+// Shops ---------------------------------------------------------------
+payon_in01,125,51,4	shop	Weapon Dealer#oldpay	77,1750:-1,1751:-1,1101:-1,1104:-1,1107:-1,1201:-1,1204:-1,1207:-1,1601:-1,1701:-1,1704:-1,1707:-1,1710:-1,1713:-1,1714:-1,1718:-1
+payon_in01,134,51,4	shop	Armor Dealer#oldpay	76,2401:-1,2403:-1,2405:-1,2501:-1,2503:-1,2505:-1,2208:-1,2211:-1,2212:-1,2301:-1,2303:-1,2305:-1,2321:-1,2328:-1,2332:-1,2309:-1,2330:-1
+payon_in02,87,34,1	shop	Tool Dealer#oldpay	75,1750:-1,1751:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,525:-1,601:-1,602:-1,1065:-1,645:-1,656:-1,657:-1
+payon,79,124,4	shop	Tool Dealer#oldpay2	88,1750:-1,611:-1,501:-1,502:-1,503:-1,504:-1,506:-1,601:-1,525:-1,602:-1,1065:-1,645:-1,656:-1,657:-1
+payon,142,104,4	shop	Pet Merchant	125,537:-1,643:-1,10013:-1,10014:-1
+//payon_in01,84,26,4	shop	Miner	48,1010:-1,1011:-1
+
+//############################################################################################################################################################
+// People
+//############################################################################################################################################################
+
+//Lady-------------------------------------------------------
+payon,163,139,8	script	Lady#oldpay	77,{
+	mes "[Lady]";
+	mes "Did you know that in the past Payon was not as prosperous as it is now? Back then we had difficulty making a living for ourselves.";
+	emotion 0;
+	next;
+	mes "[Lady]";
+	mes "The towns people were so poor that they could not even afford to properly bury their deceased family members.";
+	mes "Because of this many people chose to simply place the dead corpses in the Cave near the village.";
+	next;
+	mes "[Lady]";
+	mes "Not only was this a terrible way to treat those that passed away but it would later prove to have grave consiquences for this town."; 
+	next;
+	mes "[Lady]";
+	mes "You see, because they were not given a proper burrial, the dead were not able to leave this world and pass on to the other world.";
+	mes "Instead they became mindless zombies, wrethced souls that were forced to walk the earth for all eternity.";
+	next;
+	mes "[Lady]";
+	mes "Their rotten bodies filled with pain and suffering, yearned for the taste of human flesh.  Any living person who came near the cave would fall victim to these zombies.";
+	mes "In order to protect the village the Elder Chief founded the Archer Village to train young warriors who could fight the zombies.";
+	next;
+	mes "[Lady]";
+	mes "To this day the battle between the living and the undead still goes on.";
+	mes "It is a very tragic situation, for those zombies were at one time beloved members of the Payon community.";
+	close;
+}
+
+// Jim's Mother-------------------------------------------------------------
+payon,163,142,5	script	Jim's Mother#oldpay	78,{
+	mes "[Jim's Mother]";
+	mes "Oh boy there she goes again.  She is a confirmed gossip.  Please don't mistake her for being a typical Payon citizen.";
+	emotion 9;
+	next;
+	mes "[Jim's Mother]";
+	mes "Believe me, she's an exception.  Not all of us here in Payon have big mouths.  She gets too exited with fortune telling.";
+	next;
+	mes "[Jim's Mother]";
+	mes "Anyway, you look like a new face.  Are you new in town?";
+	next;
+	mes "[Jim's Mother]";
+	if(Sex == 0) goto L_Female;
+
+	L_Male:
+		mes "... Oh, you have broad shoulders ... tehehe! Will you go out with me? I'd like to make you a nice dinner...(bats eyelashes)";
+		emotion 30;
+		goto M_Menu;
+
+	L_Female:
+		mes "Tisk tisk tisk!  Girls these days just don't know how to dress properly.  Don't you think you should pay a little more attention to your apperance?";
+		emotion 9;
+		next;
+		mes "[Jim's Mother]";
+		mes "...(rolls eyes)... Hmmph!";
+		emotion 32;
+
+M_Menu:
+	next;
+	menu "ah em... fortune telling?",M_0,"... Good Bye.",M_End;
+	
+	M_0:
+		mes "[Jim's Mother]";
+		mes "Oh yes, there is an extraordinary fortune teller here in town.  You can find her in the central palace.";
+		mes "The more money you pay her the more acurate your fortune will be told.";
+		next;
+		mes "[Jim's Mother]";
+		mes "I saw her recently and she told me that I would meet a handsome young man this month............";
+		if(sex == 1) mes ".......... tehehe. (winks at you)";
+		emotion 3;
+		close;
+	M_End:
+		mes "[Jim's Mother]";
+		mes "What? You have to go? Awwww...Why don't you stay and chit chat with me for a while...hmm? ...";
+		close;
+
+}
+
+//Woman------------------------------------------------------------------
+payon,166,140,3	script	Woman#oldpay	71,{
+	mes "[Woman]";
+	mes "Welcome to Payon.  You must have had a hard time getting through the thick forrest?  I hope you didn't run into too much trouble?";
+	next;
+	mes "[Woman]";
+	mes "I'm glad to see a new face around here.  You see the number of tourists has decreased drastically due to the enormous amount of monsters outside.";
+	next;
+	mes "[Woman]";
+	mes "Payon has become a very quite town because of this.  There's isn't much for the towns people to do nowadays.  As for myself I'm just chit-chatting with my friends.";
+	next;
+	mes "[Woman]";
+	mes "To be honest, things are getting tough because of those creatures... (sighs)...";
+	next;
+	mes "[Woman]";
+	if(Sex == 0) goto L_Female;
+
+	L_Male:
+		mes "Hmm... you look as strong as a Rocker! How many monsters have you killed?";
+		mes "Let me tell you about a place where you can go train and become even stronger.";
+		emotion 20;
+		goto qMes;
+	L_Female:
+		mes "Miss, how many monsters have you killed?";
+		mes "I know a very good place for you to go train and get good monster drops.";
+		emotion 20;
+
+	qMes:
+	next;
+    	mes "[Woman]";
+	mes "I know of a cave near Archer Village.  Just take the exit north of town and follow the path to your left.";
+    	mes "The cave is full of monsters and their spawn rate is very high.  Does it sound interesting to you?";
+M_Menu:
+	next;
+	menu "It sounds dangerous!!",M_0,"I'll need to be prepare myself.",M_1,"Lady, you have perrrrtty clothes...yuk yuk..~",M_2,"End conversation",M_End;
+
+	M_0:
+		mes "[Woman]";
+		mes "Oh don't be such a coward! It's just a simple cave filled with normal monsters.  Archer Village is near by so you shouldn't be worried~ hohoho~";
+		next;
+		mes "[Woman]";
+		mes "Of course... there are the zombies... and Munaks... and Bonguns... which can be VERY DEADLY.....";
+		emotion 20;
+		goto M_Menu;
+	M_1:
+		mes "[Woman]";
+		mes "No need to worry about prepapring yourself.  There is an excellent tool dealer in front of town where you can purchase the items you need.";
+		next;
+		mes "[Woman]";
+		mes "I know because he's my husban... oops... I mean an aquantence of mine... heh heh..";
+		emotion 4;
+		goto M_Menu;
+	M_2:
+		mes "[Woman]";
+		mes "Oh hohohoho! SO you noticed! This is what's in-style in Prontera these days! The women in this town don't know anything about fashion!";
+		emotion 5;
+		next;
+		mes "[Woman]";
+		mes "My husband buys me these clothes with the money he makes selling overpriced items to foolish young people... oh ho oh hoho...";
+		emotion 18;
+		goto M_Menu;
+	M_End:
+		close;
+
+}
+
+//Young Man---------------------------------------------------------------------------
+payon,29,116,8	script	Young Man#1oldpay	88,{
+	mes "[Young Man]";
+	mes "I still remember the story my grandfather told me long ago about the Amulet that possessed an Evil Power within it.";
+	next;
+	mes "[Young Man]";
+	mes "According to the story the Amulet could raise the dead from their Graves!!";
+	mes "I am not sure if the story is true or not, but I wonder what would happen if I summoned my grandfather from his grave with it??...";
+	next;
+	mes "[Spooky Voice]";
+	mes "~~~~My child... do not even think of such a thing!!!~~~~~";
+	next;
+	mes "[Young Man]";
+	mes "Eeeeeeeeekkkkk?! Grampa? I-I-Is-Is t-t-th-that you?? ...";
+	emotion 16;
+	next;
+	mes "(you notice that his pants have become wet... eeeewwwwwwwwww!!!....)";
+	close;
+}
+
+
+//<=================================================== Pub and Inn ================================================>\\
+
+// Archer Joe-----------------------------------------------------------------------
+payon_in01,101,174,5	script	Archer Joe#oldpay	59,{
+	mes "[Archer Joe]";
+	mes "Payon! What a wonderful place! Superb Bows! Excellent Archers!";
+	emotion 21;
+	next;
+	mes "[Archer Joe]";
+	mes "Hey you! Have you heard of our fame?";
+	next;
+	menu "Oh yeah...sure.....",M_0, "Err Sorry....",M_1, "um......",M_2;
+
+	M_0:
+		mes "[Archer Joe]";
+		mes "Haha, of course you have!!  Who wouldn't know about our world renown Archers and Bow makers.";
+		emotion 33;
+		next;
+		mes "[Archer Joe]";
+		mes "The arrows of Payon Archers never miss their targets! Even at great distances, Payon Archers strike their enemies with great precision!";
+		next;
+		menu "I take it you like this place?",sM_0, "Well, I gota go...",sM_1;
+
+		sM_0:
+			mes "[Archer Joe]";
+			mes "Yes! I love this place!  So much that I am devoting all of my time to research the entire history of Payon.";
+			mes "If you have any questions, please ask me!";
+			emotion 33;
+		ssM_Menu:
+			next;
+			menu 	"The people here wear very unique clothes...",ssM_0, "About the building in the middle of town?",ssM_1,
+				"Who's the drunk Over there?",ssM_2, "Talk to you later.",ssM_3;
+
+			ssM_0:
+				mes "[Archer Joe]";
+				mes "Yes, this is true.  Payon has been isolated from the outside world because of the thick forest that surrounds it.";  
+				next;
+				mes "[Archer Joe]";
+				mes "Because of this, the people living here formed a very unique culture quite different from the ones on the rest of the continent.";
+				next;
+				mes "[Archer Joe]";
+				mes "The clothes that the towns people are wearing are the traditional garbs of Payon.  Why don't you try on an outfit? They're very comfortable!";
+				goto ssM_Menu;
+			ssM_1:
+				mes "[Archer Joe]";
+				mes "That building is the Central Palace of Payon.  It is home to the Royal Family.";
+				next;
+				mes "[Archer Joe]";
+				mes "In the past entrace to the palace was prohibited and only important dignitaries and freinds of the Royal Family could enter.";
+				next;				
+				mes "[Archer Joe]";
+				mes "It is now open to the public but it is well gaurded and there are many restricitons on what you can do inside.";
+				next;
+				mes "[Archer Joe]";
+				mes "The Palace is very beautiful and you should definitely go take a look around.";
+				goto ssM_Menu;
+			ssM_2:
+				mes "[Archer Joe]";
+				mes "Oh! He is a notorious drunk.! Make sure not to buy him any drinks! You will regret it later!";
+				emotion 0;
+				goto ssM_Menu;
+			ssM_3:
+				mes "[Archer Joe]";
+				mes "Ok ! Catch you later! See ya!";
+				close;
+		sM_1:
+			mes "[Archer Joe]";
+			mes "Oh, ok.  Make sure to take a look at some of the Payon Archers in action.  You will be in aw of their exquisite skill!";
+			close;
+	M_1:
+		mes "[Archer Joe]";
+		mes "WHAT??? REALLY??? What a shame! How on earth could you not know about a GLORIOUS town like Payon!";
+		emotion 23;
+		next;
+		mes "[Archer Joe]";
+		mes "Take a look around town and see for yourself why Payon is so special!  Come back later and we can talk about why Payon Archers are so magnificent!";
+		close;
+	M_2:
+		mes "[Archer Joe]";
+		mes "What? What is it?  How come you don't answer..... Oh your probably just shy.  I understand.";
+		emotion 20;
+		close;
+}
+
+// Drunkard---------------------------------------------------------------
+payon_in01,95,181,3	script	Drunkard#oldpay	49,{
+	if(Class == Job_Archer) goto L_Archer;
+
+L_Other:
+	mes "[Drunkard]";
+	mes "Hey hey! I am wondering how Stupid archers who don't know how to aim at targets could drink alcohol....  Hahaha~!";
+	emotion 18;
+	next;
+	goto L_Cont;
+L_Archer:
+	mes "[Drunkard]";
+	mes "Yo!Yo!.. archer brother!... here'sh a toasht to your bowshtring pulling fingersszzz!";
+	emotion 2;
+	next;
+
+	L_Cont:
+	mes "[Drunkard]";
+	mes "Do you want to buy me a drink?";
+	next;
+	menu "Ok, just one...",M_0,"Nope, sorry buddy.",M_1,"WTF!!~ hell no~!",M_2;
+
+	M_0:
+		mes "[Drunkard]";
+		if(Class != Job_Archer) mes "Thanksh!... shhtrangersszz are alwayssszz a generoushhh bunch!... archer guysh are penny pinchershh nowadayssszz!..(hicup!)";
+		if(Class == Job_Archer) mes "Thanksh brothaaa!... archerrrzzz are alwayssszz a generoushhh bunch!...(hicup!)";
+		emotion 15;
+		set Zeny, Zeny - 100;
+		next;
+		mes "[Drunkard]";
+		mes "Muhahahaha!  I washhn't like that when I wasshh young... back when I wasshh young... I used to fool around with girlssszzz!";
+		mes "One O themsszz a grannie in thisshh village now! She still actssszz young though and haaassh a taste for consmeticssss and stufffffff..(hicup!)";
+		next;
+		mes "[Drunkard]";
+		mes "~Gulp~Gulp~Man! This issszz great! Thanksh my man!... Thank you!... Muhahahahaha!...(hicup!)";
+		emotion 21;
+		close;
+	M_1:
+		mes "[Drunkard]";
+		mes "Umm, Ooookay. Fine by me...(hicup!)";
+		emotion 21;
+		close;
+	M_2:
+		mes "[Drunkard]";
+		mes "Blah!! Young people don't... know how... to respect their elders!";
+		mes "Fine! I won't beg you anymore!...... I won't! ...(hicup!)";
+		emotion 32;
+		close;
+
+}
+
+// Pub Girl Kelly---------------------------------------------------------
+payon_in01,104,182,2	script	Kelly#oldpay	80,{
+	mes "[Kelly]";
+	mes "People in this place seem to be busy all the time.  They come and go to be Archers or to buy arrows while I'm stuck in this smelly bar.";
+	next;
+	mes "[Kelly]";
+	mes "I feel so melancholy and bored.......";
+	emotion 28;
+	next;
+	mes "[Kelly]";
+	mes "I am sick and tired of noodle soup.  I have to constantly take showers to get rid of the smell.  Even then it still doesn't totally get rid of the smell..sigh... ";
+	next;
+	mes "[Kelly]";
+	mes "I wish there was a hot, sexy hunk, who would sweep me off my feet and take me away from a dump like this......";
+	next;
+	mes "[Kelly]";
+	mes "My grandma's a fortuneteller and she told me that I would have a bright and prosperous future!";
+	next;
+	mes "[Kelly]";
+	mes "But look at me, what's wrong!! I'm living a drab and dreary life!!  My life's such a mess...ugh!!!";
+	emotion 6;
+	next;
+	emotion 9;
+	next;
+	mes "[Kelly]";
+	mes "Oh...I'm sorry... I shouldn't be bothering you will all of my pathetic problems.  I feel so embarassed...";
+	mes "Lets just pretend I didn't say anything....";
+	emotion 4;
+	next;
+	mes "[Kelly]";
+	mes "So,how may I help you?";
+M_Menu:
+	next;
+	menu "Have you ever heard of Zombies?",M_0,"I want to have my fortune told.",M_1,"I need some booze..YEEAAAAHHH!!!",M_2,"I'll go now",M_End;
+
+	M_0:
+		mes "[Kelly]";
+		mes "Zombies are the walking dead.  You can easily spot them in this village.";
+		next;
+		mes "[Kelly]";
+		mes "It's rumored that they fear anything that is of a Holy nature.  That's why Archers prefer to use arrows made out of Holy metal or silver against Zombies.";
+		next;
+		mes "[Kelly]";
+		mes "Legend has it that the Elder Chief of this town used silver arrows against walking zombies that used to be his brethren, to release their souls and allow them to rest in peace.";
+		next;
+		mes "[Kelly]";
+ 		mes "It is believed that this is the only way for those who have become zombies to finally acheieve a peacefull existence beyond this earth.";
+		next;
+		mes "[Kelly]";
+		mes " I wish the Elder Chief could have put my grandfather's poor soul to rest....";
+		goto M_Menu;
+	M_1:
+		mes "[Kelly]";
+		mes "Oh! I have to tell you, my grandma is a really extraordinary person.";
+		mes "She doesn't come around here all that much anymore though...so you may be out a luck.";
+		emotion 5;
+		next;
+		mes "[Kelly]";
+		mes "At first, she lived in town with everyone else, but when the Elder Chief recognised her talent, he had her move into the Palace.";
+		mes "You'd better go to there if you want to see her.";
+		goto M_Menu;
+	M_2:
+		mes "[Kelly]";
+		mes "I'm so sorry but we're all sold out and we can't afford to prepare alchohol anymore due to hostile creatures out there.";
+		next;
+		mes "[Kelly]";
+		mes "The owner has a very strict rule of only providing drinks to the best customers.  So please come back at some other time.";
+		mes "Hopefully by then the monsters will have gone away.";
+		next;
+		mes "[Kelly]";
+		mes "Sorry for the inconvenience.";
+		emotion 17;
+		goto M_Menu;
+
+	M_End:
+		mes "[Kelly]";
+		mes " Have a nice day.";
+		mes " (Sob)... I wish I could lay in a bed of roses....";
+		emotion 28;
+		close;
+}
+
+//Archer Wolt-----------------------------------------------------------
+payon_in01,176,176,2	script	Archer Wolt#oldpay	88,{
+	mes "[Archer Wolt]";
+	mes "Archers should practice as much as they can, otherwise they can't become an expert like myself.";
+	next;
+	mes "[Archer Wolt]";
+	mes "You see I am constatly seeking a higher level of perfection as an archer...(blah blah blah blah)...I teach others to be like me...(blah blah blah blah)...";
+	next;
+	mes "[Archer Wolt]";
+	mes "...Oh...are you new here? Howdy!";
+	next;
+	mes "[Archer Wolt]";
+	mes "I am Wolt the Expert Archer. You can just call me Wolt.  Can I ask you something,... do you tend take it easy and waste alot of time?";
+	next;
+	menu "Well..no..I...",M_0,"..Um..well..I guess I do..but...",M_End;
+
+	M_0:
+		mes "[Archer Wolt]";
+		mes "Hmm... You don't? You are born to be an archer then.";
+		next;
+		mes "[Archer Wolt]";
+		mes "We Archers are constantly practicing and rarely have time to just sit around.  So we hate people who are not dilligent.";
+		next;
+		mes "[Archer Wolt]";
+		mes "Are you curious about HOW we practice?";
+		emotion 1;
+		next;
+		mes "[Archer Wolt]";
+		mes "From sunrise to sunset the Archers of Payon search the surrounding forest for monsters.";
+		next;
+		mes "[Archer Wolt]";
+		mes "With a bow in our hands and arrows on our back we fight dangerous monsters in order to train ourselves as well as to help keep Payon safe";
+		next;
+		mes "[Archer Wolt]";
+		mes "For us fighting monsters is a way of life...(blah blah blah)...I once saw the sun set on a river...(blah blah blah blah)...sometimes I feel pretty...(blah blah)...";
+	sM_Menu:
+		next;
+		menu "... Uh... so you must need great bows?",sM_0, "... Uh... what about rest and relaxation?",sM_1, "See ya.",M_End;
+
+		sM_0:
+			mes "[Archer Wolt]";
+			mes "....Well YES!! A well crafted Bow is essential to the success of an archer!";
+			emotion 5;
+			next;
+			mes "[Archer Wolt]";
+			mes "Bows constructed in Payon are the greatest bows you can find in Rune-Midgard! They are light yet, strong and very durable.";
+			emotion 21;
+			next;
+			mes "[Archer Wolt]";
+			mes "This is because they are made out of high quality wood found only in the Payon Forest!";
+			mes "My bow was made from a Walnut tree and will last for gererations to come.";
+			next;
+			mes "[Archer Wolt]";
+			mes "Unfortunatley many of the wonderfull trees in Payon forest have been affected by the evil force that has spread throughout Rune-Midgard and have turned into horrible creatures.";
+			next;
+			mes "[Archer Wolt]";
+			mes "It's a pitty to see such beatifull trees become tools of evil...";
+			next;
+			mes "[Archer Wolt]";
+			mes "Strange as it may sound, even as monsters the trees still provide high quality wood that can be used for bows.";
+			mes "Maybe the trees seek to help us fight the evils in the land?...";
+			next;
+			menu "I didn't realise the forest was so dangerous..",ssM_0, "(This guy talks to much)",M_End;
+
+			ssM_0:
+				mes "[Archer Wolt]";
+				mes "You know the monsters don't appear only in the forest.  Head west and you'll see a cave.";
+				mes "It is filled with terrible monsters that spawn without limit.";
+				next;
+				mes "[Archer Wolt]";
+				mes "That cave is the reason Archer Village was established by our Elder Chief.";
+				mes "We archers are responisble for protecting Payon from the monsters that come out of that cave.";
+			sssM_Menu:
+				next;
+				menu "Cave?!",sssM_0, "Elder Chief?",sssM_1, "Walk away",M_End;
+
+				sssM_0:
+					mes "[Archer Wolt]";
+					mes "The cave is filled with zombies and other undead and ghost creatures like Munaks and Bonguns.";
+					mes "They are very dangerous but the holy element works well against them.";
+					next;
+					mes "[Archer Wolt]";
+					mes "I've been told by the Elder Chief that in his day the monsters were even more fearsome.";
+					mes "The thought alone sends shivers down my spine.";
+					goto sssM_Menu;
+
+				sssM_1:
+					mes "[Archer Wolt]";
+					mes "The Elder Chief is such a great person... although he always scolds me because he says I talk too much.";
+					next;
+					mes "[Archer Wolt]";
+					mes "I don't think I talk all that much...I mean..(blah blah blah)...so I said to the guy...(blah blah blah blah blah).....";
+					next;
+					mes "[Archer Wolt]";
+					mes "... uh... anyways... back to the Chief...";
+					emotion 4;
+					next;
+					mes "[Archer Wolt]";
+					mes "In the past he bravely protected Payon with his Gakung Bow.  Now he is elderly, though he still worries about the safety of the town.";
+					mes "He resides in the Palace and has his own personal gaurd.  Only high level warriors are allowed to speak with him.";
+					goto sssM_Menu;
+
+		sM_1:
+			mes "[Archer Wolt]";
+			mes "It's is true that rest is important.  You do not want to over exert yourself from over training.  But too much rest can lead to laziness and accidents.";
+			next;
+			mes "[Archer Wolt]";
+			mes "Let me tell you a story about how I decided to take an extended rest after a long day of training.  I was dead tired and decided to take a nice hot bath.";
+			next;
+			mes "[Archer Wolt]";
+			mes "I was only supposed to stay in the bath for 15 minutes but water was warm and it felt so nice that I decided to stay a little longer.  I ended up falling asleep.";
+			next;
+			mes "[Archer Wolt]";
+			mes "Next thing I knew the fire that was heating the bath got out of controll and ended up burning down my entire house.";
+			next;
+			mes "[Archer Wolt]";
+			mes "Heh heh, I guess I was lucky since I made it out alive.  Since that accident I've been staying at the inn.";
+			emotion 4;
+			next;
+			mes "[Arhcer Wolt]";
+			mes "... Oh... I just remembered another story.  You see I was 5 and... (blah blah blah blah blah blah blah blah)........";
+			goto sM_Menu;
+
+	M_End:
+		mes "[Archer Wolt]";
+		mes "...... (blah blah blah)......";
+		close;
+}
+
+// Monster Scholar----------------------------------------------------------
+payon_in01,164,165,2	script	Monster Scholar#oldpay	55,{
+	mes "[Monster Scholar Vuicokk]";
+	mes "Nice to meet you. I am Vuicokk a scholar in the monster research organization of Rune Midgard.";
+	mes "Do you have any question about the monsters of Rune Midgard?";
+M_Menu:
+	next;
+	menu "Why are you here?",M_0,"About Undead Monsters.",M_1,"Monster Research Organization?",M_2,"Good day",M_End;
+
+	M_0:
+		mes "[Monster Scholar Vuicokk]";
+		mes "Payon is surrounded by thick forests which are the natural breeding grounds for monsters.";
+		mes "This coupled with the moster filled cave near town, make Payon a monster hot spot.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "The cave itself has an especially high concentration of undead monsters making it a populare place for monster experts like myself.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "My personal objective here in Payon is to analayze the charateristics of the monsters that live here.";
+		goto M_Menu;
+	M_1:
+		mes "[Monster Scholar Vuicokk]";
+		mes "The remarkable thing about the Undead monsters of Payon is that many of them used to be citizens of Payon.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "Now they are but lost, tortured, souls seeking release from their painful existence....";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "Undead monsters are of a totaly different classification then the other monsters because of the fact that they used to be humans.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "It is for this reason that the King of Rune Midgard has a great deal of interest in our research on Undead monsters. ";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "To know that they used to be citizens of his kingdom is very troubling to him.....";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "His Majesty Tristram the 3rd has mandated that we do all we can to find a way to remove the undead from this world.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "In order to do that we must put an end to the source of the problem.  I have tremendous faith that we can succeed in doing so.";
+		goto M_Menu;
+	M_2:
+		mes "[Monster Scholar Vuicokk]";
+		mes "The Monster Research Organization was formed to find ways to counteract the sudden and rapid growth of monsters in Rune Midgard.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "Talented scientest from all over the land have been called forth to participate in this research.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "Of course this work is not as easy as one might expect.  We are constantly risking our lives when we go out into the field.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "There have already been countless injuries and fatalities suffered by the reaserch team.";
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "However NOTHING can stop us!  We will continue to perservere for the bennifit of the people of RUNE MIDGARD!!!";
+		emotion 0;
+		next;
+		mes "[Monster Scholar Vuicokk]";
+		mes "... Eh em... please excuse my emotional outburst... I am very passionate about this work.....";
+		mes "Anyway if you happen to meet other scholars like myself, please treat them kindly.";
+		goto M_Menu;
+	M_End:
+		mes "[Monster Scholar Vuicokk]";
+		mes "Have a nice day.";
+		close;
+}
+
+
+//<======================================================== Palace ==================================================>\\
+
+// Palace Guardsman (Outside)------------------------------------------------
+payon,92,164,3	script	Palace Guardsman#1oldpay	708,{
+	mes "[Place Guardsman]";
+	mes "Halt!";
+	next;
+	mes "[Palace Guardsman]";
+	mes "You are about to enter the Royal Palace, home of the Payon Royal Family.  You must be at your best behavior at all times while in the palace.";
+	next;
+	mes "[Palace Guardsman]";
+	mes "I will need to disarm you for the time being.  If you do not cooperate you will not be able to enter the Palace";
+	next;
+	warp "payon_in01", 72, 89;
+	close;
+}
+
+// Palace Guardsman (Outside)------------------------------------------------
+payon,87,164,3	script	Palace Guardsman#2oldpay	708,{
+	mes "[Place Guardsman]";
+	mes ".............";
+	close;
+
+}
+
+// Palace Guardsman (Inside)---------------------------------------------
+payon_in01,69,90,4	script	Palace Guardsman#3oldpay	708,{
+	mes "[Place Guardsman]";
+	mes "What brings you here?";
+	emotion 1;
+	next;
+	mes "[Palace Guardsman]";
+	mes "I can see that you are not from around here.  I suggest that you behave yourself while you are here.";
+	mes "We will not tolerate any direspectfull or abberant behavior.";
+	close;
+}
+
+// Palace Guardsman (Inside)---------------------------------------------
+payon_in01,70,154,4	script	Palace Guardsman#4oldpay	708,{
+	close;
+}
+
+// Palace Guardsman (Inside)-----------------------------------------------
+payon_in01,73,154,4	script	Palace Guardsman#5oldpay	708,{
+	close;
+}
+
+// Elder Chief's Guard-----------------------------------------------------
+payon_in01,79,147,2	script	Chief's Guard#oldpay	708,{
+	mes "[Elder Chief's Guard]";
+	if(BaseLevel < 30) goto Less30;
+	mes "I see that you are a well trained warrior.  You may have the privalege of speaking with the Elder Chief.  But remember to be respectfull to him at all times!!!";
+	next;
+	mes "[Elder Chief's Guard]";
+	mes "If NOT......(cracks his nuckles)....!!!";
+	emotion 29;
+	next;
+	warp "payon_in01", 129, 143;
+	close;
+	
+	Less30:
+		mes "Halt.  Only mighty warriors are worthy to speak face to face with the Elder Chief.  You still need to train more";
+		next;
+		mes "[Elder Chief's Guard]";
+		mes "Please leave";
+		close;
+}
+
+// Elder Chief--------------------------------------------------------------
+payon_in01,137,143,2	script	Elder Chief#oldpay	120,{
+	mes "[Elder Chief]";
+	if(gotbonus == 1) goto Tired;
+	mes "Ah, hello there.  I am the Elder Chief of Payon.  It's been such a long time since I talked to a young and might warrior such as yourself.";
+M_Menu:
+	next;
+	if((@talked_1 + @talked_2 + @talked_3 + @talked_4 + @talked_5) == 5) goto GetBonus;
+	menu "About Payon.",Payon,"Where did the guards come from?",Guards,"About the cave.",Cave,"What about Archers?",Archer,"What about Hunters?",Hunter;
+
+	Payon:
+		set @talked_1,1;
+		mes "[Elder Chief]";
+		mes "Payon is the city of highlanders who have been self-supporting and self-sufficient for hundreds of years.";
+		mes "Although our ancestors were not good at farming, they found other ways to support themselves.";
+		next;
+		mes "[Elder Chief]";
+		mes "The Payon people, including  the women, have learned how hunt and how to protect ourselves from danger.";
+		next;
+		mes "[Elder Chief]";
+		mes "I've heard that for others, fields or dungeons filled with monsters are things to be feard.  But for us, battling monsters is a daily part of our lives.";
+		next;
+		mes "[Elder Chief]";
+		mes "That's why his majesty Tristram the 3rd expects us to teach young people how to effectively fight against evil creatures.";
+		goto M_Menu;
+
+	Guards:
+		set @talked_2,1;
+		mes "[Elder Chief]";
+		mes "When I was young Prontera sent civil servants to our town.  Royal troops, Kafra Ladies, Officers, etc.";
+		next;
+		mes "[Elder Chief]";
+		mes "At first we refused their help because of our long standing history of self sufficiecy."; 
+		mes "However they have proven to be a great asset in attracting foregin trade with other countries.";
+		next;
+		mes "[Elder Chief]";
+		mes "Now young people from outside Payon come here to live and make themselves a part of the Payon community......";
+		mes "I would have never imagined this when I was young. Heh heh...";
+		next;
+		mes "[Elder Chief]";
+		mes "I am very pleased to see them.  Even though they come from other places, they seem to genuinly love Payon.";
+		goto M_Menu;
+
+	Cave:
+		set @talked_3,1;
+		mes "[Elder Chief]";
+		mes "The Cave to the north, in Archer Village, is a place I used to train in when I was younger.";
+		next;
+		mes "[Elder Chief]";
+		mes "There were evil creatures that dwelled in that cave that I had never seen before.";
+		mes "Their re-spawn rate was incredible, It seemed as if they were never ending.";
+		next;
+		mes "[Elder Cheif]";
+		mes "The monsters that now live in the cave are of a different type than before and they are also weaker than the ones I used to fight.";
+		next;
+		mes "[Elder Chief]";
+		mes "Do you know about the Lasting grudge that comes out of the cave?";
+		mes "It is caused by the dead who never came back after going inside the cave to protect this village.";
+		next;
+		mes "[Elder Chief]";
+		mes "The dead walk this earth unleashing the anger they were not able to release before their death.";
+		mes "Countless innocents fall victim to these tortured souls everyday.";
+		next;
+		mes "[Elder Chief]";
+		mes "I can no longer do anything to help these lost souls... nor can I do anything to help the living for that matter........";
+		mes "I am simply too old now... just too old..........";
+		next;
+		mes "[Elder Chief]";
+		mes ".........(sigh)..........";
+		goto M_Menu;
+
+	Archer:
+		set @talked_4,1;
+		mes "[Elder Chief]";
+		mes "The huge forest that surrounds Payon provides a plentifull source of wood for our town.";
+		mes "Because of all of this wood it is only natural that bow making and archery have become an important part of our society.";
+		next;
+		mes "[Elder Chief]";
+		mes "The forest is also an exellent environment for archers to fight in.  Archers are ranged attackers and can be vulnerable to close quarters combat.";
+		mes "The trees allow the archers to stay hidden from their enemies and makes it hard for would be foes to reach them.";
+		next;
+		goto M_Menu;
+
+	Hunter:
+		set @talked_5,1;
+		mes "[Elder Chief]";
+		mes "With the introduction of foregin cultures into Payon came the adoption of the fighting techniques of those cultures.";
+		mes "Explosive compounds and other technologies dramatically changed the way the people of Payon did battle..";
+		next;
+		mes "[Elder Chief]";
+		mes "The use of Trapping Skills rose out of the mixture of fighting techniques allowing those who used them to capture monsters with never before seen ease.";
+		mes "Those who practiced these Trapping Skills were given the name of Hunter by a previous Elder Chief.";
+		next;
+		mes "[Elder Chief]";
+		mes "Even though it was extremely populare to be a Hunter at first, Trapping Skills proved to be very dangerous so young people are often instructed to avoid learning them.";
+		next;
+		mes "[Elder Chief]";
+		mes "Only those with superior skills and the right qualities are able to train as Hunters";
+		goto M_Menu;
+
+	GetBonus:
+		set gotbonus,1;
+		mes "[Elder Chief]";
+		mes "...(yaaaawwwwwwwwwnnnnnnnn)....";
+		next;
+		mes "[Elder Chief]";
+		mes "I'm getting tired.  I'd better take a nap.  Elderly people such as myself need to rest frequently.  We don't have the energy that you young ones do.  Haha";
+		next;
+		mes "[Elder Chief]";
+		mes "Well then, take care of yourself.";
+		next;
+		mes "[Elder Chief]";
+		mes "...................";
+		next;
+		mes "[Elder Chief]";
+		mes "Oh wait a minute my young warrior..... I almost forgot to give you this.  I reward all young fighters who train hard and come to visit me...";
+		next;
+		mes "^5555FF(recieved 10000 zeny)^000000";
+		set Zeny, Zeny +10000;
+		next;
+		mes "[Elder Chief]";
+		mes "Don't spend it all in one place now. Heh heh.";
+		close;
+	Tired:
+		mes "Oh, you've come back.  I appreciate you comming to visit me again but I'm afraid I'm much too tired to tell you anymore stories.";
+		next;
+		mes "[Elder Chief]";
+		mes "Please take care of yourself young one.";
+		next;
+		warp "payon_in01", 72, 153;
+		close;
+}
+
+// City Guide -------------------------------------------------
+payon,82,116,4	script	Guide#oldpay	708,{
+	cutin "pay_soldier",2;
+	mes "[Payon Soldier]";
+	mes "Welcome to Payon, the peacefull city hidden in the forest!.";
+	next;
+	mes "[Payon Soldier]";
+	mes "We are here to help you find your way.  Please feel free to speak to us anytime you need help.";
+M_Menu:
+	next;
+	menu "View Buildings",M_1, "Notice",M_2, "Cancel",M_End;
+
+	M_1:
+		mes "[Payon Soldier]";
+		mes "Do you want me to leave indications on the Mini-Map?";
+		next;
+		menu "No Thanks",sM_1a,"Yes Please",sM_1b;
+		
+		sM_1a:
+			set @COMPASS_CHECK,0;
+			goto L_Cont;
+
+		sM_1b:
+			set @COMPASS_CHECK,1;
+
+		L_Cont:
+		mes "[Payon Soldier]";
+		mes "Please choose a building to view.";
+		next;
+	sM_Menu:
+		menu 	"^FF0000Archer Guild^000000",M_1_1, "Armory",M_1_2, "Item Shop",M_1_3, "Inn",M_1_4, "Central Palace",M_1_5,
+			"Wipe all indications from mini-map.",M_1_6, "Cancel",M_End;
+
+		M_1_1:
+			mes "[Payon Soldier]";
+			mes "The 'Archer Guild' is located in Archer Village.  Go there if you want to be an archer.";
+			viewpoint 1,174,189,1,0xFF0000;
+			goto sL_Wipe;
+		M_1_2:
+			mes "[Payon Soldier]";
+			mes "The 'Armory' is located in the NorthWest corner of town.";
+			viewpoint 1,30,176,2,0xFF00FF;
+			goto sL_Wipe;
+		M_1_3:
+			mes "[Payon Soldier]";
+			mes "The 'Item Shop' is located in the Northwest corner of Archer Village.";
+			viewpoint 1,174,189,3,0xFF00FF;
+			goto sL_Wipe;
+		M_1_4:
+			mes "[Payon Soldier]";
+			mes "The 'Inn' is located in the Eastern part of town.";
+			viewpoint 1,139,93,4,0xFF00FF;
+			goto sL_Wipe;
+		M_1_5:
+			mes "[Payon Soldier]";
+			mes "The 'Central Palace' is the home of the Payon Royal Family.  Mind your manners when you enter the palace.";
+			viewpoint 1,89,166,5,0x00FF00;
+			goto sL_Wipe;
+		M_1_6:
+			set @COMPASS_CHECK, 2;
+
+		sL_Wipe:
+			if(@COMPASS_CHECK != 2) next;	// avoids a double 'next' when 'wipe indications' is chosen
+			if(@COMPASS_CHECK == 1) goto sM_Menu;
+			viewpoint 2,174,189,1,0xFF0000;
+			viewpoint 2,30,176,2,0xFF00FF;
+			viewpoint 2,174,189,3,0xFF00FF;
+			viewpoint 2,172,134,4,0xFF00FF;
+			viewpoint 2,89,166,5,0x00FF00;
+			if (@COMPASS_CHECK == 0) goto sM_Menu;
+			mes "[Payon Soldier]";
+			mes "All indications have been removed";
+			goto M_Menu;
+
+	M_2:
+		mes "[Payon Soldier]";
+		mes "We upgraded the Location Guide to the Newest Digital Style.  We hope you like this gorgeous new system.";
+		next;
+		mes "[Payon Soldier]";
+		mes "Don't forget to refer to the Mini-Map on the Upper-Right corner of your screen.";
+		next;
+		mes "[Payon Soldier]";
+		mes "If you can't see the Mini-Map, just hit ^0000ff'ctrl+tab'^000000 or Click the ^0000ff'map'^000000 button in the Basic Information Window";
+		mes "Remeber to use the ^ff0000+,-^000000 buttons to adjust the map to your liking.";
+		goto M_Menu;
+
+	M_End:
+		mes "[Payon Soldier]";
+		mes "Bon Voyage, Wanderer.";
+		cutin "pay_soldier",255;
+		close;
+}
+
+
+//############################################################################################################################################################
+// Job quest related
+//############################################################################################################################################################
+/*
+// Archer job quest -------------------------------------------------
+payon_in02,64,71,4	script	Archer Guildsman#oldpay	59,{
+	mes "[Archer Guildsman]";
+	if(Class==Job_Novice && job_archer_q == 1) goto L_Check;
+	mes "Good Day. How may I help you?";
+	next;
+	menu "I would like to become an Archer.",M_0,"What are the Requirements?",M_1,"Never mind.",M_End;
+
+	M_0:
+		mes "[Archer Guildsman]";
+		if(Class == Job_Archer) goto sL_Archer;
+		if(Class != Job_Novice) goto sL_Other;
+
+		mes "You have made an execellent job choice.";
+		mes "Please submit your resume so that I can check your qualifications.";
+		next;
+		mes "(You hand over your resume)";
+		next;
+		mes "[Archer Guildsman]";
+		if(JobLevel < 10) goto sL_LowLvl;
+		set job_archer_q,1;
+		mes "Looks good.  You have the necesssary skills to become an archer....";
+		next;
+		mes "[Archer Guildsman]";
+		mes "but.... ";
+		next;
+		mes "[Archer Guildsman]";
+		mes "you must first pass a test in order to do so.  I hope you didn't think becoming an archer was going to be that easy.  Ha ha!";
+		next;
+		mes "[Archer Guildsman]";
+		mes "A well made bow is essential for a good archer, and high quality wood is in turn essential for a well made bow.";
+		mes "You will be tested on how well you are able to gather high quality wood.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "The higher the quality of the wood you gather the higher your score.";
+		mes "You must recieve a score of ^ff0000at least 25^000000 in order to ^ff0000pass the test^000000.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "You can find wood by battling ^0000ff'Willows'^000000, a type of tree monster found outside of town in Payon forest.";
+		mes "They drop the wood in the form of^0000ff 'Trunks'^000000.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "There are a total of 4 different kind of trunks each with a different point value.  Gather a variety of trunks and bring them back here for me to grade.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "I must warn you, the Willows can be tough monsters so be carefull and remember to rest and use your healing items.  Good luck!";
+		close;
+
+		sL_Archer:
+			mes "Your free spirited nature tells me that you're already an archer....that and the bow and arrow in your hands...Haha";
+			emotion 18;
+			close;
+
+		sL_Other:
+			mes "I'm sorry but you cannot leave your current job to become an Archer...though I can understand why you would want to do so."; 
+			close;
+		
+		sL_LowLvl:
+			mes "It seems that you are not qualified to become an Archer yet.  Please take a look at the job requirments once more.";
+			close;
+
+
+	M_1:
+		mes "[Archer Guildsman]";
+		if(Class == Job_Archer) goto sM_1a;
+		if(Class != Job_Novice) goto sM_1b;
+		mes "Let me explain the requirements for becoming an archer to you:";
+		next;
+		mes "[Archer Guildsman]";
+		mes "First of all, you have to have a job level of 9 and you must learn all of the skills that come with that job level.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "Secondly, you will have to take a test that will determine whether or not you have the skills to become an archer.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "Those are the requirements.  Fullfill them and you will be able to live life as only an Archer can.";
+		close;
+
+		sM_1a:
+			mes "Have you already forgotten how you became an Archer?....";
+			emotion 1;
+			close;
+		sM_1b:
+			mes "Telling you the requirements won't help you become an Archer since you already have another job.";
+			close;	
+
+	M_End:
+		mes "[Archer Guildsman]";
+		mes "Ok then, take care.";
+		close;
+
+L_Check:
+	mes "Oh, I see you've come back.";
+	next;
+	mes "[Archer Guildsman]";	
+	if((CountItem(1066) == 0) && (CountItem(1067) == 0) && (CountItem(1068) == 0) && (Countitem(1019) == 0)) goto sL_NotRdy;
+	if(SkillPoint > 0) goto sL_SkPoints;
+	set @Trunk1, CountItem(1066)*5;
+	set @Trunk2, CountItem(1067)*3;
+	set @Trunk3, CountItem(1068)*2;
+	set @Trunk4, CountItem(1019);
+	set @TrunkTotal, @Trunk1 + @Trunk2 + @Trunk3 + @Trunk4;
+
+	mes "Lets see.....";
+	next;
+	mes "[Archer Guildsman]";
+	mes "You have:";
+	mes "^0000FF" +Countitem(1066)+ "^000000 Fine grained trunks for ^ff0000" +@Trunk1+ "^000000 points,";
+	mes "^0000FF" +Countitem(1067)+ "^000000 Solid trunks for ^ff0000" +@Trunk2+ "^000000 points,";
+	mes "^0000FF" +Countitem(1068)+ "^000000 Barren trunks for ^ff0000" +@Trunk3+ "^000000 points,";
+	mes "^0000FF" +Countitem(1019)+ "^000000 Trunks for ^ff0000" +@Trunk4+ "^000000 points.....";
+	next;
+	mes "[Archer Guildsman]";
+	mes "That gives you a total score of: ^ff0000" +@TrunkTotal+"^000000";
+	next;
+	mes "[Archer Guildsman]";
+	if(@TrunkTotal < 25) goto sL_Failed;
+
+	mes "Very good!  You have passed the test.  Congratulations, you are now fully qualified to become an archer.";
+	emotion 21;
+	next;
+	mes "[Archer Guildsman]";
+	mes "I will now transform you...";
+	next;
+	JobChange Job_Archer;
+	set job_archer_q, 0;
+	mes "[Archer Guildsman]";
+	mes "In exchange for the trunks you brought in I will give you this Bow and some arrows.  Please take them.";
+	next;
+	getitem 1702,1;
+	getitem 1750,200;
+	delitem 1066, countitem(1066);
+	delitem 1067, countitem(1067);
+	delitem 1068, countitem(1068);
+	delitem 1019, countitem(1019);
+	mes "[Archer Guildsman]";
+	mes "An Archer knows no bounds so live your life to its fullest.  I know you will make an exellent archer.";
+	next;
+	mes "[Archer Guildsman]";
+	mes "Farewell and good luck on your journey.";
+	close;
+
+	sL_NotRdy:
+		mes "What?  You didn't bring any trunks back for me to grade?  Let me explain the test requirements again just in case you forgot...";
+		emotion 1;
+		next;
+		mes "[Archer Guildsman]";
+		mes "There are a total of ^5555FF4 different kind of Trunks^000000 each with a different point value.";
+		mes "Gather a variety of Trunks and bring them back here for me to grade.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "You can find Trunks by battling ^0000ff'Willows'^000000, a type of tree monster found outside of town in Payon forest.";
+		close;
+	sL_SkPoints:
+		mes "You need to use up all of your skill points before I can make you an Archer.";
+		close;
+	sL_Failed:
+		mes "I'm sorry but your score is too low.  I'm afraid that you have failed the test.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "Fortunatley for you I'm somewhat softhearted so I'll give you another chance.  Go gather some more trunks and come back.";
+		next;
+		mes "[Archer Guildsman]";
+		mes "Hopefull they will be of a high enough quality for you to pass the test.";
+		close;
+
+}
+*/
+
+//Blacksmith job quest: Tilpitz ======================================================
+/*
+payon,151,39,4	script	Tilpitz#oldpay	59,{
+	if (BLACKSM_Q == 3) goto L_Start;
+
+	mes "[Tilpitz]";
+	mes "When's that bow coming..........";
+	mes "How long ago did I order this thing >_>";
+	next;
+	mes "[Tilpitz]";
+	mes "There's no one that can make it execpt 'him'.........";
+	mes "but, WHEN WILL IT COME >_>";
+	next;
+	mes "[Tilpitz]";
+	mes " T_T ";
+	close;
+L_Start:
+	if(BLACKSM_Q2 != 4) goto L_Wrong;
+	if(countitem(1073) == 1) goto L_Done;
+	if(countitem(1713) < 1) goto L_NoItem;
+	mes "[Tilpitz]";
+	mes ".......Ohhh! It's finally here!!!";
+	mes "Let me see it!";
+	delitem 1713,1;
+	set BLACKSM_Q3, 1;
+	next;
+	mes "[Tilpitz]";
+	mes "Wow....";
+	mes "Not bad......not bad at all!!";
+	next;
+	mes "[Tilpitz]";
+	mes "Look at this curve!! It's wonderful!!";
+	mes "Oh, I love this";
+	next;
+	mes "[Tilpitz]";
+	mes "Thank you!!!";
+	next;
+	mes "scribble scribble rip";
+	next;
+	getitem 1073,1;
+	mes "[Tilpitz]";
+	mes "Here's the receipt! Thank you again!!!!!";
+	close;
+
+	L_NoItem:
+		mes "[Tilpitz]";
+		mes "Oooh! The delivery is here? What?..... You don't have anything???.....";
+		emotion 1;
+		next;
+		mes "[Tilpitz]";
+		mes "Don't play bad jokes on people!";
+		emotion 7;
+		close;
+	L_Wrong:
+		mes "[Tilpitz]";
+		mes "What's this? You have a delivery.... for someone else..... Then why not deliver it to that person instead???........";
+		emotion 4;
+		close;
+	L_Done:
+		mes "[Tilpitz]";
+		mes "More I look at it, more beautiful it gets!!! ";
+		close;
+}
+*/
+
+//Hunder Job Quest: Guild Master - Last Test ======================================================
+/*
+payon_in02,21,31,1	script	Guild Master#oldpay	59,{
+	if(Class == Job_Archer) goto L_Archer;
+	if(Class == Job_Hunter) goto L_Hnt;
+
+L_Other:
+	mes "[Hunter]";
+	mes "Is there something you want of me? I'm have some buisiness to take care of, so please be quiet.";
+	emotion 20;
+	close;
+
+L_Hnt:
+	mes "[Guild Master]";
+	mes "Ah, it's you again, " + strcharinfo(0) + "! Good to see you're well.  Me?  I'm still busy as usual.";
+	next;
+	mes "[Guild Master]";
+	mes "Well I've gota get back to work.  Stay safe.";
+	close;
+
+L_Archer:
+	mes "[Guild Master]";
+	if(HUNTER_Q == 1) goto L_Test2;
+	if(HUNTER_Q == 2) goto L_Start;
+	if(HUNTER_Q == 3) goto L_Done;
+	mes "You want to be a hunter bad, don't you? In my days, I worked for over a month to become a hunter, hehe.";
+	next;
+	mes "[Guild Master]";
+	mes "If you don't have anything else I suggest you go back to the guild!";
+	close;
+
+L_Start:
+	if(HUNTER_Q2 == 1) goto L_ReTest;
+	if(HUNTER_Q2 == 2) goto L_Passed;
+	mes "So, you've come to take the test?  I see.... well then, do you have any questions before we get started?";
+	M_Menu:
+	next;
+	menu "What's the test about?",M_0, "Anything I should know?",M_1, "Start the test.",M_Start;
+
+	M_0:
+		mes "[Guild Master]";
+		mes "This is a test of speed, agility, and target recogniton.  You will be warped to a room full of monsters.";
+		mes "You will have to ^5533FFkill 4^000000 of those monsters but not just any 4.  You will need to kill the ones called, ^5533FFJob Change Monster^000000.";
+		next;
+		mes "[Guild Master]";
+		mes "Kill the wrong one and you will fail the test.  To make things even harder, we have set traps all over the room.";
+		mes "Stepping on a trap will also result in failure.";
+		next;
+		mes "[Guild Master]";
+		mes "One more important note.... You must complete the test within ^FF55333 minutes^000000.";
+		next;
+		mes "[Guild Master]";
+		mes "This will teach you the important abilities a hunter needs, mobilitiy and tracking.";
+		goto M_Menu;
+	M_1:
+		mes "[Guild Master]";
+		mes "Only one person can take the test at time.  If someone is currently taking the test, just enter the chat room and wait.";
+		mes "You will automatically be warped to the testing room when the other player either finishes or fails.";
+		next;
+		mes "[Guild Master]";
+		mes "Make sure you aim carefully.  There will be a lot of monsters and you don't want to hit the wrong one.";
+		mes "Keeping track of the monsters' names will be very important in this test.";
+		next;
+		mes "[Guild Master]";
+		mes "And ALWAYS watch your step!  There are traps everywhere!";
+		goto M_Menu;
+	M_Start:
+		if (countitem(1751) <= 5) callsub sF_GetArrows;
+		mes "[Guild Master]";
+		mes "Good luck, I'll send you to the test room now.";
+		next;
+		set HUNTER_Q2, 1;
+		savepoint "payon_in02", 16, 26;
+		warp "job_hunte.gat", 176, 22;
+		end;
+
+		sF_GetArrows:
+			mes "[Guild Master]";
+			mes "This is where your hard work in the 2nd test payed off.  Here are some arrows, made with the items you collected.";
+ 			getitem 1751, 200;
+			next;
+			return;
+
+L_ReTest:
+	mes "Ah, you're one of the archers that failed.  Here, let me heal you wounds...";
+	next;
+	mes "[Guild Master]";
+	mes "You're ready right?";
+	percentheal 100,100;
+	goto M_Menu;
+
+L_Passed:
+	mes "I see you suceeded. Great job! Now I will give you the proof of your success, the ^5533FFNecklace of Wisdom^000000.";
+	emotion 21;
+	next;
+	mes "[Guild Master]";
+	mes "Here you go.  Make sure you show this to Hunter Sharon or you WON'T be able to become a Hunter.";
+	getitem 1007,1;
+	next;
+	mes "[Guild Master]";
+	mes "Anyway, I've got some work left to do here so I'll see you later.";
+	set HUNTER_Q, 3;
+	set HUNTER_Q2, 0;
+	close;
+
+L_Test2:
+	mes "Yes? What would a archer want from me? The guild didn't send me a msg about you.";
+	mes "Did you talk to the guild recruiters and get all the items needed? You have to get them the items first.";
+	close;
+L_Done:
+	mes "Hmm? What is it? Don't waste your time here, go on and become a Hunter already....";
+	close;
+
+}
+*/
+
+//############################################################################################################################################################
+// Quests
+//############################################################################################################################################################
+// 'Pretend Murdered' Quest
+//============================================================
+payon_in01,103,107,4	script	Granny#oldpay	78,{
+	if (checkweight(908,1) == 0) {
+		mes "^3355FFWait a second! Right now, you're carrying too many items with you. Please come back after putting some of your things into Kafra Storage.^000000";
+		close;
+	}
+	if (countitem(1049) > 3) {
+		mes "[Granny]";
+		mes "I wish I could make some clothing for my grandchildren for the festival season...";
+		next;
+		mes "[Granny]";
+		mes "Oh! Would you give me your ^3355FFSkirt of Virgin^000000? I'd need four of them. Please, I'm begging you.";
+		next;
+		switch(select("Alright.:No way!")) {
+		case 1:
+			delitem 1049,4; //Skirt_Of_Virgin
+			mes "[Granny]";
+			mes "Oh! Thank you so much~ Now I can make some clothes for Kitty Cutty~";
+			next;
+			mes "[Granny]";
+			mes "Ah, Wait! I almost forgot. I was quite a popular actress back in my youth. My actor friends gave me a wedding present when I left the Troupe. I've kept it to remind me of those precious times.";
+			next;
+			mes "[Granny]";
+			mes "If it's okay...";
+			mes "I'd like to give you this.";
+			next;
+			getitem 2293,1; //Pretend_Murdered
+			mes "[Granny]";
+			mes "Goodbye, adventurer~!";
+			mes "Thank you for making an old woman so happy...";
+			close;
+		case 2:
+			mes "[Granny]";
+			mes "*Sigh* How can I get ^3355FFSkirt of Virgin^000000 by myself? I'm just so weak and feeble, even rolling in my rocking chair exhausts me. *Sniff* All I want is to make my grandchildren happy...";
+			close;
+		}
+	}
+	else {
+		mes "[Granny]";
+		mes "I gather Mushrooms on the Mountain of Payon everyday. Time passes and before I know it, it's already fesitval season. I wish I could make clothing for my family this time of the year.";
+		next;
+		mes "[Granny]";
+		mes "...";
+		mes "But for that, I need ^3355FF4 Skirt of Virgin^000000...";
+		next;
+		mes "[Granny]";
+		mes "Young traveler, please help me. When you find some ^3355FFSkirt of Virgin^000000, please bring them to me. I'd really appreciate it...";
+		close;
+	}
+}
+
+//Ear Muffs Quest-----------------------------
+payon_in01,103,78,4	script	Mystic Lady#oldpay	75,{
+	mes "[Mystic Lady]";
+	mes "My family has produced and sold the special Winter product ^3355FFEar Muffs^000000 for many years. We just moved here, but the weather is always warm so we can hardly make a living.";
+	next;
+	mes "[Mystic Lady]";
+	mes "If you plan to travel to colder regions, I suggest that you bring some ^3355FFEar Muffs^000000...";
+	emotion ET_THINK;
+	next;
+	mes "[Mystic Lady]";
+	mes "Ear Muffs are my family's specialty, and we provide it to customers who have ^FF33551 Cursed Ruby^000000, ^3311AA1 Headset,^000000 ^3355FF 200 Feathers^000000 and ^DDDD005000 Zeny^000000.";
+	emotion ET_THINK;
+	next;
+	switch(select("Oh Yeah? That sounds good.:No thank you, Ma'am.")) {
+	case 1:
+		if ((countitem(724) > 0) && (countitem(949) > 199) && (countitem(5001) > 0) && (Zeny > 4999)) {
+			mes "[Mystic Lady]";
+			delitem 724,1; //Cardinal_Jewel_
+			delitem 949,200; //Feather
+			delitem 5001,1; //Headset
+			set Zeny,Zeny-5000;
+			mes "Here, I will give you this pre-made one.";
+			getitem 2283,1; //Ear_Mufs
+			next;
+			mes "[Mystic Lady]";
+			mes "Thank you for buying our product. You won't regret purchasing our Ear Muffs: Satisfaction guaranteed~";
+			emotion ET_THINK;
+			close;
+		}
+		else {
+			mes "[Mystic Lady]";
+			mes "Oh dear...";
+			mes "You don't have enough money or items. Unfortunately, we can't give any discounts. Please understand that we have to make a living...";
+			emotion ET_THINK;
+			close;
+		}
+	case 2:
+		mes "[Mystic Lady]";
+		mes "That's fine.";
+		mes "I believe we";
+		mes "will meet again.";
+		mes "...One of these days.";
+		emotion ET_THINK;
+		close;
+	}
+}
+
+// Oxygen Mask Quest--------------------------------------------
+payon_in02,25,71,4	script	Young Man#2oldpay	86,{
+	if (countitem(701) > 4) {
+		mes "[Young Man]";
+		mes "ArrrGggghh!";
+		mes "Ah, No I can't...";
+		next;
+		mes "[Young Man]";
+		mes "*Huk*";
+		mes "Now even my eyes have gone mad!! Why do these bugs suddenly seem so cute?! Nooooooo~!!!";
+		next;
+		switch(select("Show Ora Ora:Give Ora Ora:Cancel")) {
+		case 1:
+			mes "[Young Man]";
+			mes "Oooooohhhh!!!";
+			mes "Is, is this";
+			mes "the one?!";
+			mes "This is...";
+			mes "Ora Ora!!";
+			next;
+			mes "[Young Man]";
+			mes "I'll make it short! Give it to me, and I will give you my treasure! So how's my idea? Wanna deal?";
+			close;
+		case 2:
+			if (countitem(701) > 4) {
+				delitem 701,5; //Ora_Ora
+			}
+			mes "[Young Man]";
+			mes "Muhahahahah!!!";
+			mes "I finally have this!";
+			mes "Ora Ora!";
+			mes "Stupid and Disgusting";
+			mes "Thief Bugs!!";
+			mes "You will pay!!!";
+			next;
+			mes "[Young Man]";
+			mes "Huk...Huk...";
+			mes "Sorry, I was out of control with pleasure for a while. Now, I will give my treasure as promised.";
+			next;
+			getitem 5004,1; //Oxygen_Mask
+			mes "[Young Man]";
+			mes "When you wear this over your mouth and start to breathe, it filters junk out before getting to your lungs.";
+			next;
+			mes "[Young Man]";
+			mes "Kakakakakaka!";
+			mes "I can't wait";
+			mes "to use this";
+			mes "Ora Ora!";
+			close;
+		case 3:
+			mes "[Young Man]";
+			mes "Huhuhuhuhu...";
+			mes "What if I can't get rid of all these Thief Bugs? I might even grow to love them... *Huk*";
+			close;
+		}
+	}
+	else {
+		mes "[Young Man]";
+		mes "Wahhhhhh! I, I...";
+		mes "I can't take it any more!";
+		mes "You little stinky filthy bastards!";
+		next;
+		switch(select("Continue:Cancel")) {
+		case 1:
+			mes "[Young Man]";
+			mes "Oh man...";
+			mes "It all started when my parents passed away when I was a little kid. Early on I had to work for a living, and had a really hard time.";
+			next;
+			mes "[Young Man]";
+			mes "I've worked for 10 years in hopes of buying my dream house where I could find some sense of peace and comfort again. Eventually I thought I had enough zeny to afford my very own sweet home.";
+			next;
+			mes "[Young Man]";
+			mes "Unfortunately I didn't have enough money to buy the nice house that I had my eye on. But then, I found this house, which was bigger and cheaper than the first. I bought it without thinking...";
+			next;
+			mes "[Young Man]";
+			mes "Sweet Jesus! Turns out, it's a Heaven for Thief Bugs!!!";
+			next;
+			mes "[Young Man]";
+			mes "I tried to do everything I could do. I coaxed them, killed them, but it only brought peace for a moment! I even tried to burn this house down...!";
+			next;
+			mes "[Young Man]";
+			mes "*Gasp* I mean, really, do I need ^3355FF Ora Ora^000000 to get rid of them? People say it is very rarely seen in distant countries.";
+			next;
+			mes "[Young Man]";
+			mes "If I could afford 5 of them, I won't have to be frustrated with these disgusting bugs any more...";
+			close;
+		case 2:
+			mes "[Young Man]";
+			mes "This never ending fight with the bugs has really exhausted me. I give up. Do as you wish you scumbags!";
+			close;
+		}
+	}
+}
+
+// Derivuchi Cap(Hat of Petite Diablo), Helm of Angel --------------------------------------------------------------------------
+payon_in01,123,41,2	script	Young Man#3oldpay	89,{
+	mes "[Young man]";
+	mes "...What is it?";
+	next;
+	switch(select("Can you make me a special item?:Hey.")) {
+	case 1:
+		mes "[Young man]";
+		mes "Huh? So you already know what I specialize in, eh? I suppose there's no need for the usual secrecy. Tell me what you want.";
+		next;
+		switch(select("Helm of Angel.:Deviruchi Cap.:I will come next time.")) {
+		case 1:
+			mes "[Young man]";
+			mes "1 Helm (with slot).";
+			mes "1 Angel Wing.";
+			mes "5 Fang of Garm.";
+			mes "That's all I require.";
+			next;
+			mes "[Young man]";
+			mes "Wait! Just so you know, I don't care if the items in your inventory have been upgraded, or have cards attached.";
+			next;
+			mes "[Young man]";
+			mes "I mean, any cards or upgrades in the items I will use to make something for you will be lost once I make the item. So be careful when you hand stuff over to me.";
+			next;
+			mes "[Young man]";
+			mes "Did you gather the items? Then hand them over.";
+			next;
+			switch(select("Give him the items.:Don't give him the items.")) {
+			case 1:
+				if ((countitem(2229) > 0) && (countitem(2254) > 0) && (countitem(7036) > 4)) {
+					mes "[Young man]";
+					mes ".....Hm.";
+					mes "Fine, here's your Helm of Angel. Take it.";
+					delitem 2229,1; //Helm_
+					delitem 2254,1; //Angelic_Chain
+					delitem 7036,5; //Fang_Of_Garm
+					close2;
+					getitem 5025,1; //Helm_Of_Angel
+					end;
+				}
+				else {
+					mes "[Young man]";
+					mes "...The number of items is not right. You better double check.";
+					close;
+				}
+			case 2:
+				mes "[Young man]";
+				mes "Do as you wish...";
+				close;
+			}
+		case 2:
+			mes "[Young man]";
+			mes "600 Little Evil Horn.";
+			mes "40 Talon of Griffon.";
+			mes "That's all I require.";
+			next;
+			mes "[Young man]";
+			mes "Wait! Just so you know, I don't care if the items in your inventory have been upgraded, or have cards attached.";
+			next;
+			mes "[Young man]";
+			mes "I mean, any cards or upgrades in the items I will use to make something for you will be lost once I make the item. So be careful when you hand stuff over to me.";
+			next;
+			mes "[Young man]";
+			mes "Did you gather the items? Then hand them over.";
+			next;
+			switch(select("Give him the items.:Don't give him the items.")) {
+			case 1:
+				if ((countitem(1038) > 599) && (countitem(7048) > 39)) {
+					mes "[Young man]";
+					mes ".....Hm. Here's your Deviruchi Hat. Please take it.";
+					delitem 1038,600; //Petite_DiablOfs_Horn
+					delitem 7048,40; //Talon_Of_Griffin
+					close2;
+					getitem 5038,1; //Deviruchi_Cap
+					end;
+				}
+				else {
+					mes "[Young man]";
+					mes "...The number of items isn't right. You better double check.";
+					close;
+				}
+			case 2:
+				mes "[Young man]";
+				mes "Do as you wish...";
+				close;
+			}
+		case 3:
+			mes "[Young man]";
+			mes "Hm. Alright.";
+			mes "Then we shall meet again.";
+			close;
+		}
+	case 2:
+		mes "[Young man]";
+		mes "Hm.";
+		mes "Take care.";
+		close;
+	}
+}
+
+// Mr Smile ----------------------------------------------------------------------------------------------
+payon,84,153,4	duplicate(SmileHelper)	Smile Assistance#payold	92
+
+// Bunny Band --------------------------------------------------------------------------------------------
+payon,97,116,4	duplicate(bunny)	Kafra Employee#bunnyold	83
+
+
+// Juice Maker -------------------------------------------------------------------------------------------
+payon_in01,174,113,2	script	Marx Hansen#juiceold	86,{
+	if (checkweight(1201,1) == 0) {
+		mes "- Wait a moment! -";
+		mes "- Currently you're carrying -";
+		mes "- too many items with you. -";
+		mes "- Please come back later -";
+		mes "- after you put some items into kafra storage. -";
+		close;
+	}
+	if (MISC_QUEST&1) {
+		mes "[Merchant Marx Hansen]";
+		mes "Welcome.";
+		mes "Did you come to";
+		mes "process fruits as well?";
+		next;
+		switch(select("Make Juice.:Talk and get information about fruit processing.:Cancel.")) {
+		case 1:
+			mes "[Merchant Marx Hansen]";
+			mes "What kind of fruit juice would you like to make?";
+			next;
+			switch(select("Apple Juice:Banana Juice:Carrot Juice:Grape Juice:Cancel")) {
+			case 1:
+				set .@fruit,512;
+				set .@juice,531;
+				break;
+			case 2:
+				set .@fruit,513;
+				set .@juice,532;
+				break;
+			case 3:
+				set .@fruit,515;
+				set .@juice,534;
+				break;
+			case 4:
+				set .@fruit,514;
+				set .@juice,533;
+				break;
+			case 5:
+				mes "[Merchant Marx Hansen]";
+				mes "Well then...";
+				mes "See you next time.";
+				close;
+			}
+			if (countitem(.@fruit) == 0 || countitem(713) == 0 || Zeny < 3) {
+				mes "[Merchant Marx Hansen]";
+				mes "Oh no...";
+				mes "You don't have all the necessary materials. To make "+getitemname(.@juice)+", I need 1 "+getitemname(.@fruit)+" and 1 Empty Bottle. I will also need a 3 zeny fee.";
+				next;
+				mes "[Merchant Marx Hansen]";
+				mes "When you have prepared everything, I will blend the fruit to give you delicious juice.";
+				close;
+			}
+
+			mes "[Merchant Marx Hansen]";
+			mes "How many would you like?";
+			next;
+			switch(select("As many as I can.:I want a certain amount.:Cancel.")) {
+			case 1:
+				set .@make,countitem(.@fruit);
+				if (countitem(713) < .@make) set .@make, countitem(713);
+				if (Zeny/3 < .@make) set .@make, Zeny/3;
+				break;
+			case 2:
+				mes "[Merchant Marx Hansen]";
+				mes "Choose a number less than 100. If you don't want to, put '0'. You can make up to " + countitem(.@fruit) + " bottles of juice.";
+				next;
+				while(1) {
+					input .@input;
+					if (.@input == 0) {
+						mes "[Merchant Marx Hansen]";
+						mes "Well then...";
+						mes "Come again.";
+						close;
+					}
+					else if (.@input > 100) {
+						mes "[Merchant Marx Hansen]";
+						mes "More than 100 bottles is impossible. Choose a different amount.";
+						next;
+					}
+					else {
+						break;
+					}
+				}
+				set .@make,.@input;
+				break;
+			case 3:
+				mes "[Merchant Marx Hansen]";
+				mes "Well then...";
+				mes "Come again.";
+				close;
+			}
+
+			set .@total_zeny,3 * .@make;
+
+			if (countitem(.@fruit) < .@make || countitem(713) < .@make || Zeny < .@total_zeny) {
+				mes "[Merchant Marx Hansen]";
+				mes "Oh no...";
+				mes "You don't have all the necessary materials. I can't help a situation like this. I guess you collect what you need.";
+				close;
+			}
+			delitem .@fruit,.@make;
+			delitem 713,.@make;
+			set Zeny, Zeny-.@total_zeny;
+			getitem .@juice,.@make;
+
+			mes "[Merchant Marx Hansen]";
+			mes "Here you go! Fresh and delicious juice as promised. It should be very refreshing and palatable.";
+			next;
+			mes "[Merchant Marx Hansen]";
+			mes "Well then...";
+			mes "Come again.";
+			close;
+		case 2:
+			mes "[Merchant Marx Hansen]";
+			mes "Before humans were able to develop such vast societies, they gathered fruit from trees to survive. Fruits may have been nature's blessing that allowed us to exist in the world.";
+			next;
+			mes "[Merchant Marx Hansen]";
+			mes "Since life became so prosperous, the younger generation seems not to eat fruit any more. So, I started thinking of ways to make fruit easier to eat.";
+			next;
+			mes "[Merchant Marx Hansen]";
+			mes "I realized that when you make fruit juice, it's more convenient to eat and has a much better taste.";
+			next;
+			mes "# Fruit Juice Information #";
+			mes "^CC4E5C- Apple Juice -^000000";
+			mes "Apple x 1 ea, Empty Bottle x 1 ea, 3 zeny.";
+			mes "^E3CF57- Banana Juice -^000000";
+			mes "Banana x 1 ea, Empty Bottle x 1 ea, 3 zeny.";
+			mes "^ED9121- Carrot Juice -^000000";
+			mes "Carrot x 1 ea, Empty Bottle x 1 ea, 3 zeny.";
+			mes "^CC00FF- Grape Juice -^000000";
+			mes "Grape x 1 ea, Empty Bottle x 1 ea, 3 zeny.";
+			close;
+		case 3:
+			mes "[Merchant Marx Hansen]";
+			mes "Hey!";
+			mes "If you visit";
+			mes "somebody, talk to them!";
+			close;
+		}
+	}
+	else {
+		mes "[Merchant Marx Hansen]";
+		mes "Welcome.";
+		mes "How may I help you?";
+		next;
+		if (select("Talk:Cancel") == 1) {
+			mes "[Merchant Marx Hansen]";
+			mes "Before humans were able to develop such vast societies, they gathered fruit from trees to survive. Fruits may have been nature's blessing that allowed us to exist in the world.";
+			next;
+			mes "[Merchant Marx Hansen]";
+			mes "Since life became so prosperous, the younger generation seems not to eat fruit any more. So, I started thinking of ways to make fruit easier to eat.";
+			next;
+			mes "[Merchant Marx Hansen]";
+			mes "I realized that when you make fruit juice, it's more convenient to eat and has a much better taste.";
+			close;
+		}
+		mes "[Merchant Marx Hansen]";
+		mes "Hey!";
+		mes "If you vist";
+		mes "somebody, talk to them!";
+		close;
+	}
+}
