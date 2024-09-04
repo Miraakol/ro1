@@ -554,6 +554,7 @@ morocc_in,73,38,6	script	Aragham	4W_M_03,{
 	}
 }
 
+/*
 payon,144,173,5	script	Antonio	4_M_ORIENT01,{
 	if( getbattleflag( "feature.refineui" ) ){
 		mes "[Antonio]";
@@ -566,6 +567,7 @@ payon,144,173,5	script	Antonio	4_M_ORIENT01,{
 		end;
 	}
 }
+*/
 
 alberta_in,28,58,0	script	Fredrik	4_M_03,{
 	if( getbattleflag( "feature.refineui" ) ){
@@ -975,10 +977,12 @@ prt_in,56,68,5	script	Vurewell	86,{
 	callfunc "phramain","Vurewell";
 	end;
 }
+/*
 payon,145,178,3	script	Begnahd	88,{
 	callfunc "phramain","Begnahd";
 	end;
 }
+*/
 morocc_in,63,32,6	script	Sade	99,{
 	callfunc "phramain","Sade";
 	end;
@@ -1091,10 +1095,12 @@ prt_in,63,69,3	script	Dietrich	84,{
 	callfunc "orimain","Dietrich";
 	end;
 }
+/*
 payon,137,178,5	script	Hakhim	88,{
 	callfunc "orimain","Hakhim";
 	end;
 }
+*/
 morocc_in,72,32,6	script	Abdula	99,{
 	callfunc "orimain","Abdula";
 	end;
@@ -1200,10 +1206,12 @@ moc_ruins,107,94,4	script	Repairman#moc	99,{
 	end;
 }
 
+/*
 payon,143,165,4	script	Repairman#pay	88,{
 	callfunc "repairmain","Repairman";
 	end;
 }
+*/
 
 prt_in,63,54,2	script	Repairman#prt	86,{
 	callfunc "repairmain","Grendal";

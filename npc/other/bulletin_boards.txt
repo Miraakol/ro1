@@ -76,6 +76,7 @@ izlu2dun,104,92,5	script	Bulletin Board#4	837,{
 	close;
 }
 
+/*
 payon,178,108,5	script	Bulletin Board#06	837,{
 	mes "[Payon: The Mountain City]";
 	mes "Welcome to Payon, the mountain city. Payon has recently been renovated, so we hope you enjoy the clean, nice streets and buildings.";
@@ -97,6 +98,7 @@ payon,178,108,5	script	Bulletin Board#06	837,{
 	mes "Enjoy your travels."; 
 	close;
 }
+*/
 
 pay_arche,79,31,5	script	Bulletin Board#07	837,{
 	mes "[Archer Village]"; 

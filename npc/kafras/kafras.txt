@@ -187,6 +187,7 @@ morocc,160,258,4	script	Kafra::kaf_morocc2	114,{
 
 // Payon
 //============================================================
+/*
 payon,181,104,4	script	Kafra Employee::kaf_payon	113,{
 	cutin "kafra_05",2;
 	callfunc "F_KafSet";
@@ -227,6 +228,7 @@ pay_arche,55,123,0	script	Kafra Employee::kaf_payon3	4_F_KAFRA1,{
 	savepoint "pay_arche",49,144,1,1;
 	callfunc "F_KafEnd",0,1,"at the Payon Dungeon";
 }
+*/
 
 // Prontera
 //============================================================

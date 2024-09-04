@@ -77,11 +77,13 @@ geffen_in,70,64,5	script	Inn Employee#Cena	53,{
 }
 
 //======================= Payon ======================================
+/*
 payon_in01,132,62,5	script	Inn Employee#Ahee	53,{
 
 	callfunc "F_InnMaid","[Employee Ahee]","Payon Inn","payon_in01",136,61;
 	warp "payon_in01",132,11; end;
 }
+*/
 
 //======================== Morocc ====================================
 // North East --------------------------
