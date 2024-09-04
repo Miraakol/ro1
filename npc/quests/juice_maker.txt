@@ -169,6 +169,7 @@ prt_in,47,173,3	script	Morrison#juice	97,{
 	close;
 }
 
+/*
 payon_in03,188,146,5	script	Marx Hansen#juice	86,{
 	if (checkweight(1201,1) == 0) {
 		mes "- Wait a moment! -";
@@ -332,6 +333,7 @@ payon_in03,188,146,5	script	Marx Hansen#juice	86,{
 		close;
 	}
 }
+*/
 
 //============================================================ 
 // Old changelog
