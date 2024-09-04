@@ -2008,7 +2008,7 @@ ACMD_FUNC(go)
 		{ MAP_PRONTERA,    156, 191 }, //  0=Prontera
 		{ MAP_MORROC,      156,  93 }, //  1=Morroc
 		{ MAP_GEFFEN,      119,  59 }, //  2=Geffen
-		{ MAP_PAYON,       162, 233 }, //  3=Payon
+		{ MAP_PAYON,       68, 99 }, //  3=Payon
 		{ MAP_ALBERTA,     192, 147 }, //  4=Alberta
 #ifdef RENEWAL
 		{ MAP_IZLUDE,      128, 146 }, //  5=Izlude (Renewal)
