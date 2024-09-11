@@ -32,12 +32,12 @@ cmd_fild02,94,85,40,80	monster	Raggler	1254,2
 cmd_fild02,0,0	monster	Shellfish	1074,35
 cmd_fild02,93,82,40,80	monster	Shellfish	1074,5
 cmd_fild02,0,0	monster	Crab	1073,30
-cmd_fild02,0,0	monster	Galapago	1391,30
+//cmd_fild02,0,0	monster	Galapago	1391,30
 cmd_fild02,95,89,40,80	monster	Cornutus	1067,5,5000,60000
 cmd_fild02,279,78,100,20	monster	Cornutus	1067,10,5000,60000
 cmd_fild02,73,100,40,100	monster	Aster	1266,5
 cmd_fild02,200,130,150,50	monster	Aster	1266,5
-cmd_fild02,0,0	monster	Mobster	1313,1,5000,2400000
+//cmd_fild02,0,0	monster	Mobster	1313,1,5000,2400000
 
 //==================================================
 // cmd_fild03 - Zenhai Marsh
@@ -47,7 +47,7 @@ cmd_fild03,0,0	monster	Greatest General	1277,45
 cmd_fild03,0,0	monster	Pest	1256,40
 cmd_fild03,0,0	monster	Alligator	1271,25
 cmd_fild03,0,0	monster	Poporing	1031,10
-cmd_fild03,0,0	monster	Mutant Dragonoid	1262,1,1980000,5580000
+//cmd_fild03,0,0	monster	Mutant Dragonoid	1262,1,1980000,5580000
 cmd_fild03,0,0	monster	Toad	1089,1,1500000,3300000
 
 //==================================================
@@ -56,7 +56,7 @@ cmd_fild03,0,0	monster	Toad	1089,1,1500000,3300000
 cmd_fild04,221,120,120,40	monster	Aster	1266,50
 cmd_fild04,0,0	monster	Raggler	1254,40
 cmd_fild04,221,120,120,40	monster	Sea Otter	1323,40
-cmd_fild04,0,0	monster	Galapago	1391,30
+//cmd_fild04,0,0	monster	Galapago	1391,30
 cmd_fild04,0,0	monster	Shellfish	1074,20
 cmd_fild04,0,0	monster	Crab	1073,20
 cmd_fild04,122,262,110,50	monster	Golem	1040,7

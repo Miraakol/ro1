@@ -21,13 +21,13 @@ prt_maze01,59,60,21,21	monster	Snake	1025,5,60000,180000
 prt_maze01,59,100,21,21	monster	Horn	1128,5,60000,180000
 prt_maze01,179,180,21,21	monster	Coco	1104,5,60000,180000
 prt_maze01,139,180,21,21	monster	Caramel	1103,5,60000,180000
-prt_maze01,99,20,21,21	monster	Fabre	1184,5,60000,180000
+prt_maze01,99,20,21,21	monster	Fabre	1007,5,60000,180000
 prt_maze01,59,20,21,21	monster	Pupa	1008,5,60000,180000
 prt_maze01,19,60,21,21	monster	Wolf	1013,5,60000,180000
 prt_maze01,179,60,21,21	monster	Rocker	1052,5,60000,180000
 prt_maze01,139,60,21,21	monster	Bigfoot	1060,5,60000,180000
 prt_maze01,99,60,21,21	monster	Smokie	1056,5,60000,180000
-prt_maze01,99,100,21,21	monster	Chonchon	1183,5,60000,180000
+prt_maze01,99,100,21,21	monster	Chonchon	1011,5,60000,180000
 prt_maze01,19,140,21,21	monster	Steel Chonchon	1042,5,60000,180000
 prt_maze01,139,140,21,21	monster	Stainer	1174,5,60000,180000
 prt_maze01,99,180,21,21	monster	Dustiness	1114,5,60000,180000
@@ -67,7 +67,7 @@ prt_maze03,179,20,21,21	monster	Poring	1002,5,60000,180000
 prt_maze03,19,180,21,21	monster	Savage Babe	1167,5,60000,180000
 prt_maze03,179,60,21,21	monster	Rocker	1052,5,60000,180000
 prt_maze03,139,140,21,21	monster	Stainer	1174,5,60000,180000
-prt_maze03,99,20,21,21	monster	Fabre	1184,5,600000,180000
+prt_maze03,99,20,21,21	monster	Fabre	1007,5,600000,180000
 prt_maze03,59,180,21,21	monster	Martin	1145,5,60000,180000
 prt_maze03,19,60,21,21	monster	Wolf	1013,5,60000,180000
 prt_maze03,179,180,21,21	monster	Coco	1104,5,60000,180000

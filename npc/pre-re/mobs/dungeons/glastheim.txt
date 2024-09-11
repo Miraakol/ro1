@@ -24,7 +24,7 @@ gl_cas01,0,0	monster	Dark Frame	1260,40
 gl_cas01,0,0	monster	Whisper	1179,20
 gl_cas01,0,0	monster	Khalitzburg	1132,15
 gl_cas01,0,0	monster	Rideword	1195,15
-gl_cas01,0,0	monster	Owl Duke	1320,6
+//gl_cas01,0,0	monster	Owl Duke	1320,6
 gl_cas01,0,0	monster	Alice	1275,1
 
 //==================================================
@@ -161,7 +161,7 @@ gl_sew04,0,0	monster	Sting	1207,30
 // gl_step - Glast Heim Staircase Dungeon
 //==================================================
 gl_step,0,0	monster	Wraith	1192,50
-gl_step,0,0	monster	Wraith Dead	1291,50
+//gl_step,0,0	monster	Wraith Dead	1291,50
 gl_step,0,0	monster	Gargoyle	1253,50
 gl_step,0,0	monster	Raydric Archer	1276,30
 gl_step,0,0	monster	Wind Ghost	1263,15
