@@ -125,7 +125,7 @@ pay_fild08,143,156,40,40	monster	Shining Plant	1083,1,1800000,5400000
 // pay_fild09 - Payon Forest
 //==================================================
 pay_fild09,0,0	monster	Elder Willow	1033,20
-pay_fild09,0,0	monster	Elder Eggyra	1116,20
+pay_fild09,0,0	monster	Eggyra	1116,20
 pay_fild09,0,0	monster	Bigfoot	1060,15
 pay_fild09,0,0	monster	Poporing	1031,10
 pay_fild09,198,217,30,30	monster	Green Plant	1080,10,180000,540000

@@ -17,7 +17,7 @@ mjolnir_01,0,0	monster	Hornet	1004,65
 mjolnir_01,0,0	monster	Chonchon	1011,35
 mjolnir_01,0,0	monster	Mandragora	1020,25
 mjolnir_01,0,0	monster	Creamy	1018,20
-mjolnir_01,0,0	monster	Steel_Chonchon	1042,10
+mjolnir_01,0,0	monster	Steel Chonchon	1042,10
 mjolnir_01,75,85,25,25	monster	Green Plant	1080,5,120000,300000
 mjolnir_01,78,219,25,25	monster	Green Plant	1080,5,120000,300000
 mjolnir_01,311,271,25,25	monster	Blue Plant	1079,5,180000,540000
