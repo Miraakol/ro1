@@ -227,7 +227,7 @@ OnRecvCastle:
 			// Normal Spawns
 			monster strnpcinfo(2),0,0,"Greatest General",1277,9;
 			monster strnpcinfo(2),0,0,"Wanderer",1208,10;
-			monster strnpcinfo(2),0,0,"Mutant Dragonoid",1262,5;
+			//monster strnpcinfo(2),0,0,"Mutant Dragonoid",1262,5;
 			monster strnpcinfo(2),0,0,"Bathory",1102,5;
 			monster strnpcinfo(2),0,0,"Moonlight Flower",1150,1;
 			monster strnpcinfo(2),0,0,"Eddga",1115,1;
