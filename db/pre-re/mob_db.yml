@@ -1506,8 +1506,8 @@ Body:
         Rate: 9000
       - Item: Elunium_Stone
         Rate: 40
-      - Item: Baked_Yam
-        Rate: 20
+      - Item: Sweet_Potato
+        Rate: 300
       - Item: Wooden_Block
         Rate: 350
       - Item: Wooden_Mail_
@@ -13890,7 +13890,7 @@ Body:
         Rate: 550
       - Item: Staff_
         Rate: 3
-      - Item: Baked_Yam
+      - Item: Sweet_Potato
         Rate: 3000
       - Item: Belt
         Rate: 10
