@@ -889,7 +889,7 @@ int guild_calcinfo( std::shared_ptr<CharGuild> g ){
 	}
 
 	// Set the max number of members, Guild Extention skill - currently adds 6 to max per skill lv.
-	g->guild.max_member = 16 + guild_checkskill(g, GD_EXTENSION) * 6;
+	g->guild.max_member = 16 + guild_checkskill(g, GD_EXTENSION) * 2;
 	if(g->guild.max_member > MAX_GUILD)
 	{
 		ShowError("Guild %d:%s has capacity for too many guild members (%d), max supported is %d\n", g->guild.guild_id, g->guild.name, g->guild.max_member, MAX_GUILD);
