@@ -365,13 +365,13 @@ Body:
         Requires:
           - Name: KN_RIDING
             Level: 1
-      - Name: KN_CHARGEATK
-        MaxLevel: 1
-      - Name: KN_ONEHAND
-        MaxLevel: 1
-        Requires:
-          - Name: KN_TWOHANDQUICKEN
-            Level: 10
+#      - Name: KN_CHARGEATK
+#        MaxLevel: 1
+#      - Name: KN_ONEHAND
+#        MaxLevel: 1
+#        Requires:
+#          - Name: KN_TWOHANDQUICKEN
+#            Level: 10
   - Job: Priest
     Inherit:
       Novice: true
@@ -465,8 +465,8 @@ Body:
             Level: 1
           - Name: PR_TURNUNDEAD
             Level: 3
-      - Name: PR_REDEMPTIO
-        MaxLevel: 1
+#      - Name: PR_REDEMPTIO
+#        MaxLevel: 1
   - Job: Wizard
     Inherit:
       Novice: true
@@ -550,8 +550,8 @@ Body:
             Level: 1
       - Name: WZ_ESTIMATION
         MaxLevel: 1
-      - Name: WZ_SIGHTBLASTER
-        MaxLevel: 1
+#      - Name: WZ_SIGHTBLASTER
+#        MaxLevel: 1
   - Job: Blacksmith
     Inherit:
       Novice: true
@@ -653,15 +653,15 @@ Body:
             Level: 3
           - Name: BS_OVERTHRUST
             Level: 2
-      - Name: BS_UNFAIRLYTRICK
-        MaxLevel: 1
-      - Name: BS_GREED
-        MaxLevel: 1
-      - Name: BS_ADRENALINE2
-        MaxLevel: 1
-        Requires:
-          - Name: BS_ADRENALINE
-            Level: 5
+#      - Name: BS_UNFAIRLYTRICK
+#        MaxLevel: 1
+#      - Name: BS_GREED
+#        MaxLevel: 1
+#      - Name: BS_ADRENALINE2
+#        MaxLevel: 1
+#        Requires:
+#          - Name: BS_ADRENALINE
+#            Level: 5
   - Job: Hunter
     Inherit:
       Novice: true
@@ -755,13 +755,13 @@ Body:
             Level: 1
           - Name: HT_FALCON
             Level: 1
-      - Name: HT_PHANTASMIC
-        MaxLevel: 1
-      - Name: HT_POWER
-        MaxLevel: 1
-        Requires:
-          - Name: AC_DOUBLE
-            Level: 10
+#      - Name: HT_PHANTASMIC
+#        MaxLevel: 1
+#      - Name: HT_POWER
+#        MaxLevel: 1
+#        Requires:
+#          - Name: AC_DOUBLE
+#            Level: 10
   - Job: Assassin
     Inherit:
       Novice: true
@@ -815,10 +815,10 @@ Body:
             Level: 5
           - Name: AS_VENOMDUST
             Level: 5
-      - Name: AS_SONICACCEL
-        MaxLevel: 1
-      - Name: AS_VENOMKNIFE
-        MaxLevel: 1
+#      - Name: AS_SONICACCEL
+#        MaxLevel: 1
+#      - Name: AS_VENOMKNIFE
+#        MaxLevel: 1
   - Job: Knight2
     Inherit:
       Novice: true

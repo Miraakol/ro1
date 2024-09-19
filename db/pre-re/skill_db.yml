@@ -12409,42 +12409,42 @@ Body:
         - Level: 5
           Amount: 60
     Status: Spirit
-  - Id: 459
-    Name: BS_ADRENALINE2
-    Description: Advanced Adrenaline Rush
-    MaxLevel: 1
-    Type: Weapon
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-      Splash: true
-    Flags:
-      IsSpirit: true
-      AllowOnMado: true
-    Hit: Single
-    HitCount: 1
-    SplashArea: -1
-    Duration1: 150000
-    Requires:
-      SpCost: 64
-      Weapon:
-        Fist: true
-        Dagger: true
-        1hSword: true
-        2hSword: true
-        1hSpear: true
-        2hSpear: true
-        1hAxe: true
-        2hAxe: true
-        Mace: true
-        2hMace: true
-        Staff: true
-        Knuckle: true
-        Musical: true
-        Whip: true
-        Book: true
-        Katar: true
-    Status: Adrenaline2
+#  - Id: 459
+#    Name: BS_ADRENALINE2
+#    Description: Advanced Adrenaline Rush
+#    MaxLevel: 1
+#    Type: Weapon
+#    TargetType: Self
+#    DamageFlags:
+#      NoDamage: true
+#      Splash: true
+#    Flags:
+#      IsSpirit: true
+#      AllowOnMado: true
+#    Hit: Single
+#    HitCount: 1
+#    SplashArea: -1
+#    Duration1: 150000
+#    Requires:
+#      SpCost: 64
+#      Weapon:
+#        Fist: true
+#        Dagger: true
+#        1hSword: true
+#        2hSword: true
+#        1hSpear: true
+#        2hSpear: true
+#        1hAxe: true
+#        2hAxe: true
+#        Mace: true
+#        2hMace: true
+#        Staff: true
+#        Knuckle: true
+#        Musical: true
+#        Whip: true
+#        Book: true
+#        Katar: true
+#    Status: Adrenaline2
   - Id: 460
     Name: SL_HUNTER
     Description: Spirit of the Hunter
@@ -13547,24 +13547,24 @@ Body:
         - Level: 5
           Amount: 60
     Status: Spirit
-  - Id: 495
-    Name: KN_ONEHAND
-    Description: Onehand Quicken
-    MaxLevel: 1
-    Type: Weapon
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-    Flags:
-      IsSpirit: true
-    Hit: Single
-    HitCount: 1
-    Duration1: 300000
-    Requires:
-      SpCost: 100
-      Weapon:
-        1hSword: true
-    Status: OneHand
+#  - Id: 495
+#    Name: KN_ONEHAND
+#    Description: Onehand Quicken
+#    MaxLevel: 1
+#    Type: Weapon
+#    TargetType: Self
+#    DamageFlags:
+#      NoDamage: true
+#    Flags:
+#      IsSpirit: true
+#    Hit: Single
+#    HitCount: 1
+#    Duration1: 300000
+#    Requires:
+#      SpCost: 100
+#      Weapon:
+#        1hSword: true
+#    Status: OneHand
   - Id: 496
     Name: AM_TWILIGHT1
     Description: Twilight Alchemy 1
@@ -13622,27 +13622,27 @@ Body:
       ItemCost:
         - Item: Medicine_Bowl
           Amount: 200
-  - Id: 499
-    Name: HT_POWER
-    Description: Beast Strafing
-    MaxLevel: 1
-    Type: Weapon
-    TargetType: Attack
-    Flags:
-      IsSpirit: true
-      AlterRangeVulture: true
-    Range: -9
-    Hit: Multi_Hit
-    HitCount: 2
-    Element: Weapon
-    Duration1: 100
-    Requires:
-      SpCost: 12
-      Weapon:
-        Bow: true
-      Ammo:
-        Arrow: true
-      AmmoAmount: 1
+#  - Id: 499
+#    Name: HT_POWER
+#    Description: Beast Strafing
+#    MaxLevel: 1
+#    Type: Weapon
+#    TargetType: Attack
+#    Flags:
+#      IsSpirit: true
+#      AlterRangeVulture: true
+#    Range: -9
+#    Hit: Multi_Hit
+#    HitCount: 2
+#    Element: Weapon
+#    Duration1: 100
+#    Requires:
+#      SpCost: 12
+#      Weapon:
+#        Bow: true
+#      Ammo:
+#        Arrow: true
+#      AmmoAmount: 1
   - Id: 500
     Name: GS_GLITTERING
     Description: Flip the Coin
@@ -16911,25 +16911,25 @@ Body:
       Flag:
         NoReiteration: true
         NoOverlap: true
-  - Id: 1001
-    Name: KN_CHARGEATK
-    Description: Charge Attack
-    MaxLevel: 1
-    Type: Weapon
-    TargetType: Attack
-    Flags:
-      IsQuest: true
-    Range: 14
-    Hit: Single
-    HitCount: 1
-    Element: Weapon
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    CastTime: 500
-    Requires:
-      SpCost: 40
+#  - Id: 1001
+#    Name: KN_CHARGEATK
+#    Description: Charge Attack
+#    MaxLevel: 1
+#    Type: Weapon
+#    TargetType: Attack
+#    Flags:
+#      IsQuest: true
+#    Range: 14
+#    Hit: Single
+#    HitCount: 1
+#    Element: Weapon
+#    CopyFlags:
+#      Skill:
+#        Plagiarism: true
+#        Reproduce: true
+#    CastTime: 500
+#    Requires:
+#      SpCost: 40
   - Id: 1002
     Name: CR_SHRINK
     Description: Shrink
@@ -16948,39 +16948,39 @@ Body:
       SpCost: 15
       State: Shield
     Status: Shrink
-  - Id: 1003
-    Name: AS_SONICACCEL
-    Description: Sonic Acceleration
-    MaxLevel: 1
-    Type: Weapon
-    Flags:
-      IsQuest: true
-  - Id: 1004
-    Name: AS_VENOMKNIFE
-    Description: Throw Venom Knife
-    MaxLevel: 1
-    Type: Weapon
-    TargetType: Attack
-    DamageFlags:
-      IgnoreAtkCard: true
-    Flags:
-      IsQuest: true
-      IgnoreAutoGuard: true
-      IgnoreCicada: true
-    Range: 9
-    Hit: Multi_Hit
-    HitCount: 1
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    Duration2: 60000
-    Requires:
-      SpCost: 15
-      Ammo:
-        Dagger: true
-      AmmoAmount: 1
-    Status: Poison
+#  - Id: 1003
+#    Name: AS_SONICACCEL
+#    Description: Sonic Acceleration
+#    MaxLevel: 1
+#    Type: Weapon
+#    Flags:
+#      IsQuest: true
+#  - Id: 1004
+#    Name: AS_VENOMKNIFE
+#    Description: Throw Venom Knife
+#    MaxLevel: 1
+#    Type: Weapon
+#    TargetType: Attack
+#    DamageFlags:
+#      IgnoreAtkCard: true
+#    Flags:
+#      IsQuest: true
+#      IgnoreAutoGuard: true
+#      IgnoreCicada: true
+#    Range: 9
+#    Hit: Multi_Hit
+#    HitCount: 1
+#    CopyFlags:
+#      Skill:
+#        Plagiarism: true
+#        Reproduce: true
+#    Duration2: 60000
+#    Requires:
+#      SpCost: 15
+#      Ammo:
+#        Dagger: true
+#      AmmoAmount: 1
+#    Status: Poison
   - Id: 1005
     Name: RG_CLOSECONFINE
     Description: Close Confine
@@ -16998,30 +16998,30 @@ Body:
     Requires:
       SpCost: 25
     Status: CloseConfine2
-  - Id: 1006
-    Name: WZ_SIGHTBLASTER
-    Description: Sight Blaster
-    MaxLevel: 1
-    Type: Magic
-    TargetType: Self
-    Flags:
-      IsQuest: true
-      TargetTrap: true
-    Hit: Single
-    HitCount: 1
-    Element: Fire
-    SplashArea: 1
-    Knockback: 3
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    CastCancel: true
-    CastTime: 2000
-    Duration1: 120000
-    Requires:
-      SpCost: 40
-    Status: SightBlaster
+#  - Id: 1006
+#    Name: WZ_SIGHTBLASTER
+#    Description: Sight Blaster
+#    MaxLevel: 1
+#    Type: Magic
+#    TargetType: Self
+#    Flags:
+#      IsQuest: true
+#      TargetTrap: true
+#    Hit: Single
+#    HitCount: 1
+#    Element: Fire
+#    SplashArea: 1
+#    Knockback: 3
+#    CopyFlags:
+#      Skill:
+#        Plagiarism: true
+#        Reproduce: true
+#    CastCancel: true
+#    CastTime: 2000
+#    Duration1: 120000
+#    Requires:
+#      SpCost: 40
+#    Status: SightBlaster
   - Id: 1007
     Name: SA_CREATECON
     Description: Create Elemental Converter
@@ -17058,27 +17058,27 @@ Body:
         - Item: Elemental_Water
           Amount: 1
     Status: ElementalChange
-  - Id: 1009
-    Name: HT_PHANTASMIC
-    Description: Phantasmic Arrow
-    MaxLevel: 1
-    Type: Weapon
-    TargetType: Attack
-    Flags:
-      IsQuest: true
-    Range: -9
-    Hit: Single
-    HitCount: 1
-    Element: Weapon
-    Knockback: 3
-    CopyFlags:
-      Skill:
-        Plagiarism: true
-        Reproduce: true
-    Requires:
-      SpCost: 10
-      Weapon:
-        Bow: true
+#  - Id: 1009
+#    Name: HT_PHANTASMIC
+#    Description: Phantasmic Arrow
+#    MaxLevel: 1
+#    Type: Weapon
+#    TargetType: Attack
+#    Flags:
+#      IsQuest: true
+#    Range: -9
+#    Hit: Single
+#    HitCount: 1
+#    Element: Weapon
+#    Knockback: 3
+#    CopyFlags:
+#      Skill:
+#        Plagiarism: true
+#        Reproduce: true
+#    Requires:
+#      SpCost: 10
+#      Weapon:
+#        Bow: true
   - Id: 1010
     Name: BA_PANGVOICE
     Description: Pang Voice
@@ -17115,51 +17115,51 @@ Body:
     Requires:
       SpCost: 40
     Status: WinkCharm
-  - Id: 1012
-    Name: BS_UNFAIRLYTRICK
-    Description: Unfair Trick
-    MaxLevel: 1
-    Type: Weapon
-    Flags:
-      IsQuest: true
-  - Id: 1013
-    Name: BS_GREED
-    Description: Greed
-    MaxLevel: 1
-    Type: Weapon
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-      Splash: true
-    Flags:
-      IsQuest: true
-      AllowOnWarg: true
-      AllowOnMado: true
-    Hit: Single
-    SplashArea: 2
-    AfterCastActDelay: 1000
-    Requires:
-      SpCost: 10
-  - Id: 1014
-    Name: PR_REDEMPTIO
-    Description: Redemptio
-    MaxLevel: 1
-    Type: Magic
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-      Splash: true
-    Flags:
-      IsQuest: true
-    Hit: Single
-    Element: Holy
-    SplashArea: 14
-    CastCancel: true
-    CastTime: 4000
-    CastTimeFlags:
-      IgnoreDex: true
-    Requires:
-      SpCost: 400
+#  - Id: 1012
+#    Name: BS_UNFAIRLYTRICK
+#    Description: Unfair Trick
+#    MaxLevel: 1
+#    Type: Weapon
+#    Flags:
+#      IsQuest: true
+#  - Id: 1013
+#    Name: BS_GREED
+#    Description: Greed
+#    MaxLevel: 1
+#    Type: Weapon
+#    TargetType: Self
+#    DamageFlags:
+#      NoDamage: true
+#      Splash: true
+#    Flags:
+#      IsQuest: true
+#      AllowOnWarg: true
+#      AllowOnMado: true
+#    Hit: Single
+#    SplashArea: 2
+#    AfterCastActDelay: 1000
+#    Requires:
+#      SpCost: 10
+#  - Id: 1014
+#    Name: PR_REDEMPTIO
+#    Description: Redemptio
+#    MaxLevel: 1
+#    Type: Magic
+#    TargetType: Self
+#    DamageFlags:
+#      NoDamage: true
+#      Splash: true
+#    Flags:
+#      IsQuest: true
+#    Hit: Single
+#    Element: Holy
+#    SplashArea: 14
+#    CastCancel: true
+#    CastTime: 4000
+#    CastTimeFlags:
+#      IgnoreDex: true
+#    Requires:
+#      SpCost: 400
   - Id: 1015
     Name: MO_KITRANSLATION
     Description: Ki Translation
