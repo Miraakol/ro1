@@ -6955,10 +6955,8 @@ Body:
     DamageMotion: 432
     Ai: 09
     Drops:
-      - Item: Axe
-        Rate: 200
       - Item: Axe_
-        Rate: 20
+        Rate: 200
       - Item: Berserk_Potion
         Rate: 300
       - Item: Hammer_Of_Blacksmith
