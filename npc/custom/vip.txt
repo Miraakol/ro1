@@ -1,0 +1,152 @@
+prontera,146,92,6	script	VIP Employee#prt	117,{
+	if (vip_status(VIP_STATUS_ACTIVE)) {
+	mes "[VIP Employee]";
+	mes "Welcome to the VIP Services. The VIP services are always on your side. How may I assist you?";
+	mes " ";
+	mes "^FF0000[Free services for Level 60 below only]^000000";
+		next;
+			switch(select("Take a Rest -> 3000 zeny:Buff -> 3000 zeny:Use Teleport Service -> 1000 zeny:Cancel")){
+
+				case 1:
+					if (BaseLevel < 60) {
+						mes "[VIP Employee]";
+						mes "You've taken quite a beating! Let me patch you up.";
+						next;
+						mes "[VIP Employee]";
+						mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+						percentheal 100,100;
+					} else {
+						mes "[VIP Employee]";
+						mes "You've taken quite a beating! Let me patch you up.";
+						next;
+							if (Zeny >= 3000) {
+							Zeny -= 3000;
+							mes "[VIP Employee]";
+							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+							percentheal 100,100;
+								} else {
+									mes "[VIP Employee]";
+									mes "You do not have enough zeny. Rest costs 3000 Zeny.";							
+							}
+					}
+					end;
+
+				case 2:
+					if (BaseLevel < 60) {
+						mes "[VIP Employee]";
+						mes "Time for a little boost! You'll feel stronger and faster in no time.";
+						next;
+						mes "[VIP Employee]";
+						mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+						sc_start SC_INCREASEAGI,1800000,10;
+						sc_start SC_BLESSING,1800000,10;
+						sc_start SC_STRFOOD,1800000,5;
+						sc_start SC_AGIFOOD,1800000,5;
+						sc_start SC_VITFOOD,1800000,5;
+						sc_start SC_INTFOOD,1800000,5;
+						sc_start SC_DEXFOOD,1800000,5;
+						sc_start SC_LUKFOOD,1800000,5;
+					} else {
+						mes "[VIP Employee]";
+						mes "Time for a little boost! You'll feel stronger and faster in no time.";
+						next;
+							if (Zeny >= 3000) {
+							Zeny -= 3000;
+							mes "[VIP Employee]";
+							mes "Time for a little boost! You'll feel stronger and faster in no time.";
+							next;
+							mes "[VIP Employee]";
+							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+							sc_start SC_INCREASEAGI,1800000,10;
+							sc_start SC_BLESSING,1800000,10;
+							sc_start SC_STRFOOD,1800000,5;
+							sc_start SC_AGIFOOD,1800000,5;
+							sc_start SC_VITFOOD,1800000,5;
+							sc_start SC_INTFOOD,1800000,5;
+							sc_start SC_DEXFOOD,1800000,5;
+							sc_start SC_LUKFOOD,1800000,5;
+								} else {
+									mes "[VIP Employee]";
+									mes "You do not have enough zeny. Buff costs 3000 Zeny.";
+							}
+					}
+					end;
+
+                case 3:
+					if (BaseLevel < 60) {
+                    	mes "[VIP Employee]";
+						mes "Please choose your destination.";
+						next;
+							switch(select("Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Morocc:Payon:Cancel")){
+								case 1: callsub S_TownWarpF,"prontera",116,72;
+								case 2: callsub S_TownWarpF,"alberta",117,56;
+								case 3: callsub S_TownWarpF,"aldebaran",168,112;
+								case 4: callsub S_TownWarpF,"comodo",209,143;
+								case 5: callsub S_TownWarpF,"geffen",120,39;
+								case 6: callsub S_TownWarpF,"izlude",91,105;
+								case 7: callsub S_TownWarpF,"morocc",156,46;
+								case 8: callsub S_TownWarpF,"payon",68,99;
+								case 9: 
+						mes "[VIP Employee]";
+						mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+						close;
+					}
+					S_TownWarpF:
+					// getarg(0) = "map name"
+					// getarg(1) = x
+					// getarg(2) = y
+							warp getarg(0),getarg(1),getarg(2);
+							} else {
+                   			 mes "[VIP Employee]";
+							mes "Please choose your destination.";
+							next;
+							switch(select("Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Morocc:Payon:Cancel")){
+								case 1: callsub S_TownWarp,"prontera",116,72;
+								case 2: callsub S_TownWarp,"alberta",117,56;
+								case 3: callsub S_TownWarp,"aldebaran",168,112;
+								case 4: callsub S_TownWarp,"comodo",209,143;
+								case 5: callsub S_TownWarp,"geffen",120,39;
+								case 6: callsub S_TownWarp,"izlude",91,105;
+								case 7: callsub S_TownWarp,"morocc",156,46;
+								case 8: callsub S_TownWarp,"payon",68,99;
+								case 9: 
+								mes "[VIP Employee]";
+								mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+								close;
+					}
+					S_TownWarp:
+					// getarg(0) = "map name"
+					// getarg(1) = x
+					// getarg(2) = y
+						if (Zeny >= 1000) {
+							Zeny -= 1000;
+							warp getarg(0),getarg(1),getarg(2);
+						} else {
+							mes "[VIP Employee]";
+							mes "You do not have enough zeny. Town warp costs 1000 Zeny.";
+						}
+					}
+					end;
+
+				case 4:
+					mes "[VIP Employee]";
+					mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+					end;
+			}
+			
+	} else {
+		mes "[VIP Employee]";
+		mes "Sorry, but you are not a VIP Member.";
+		end;
+	}
+	close;
+}
+
+//Town Duplicate
+morocc,159,97,4	duplicate(VIP Employee#prt)	VIP Employee#moc	113
+geffen,122,62,8	duplicate(VIP Employee#prt)	VIP Employee#gef	115
+payon,101,116,4	duplicate(VIP Employee#prt)	VIP Employee#pay	113
+alberta,113,63,6	duplicate(VIP Employee#prt)	VIP Employee#alb	112
+izlude,134,90,3	duplicate(VIP Employee#prt)	VIP Employee#iz	117
+aldebaran,143,116,4	duplicate(VIP Employee#prt)	VIP Employee#alde	113
+comodo,192,150,4	duplicate(VIP Employee#prt)	VIP Employee#com	721
