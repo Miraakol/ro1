@@ -2,7 +2,6 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 	if (vip_status(VIP_STATUS_ACTIVE)) {
 	mes "[VIP Employee]";
 	mes "Welcome to the VIP Services. The VIP services are always on your side. How may I assist you?";
-	mes " ";
 	mes "^FF0000[Free services for Level 60 below only]^000000";
 		next;
 			switch(select("Take a Rest -> 3000 zeny:Buff -> 3000 zeny:Use Teleport Service -> 1000 zeny:Cancel")){
