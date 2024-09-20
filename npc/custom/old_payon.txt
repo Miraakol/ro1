@@ -322,7 +322,7 @@ payon_in01,131,77,4	script	Falcon Master#oldpay	59,{
 		close;
 }
 
-//in_hunter.gat,146,100,2	duplicate(Falcon Master)	Falcon Master	59
+in_hunter.gat,146,100,2	duplicate(Falcon Master#oldpay)	Falcon Master#jobtest	59
 
 // Shops ---------------------------------------------------------------
 payon_in01,125,51,4	shop	Weapon Dealer#oldpay	77,1750:-1,1751:-1,1101:-1,1104:-1,1107:-1,1201:-1,1204:-1,1207:-1,1601:-1,1701:-1,1704:-1,1707:-1,1710:-1,1713:-1,1714:-1,1718:-1
