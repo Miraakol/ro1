@@ -271,8 +271,8 @@ Body:
         Requires:
           - Name: MC_VENDING
             Level: 1
-      - Name: MC_CARTDECORATE
-        MaxLevel: 1
+#      - Name: MC_CARTDECORATE
+#        MaxLevel: 1
   - Job: Thief
     Inherit:
       Novice: true
@@ -1722,8 +1722,8 @@ Body:
         Requires:
           - Name: MC_VENDING
             Level: 1
-      - Name: MC_CARTDECORATE
-        MaxLevel: 1
+#      - Name: MC_CARTDECORATE
+#        MaxLevel: 1
   - Job: Gunslinger
     Inherit:
       Novice: true
@@ -2967,8 +2967,8 @@ Body:
         Requires:
           - Name: MC_VENDING
             Level: 1
-      - Name: MC_CARTDECORATE
-        MaxLevel: 1
+#      - Name: MC_CARTDECORATE
+#        MaxLevel: 1
   - Job: Taekwon
     Inherit:
       Novice: true

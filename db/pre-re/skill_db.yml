@@ -13622,27 +13622,27 @@ Body:
       ItemCost:
         - Item: Medicine_Bowl
           Amount: 200
-#  - Id: 499
-#    Name: HT_POWER
-#    Description: Beast Strafing
-#    MaxLevel: 1
-#    Type: Weapon
-#    TargetType: Attack
-#    Flags:
-#      IsSpirit: true
-#      AlterRangeVulture: true
-#    Range: -9
-#    Hit: Multi_Hit
-#    HitCount: 2
-#    Element: Weapon
-#    Duration1: 100
-#    Requires:
-#      SpCost: 12
-#      Weapon:
-#        Bow: true
-#      Ammo:
-#        Arrow: true
-#      AmmoAmount: 1
+  - Id: 499
+    Name: HT_POWER
+    Description: Beast Strafing
+    MaxLevel: 1
+    Type: Weapon
+    TargetType: Attack
+    Flags:
+      IsSpirit: true
+      AlterRangeVulture: true
+    Range: -9
+    Hit: Multi_Hit
+    HitCount: 2
+    Element: Weapon
+    Duration1: 100
+    Requires:
+      SpCost: 12
+      Weapon:
+        Bow: true
+      Ammo:
+        Arrow: true
+      AmmoAmount: 1
   - Id: 500
     Name: GS_GLITTERING
     Description: Flip the Coin
@@ -28000,21 +28000,21 @@ Body:
           Amount: 70
         - Level: 2
           Amount: 100
-  - Id: 2544
-    Name: MC_CARTDECORATE
-    Description: Decorate Cart
-    MaxLevel: 1
-    TargetType: Self
-    DamageFlags:
-      NoDamage: true
-    Flags:
-      IsQuest: true
-      AllowOnMado: true
-    Hit: Single
-    HitCount: 1
-    Requires:
-      SpCost: 40
-      State: Cart
+#  - Id: 2544
+#    Name: MC_CARTDECORATE
+#    Description: Decorate Cart
+#    MaxLevel: 1
+#    TargetType: Self
+#    DamageFlags:
+#      NoDamage: true
+#    Flags:
+#      IsQuest: true
+#      AllowOnMado: true
+#    Hit: Single
+#    HitCount: 1
+#    Requires:
+#      SpCost: 40
+#      State: Cart
   - Id: 2552
     Name: RL_RICHS_COIN
     Description: Rich's Coin
