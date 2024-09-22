@@ -1,0 +1,88 @@
+new_1-1,56,114,4	script	VIP Employee#tgd	117,{
+	if (vip_status(VIP_STATUS_ACTIVE)) {
+	mes "[VIP Employee]";
+	mes "Welcome ^0000FF"+strcharinfo(0)+"^000000!";
+	mes "The VIP services are always on your side. How may I assist you?";
+	mes "^FF0000Expiry:^000000 " + gettimestr("%Y-%m-%d/%H:%M",21,vip_status(VIP_STATUS_EXPIRE));
+	mes "^FF0000[Free services for Level 60 below only]^000000";
+		next;
+			switch(select("Take a Rest -> 3000 zeny:Buff -> 3000 zeny:Cancel")){
+
+				case 1:
+					if (BaseLevel < 60) {
+						mes "[VIP Employee]";
+						mes "You've taken quite a beating! Let me patch you up.";
+						next;
+						mes "[VIP Employee]";
+						mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+						percentheal 100,100;
+					} else {
+						mes "[VIP Employee]";
+						mes "You've taken quite a beating! Let me patch you up.";
+						next;
+							if (Zeny >= 3000) {
+							Zeny -= 3000;
+							mes "[VIP Employee]";
+							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+							percentheal 100,100;
+								} else {
+									mes "[VIP Employee]";
+									mes "You do not have enough zeny. Rest costs 3000 Zeny.";							
+							}
+					}
+					end;
+
+				case 2:
+					if (BaseLevel < 60) {
+						mes "[VIP Employee]";
+						mes "Time for a little boost! You'll feel stronger and faster in no time.";
+						next;
+						mes "[VIP Employee]";
+						mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+						sc_start SC_INCREASEAGI,1800000,10;
+						sc_start SC_BLESSING,1800000,10;
+						sc_start SC_STRFOOD,1800000,5;
+						sc_start SC_AGIFOOD,1800000,5;
+						sc_start SC_VITFOOD,1800000,5;
+						sc_start SC_INTFOOD,1800000,5;
+						sc_start SC_DEXFOOD,1800000,5;
+						sc_start SC_LUKFOOD,1800000,5;
+					} else {
+						mes "[VIP Employee]";
+						mes "Time for a little boost! You'll feel stronger and faster in no time.";
+						next;
+							if (Zeny >= 3000) {
+							Zeny -= 3000;
+							mes "[VIP Employee]";
+							mes "Time for a little boost! You'll feel stronger and faster in no time.";
+							next;
+							mes "[VIP Employee]";
+							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+							sc_start SC_INCREASEAGI,1800000,10;
+							sc_start SC_BLESSING,1800000,10;
+							sc_start SC_STRFOOD,1800000,5;
+							sc_start SC_AGIFOOD,1800000,5;
+							sc_start SC_VITFOOD,1800000,5;
+							sc_start SC_INTFOOD,1800000,5;
+							sc_start SC_DEXFOOD,1800000,5;
+							sc_start SC_LUKFOOD,1800000,5;
+								} else {
+									mes "[VIP Employee]";
+									mes "You do not have enough zeny. Buff costs 3000 Zeny.";
+							}
+					}
+					end;
+
+				case 3:
+					mes "[VIP Employee]";
+					mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+					end;
+			}
+			
+	} else {
+		mes "[VIP Employee]";
+		mes "Sorry, but you are not a VIP Member.";
+		end;
+	}
+	close;
+}
