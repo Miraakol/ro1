@@ -989,7 +989,7 @@
 1200,Zherlthsh@NPC_EMOTION,chase,197,1,2000,0,5000,yes,self,always,0,30,,,,,,
 1200,Zherlthsh@NPC_GUIDEDATTACK,attack,172,3,500,1000,20000,no,target,always,0,,,,,,30,
 1200,Zherlthsh@NPC_LICK,attack,206,3,500,0,5000,yes,target,always,0,,,,,,30,
-1200,Zherlthsh@NPC_SUMMONSLAVE,idle,196,3,10000,2000,60000,no,self,slavele,0,1257,,,,,,
+//1200,Zherlthsh@NPC_SUMMONSLAVE,idle,196,3,10000,2000,60000,no,self,slavele,0,1257,,,,,,
 1200,Zherlthsh@NPC_STOP,attack,342,1,500,0,30000,no,target,always,0,,,,,,3,
 1201,Rybio@AS_SONICBLOW,attack,136,10,500,800,5000,no,target,always,0,,,,,,4,
 1201,Rybio@NPC_POISON,attack,176,2,500,800,5000,no,target,always,0,,,,,,4,
