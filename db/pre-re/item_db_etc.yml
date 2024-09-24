@@ -2547,6 +2547,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,2;
@@ -2560,6 +2561,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,1;
@@ -2573,6 +2575,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHP,700;
@@ -2585,6 +2588,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDex,1;
@@ -2598,6 +2602,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Dark,20;
@@ -2610,6 +2615,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,1;
@@ -2624,6 +2630,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_Formless,20;
@@ -2636,6 +2643,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,1;
@@ -2649,6 +2657,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,1;
@@ -2664,6 +2673,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxSP,80;
@@ -2676,6 +2686,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,1;
@@ -2689,6 +2700,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHP,400;
@@ -2701,6 +2713,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,5;
@@ -2713,6 +2726,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHP,400;
@@ -2726,6 +2740,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee,10;
@@ -2738,6 +2753,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,1;
@@ -2750,6 +2766,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Stun,500;
@@ -2762,6 +2779,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,1;
@@ -2775,6 +2793,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,1;
@@ -2788,6 +2807,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Blind,500;
@@ -2801,6 +2821,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDex,1;
@@ -2814,6 +2835,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,2;
@@ -2826,6 +2848,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,1;
@@ -2838,6 +2861,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Sleep,500;
@@ -2851,6 +2875,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,10;
@@ -2864,6 +2889,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,1;
@@ -2877,6 +2903,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,2;
@@ -2889,6 +2916,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,2;
@@ -2901,6 +2929,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,15;
@@ -2914,6 +2943,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Wind,20;
@@ -2926,6 +2956,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,10;
@@ -2938,6 +2969,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,2;
@@ -2950,6 +2982,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "TF_DETOXIFY",1;
@@ -2962,6 +2995,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDex,2;
@@ -2974,6 +3008,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_DemiHuman,20;
@@ -2987,6 +3022,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHPrecovRate,10;
@@ -2999,6 +3035,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Poison,500;
@@ -3012,6 +3049,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHPrecovRate,20;
@@ -3026,6 +3064,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Silence,2000;
@@ -3039,6 +3078,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "AL_TELEPORT",1;
@@ -3053,6 +3093,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Sleep,2000;
@@ -3066,6 +3107,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Wind,10;
@@ -3079,6 +3121,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,20;
@@ -3091,6 +3134,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "TF_HIDING",1;
@@ -3105,6 +3149,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLongAtkDef,35;
@@ -3119,6 +3164,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Blind,2000;
@@ -3132,6 +3178,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Ghost;
@@ -3145,6 +3192,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "TF_POISON",3;
@@ -3157,6 +3205,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Fire,20;
@@ -3169,6 +3218,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,2;
@@ -3181,6 +3231,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee2,5;
@@ -3196,6 +3247,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,2;
@@ -3208,6 +3260,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "AL_HEAL",1;
@@ -3221,6 +3274,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Holy;
@@ -3233,6 +3287,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Freeze,500;
@@ -3246,6 +3301,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Wind,30;
@@ -3259,6 +3315,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Silence,500;
@@ -3272,6 +3329,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_DemiHuman,30;
@@ -3285,6 +3343,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Plant,30;
@@ -3297,6 +3356,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_Brute,20;
@@ -3310,6 +3370,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bUnbreakableArmor;
@@ -3323,6 +3384,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Poison,20;
@@ -3335,6 +3397,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_Insect,20;
@@ -3347,6 +3410,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDex,3;
@@ -3359,6 +3423,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Earth,20;
@@ -3371,6 +3436,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Brute,30;
@@ -3384,6 +3450,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Freeze,2000;
@@ -3397,6 +3464,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_Plant,20;
@@ -3409,6 +3477,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Water,20;
@@ -3421,6 +3490,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bSPrecovRate,15;
@@ -3433,6 +3503,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Undead,30;
@@ -3446,6 +3517,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bUnbreakableWeapon;
@@ -3459,6 +3531,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "MC_DISCOUNT",5;
@@ -3471,6 +3544,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Insect,30;
@@ -3483,6 +3557,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Stone,2000;
@@ -3496,6 +3571,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Curse,500;
@@ -3509,6 +3585,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bNoCastCancel;
@@ -3522,6 +3599,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,3;
@@ -3534,6 +3612,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,3;
@@ -3546,6 +3625,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_Fish,20;
@@ -3558,6 +3638,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Earth,30;
@@ -3571,6 +3652,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddSize,Size_Small,15;
@@ -3584,6 +3666,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Fish,30;
@@ -3596,6 +3679,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "SM_MAGNUM",3;
@@ -3608,6 +3692,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Holy,20;
@@ -3620,6 +3705,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritical,9;
@@ -3634,6 +3720,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Confusion,10000;
@@ -3647,6 +3734,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "AS_CLOAKING",1;
@@ -3661,6 +3749,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Water;
@@ -3674,6 +3763,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Stone,1500;
@@ -3688,6 +3778,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,1;
@@ -3701,6 +3792,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddSize,Size_Medium,15;
@@ -3714,6 +3806,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "AL_CURE",1;
@@ -3726,6 +3819,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLongAtkRate,10;
@@ -3738,6 +3832,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Water,30;
@@ -3751,6 +3846,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Poison,400;
@@ -3764,6 +3860,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,10;
@@ -3777,6 +3874,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Wind;
@@ -3790,6 +3888,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Fire;
@@ -3803,6 +3902,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxSPrate,15;
@@ -3816,6 +3916,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Earth;
@@ -3829,6 +3930,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee,20;
@@ -3842,6 +3944,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "MG_SIGHT",1;
@@ -3856,6 +3959,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Confusion,500;
@@ -3868,6 +3972,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Water,5;
@@ -3881,6 +3986,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHit,20;
@@ -3893,6 +3999,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,8;
@@ -3906,6 +4013,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Poison,30;
@@ -3919,6 +4027,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Fire,30;
@@ -3934,6 +4043,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Poison,2000;
@@ -3947,6 +4057,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_Demon,20;
@@ -3961,6 +4072,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Silence,10000;
@@ -3973,6 +4085,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Ghost,30;
@@ -3986,6 +4099,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Poison;
@@ -3999,6 +4113,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bHPDrainRate,30,15;
@@ -4011,6 +4126,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Dark,30;
@@ -4024,6 +4140,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "TF_DOUBLE",1;
@@ -4036,6 +4153,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_Dragon,20;
@@ -4048,6 +4166,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Dark;
@@ -4060,6 +4179,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Dragon,30;
@@ -4072,6 +4192,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHit,100;
@@ -4086,6 +4207,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,1;
@@ -4099,6 +4221,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,-25;
@@ -4112,6 +4235,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Demon,15;
@@ -4125,6 +4249,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_DemiHuman,7;
@@ -4142,6 +4267,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddSize,Size_Large,15;
@@ -4157,6 +4283,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Sleep,10000;
@@ -4170,6 +4297,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bNoMagicDamage,100;
@@ -4183,6 +4311,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,3;
@@ -4196,6 +4325,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Undead,20;
@@ -4208,6 +4338,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bSpeedRate,25;
@@ -4222,6 +4353,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bNoGemStone;
@@ -4235,6 +4367,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Neutral,20;
@@ -4247,6 +4380,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPDrainRate,100,5;
@@ -4259,6 +4393,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bShortWeaponDamageReturn,30;
@@ -4271,6 +4406,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Demon,30;
@@ -4283,6 +4419,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bNoSizeFix;
@@ -4295,6 +4432,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Angel,30;
@@ -4307,6 +4445,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "TF_STEAL",1;
@@ -4319,6 +4458,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddClass,Class_Boss,25;
@@ -4331,6 +4471,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Undead;
@@ -4345,6 +4486,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAspdRate,10;
@@ -4359,6 +4501,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,3;
@@ -4372,6 +4515,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bRestartFullRecover;
@@ -4384,6 +4528,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCastrate,-30;
@@ -4396,6 +4541,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMagicDamageReturn,50;
@@ -4408,6 +4554,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHit,-10;
@@ -4423,6 +4570,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bUseSPrate,-30;
@@ -4435,6 +4583,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12028,RC_Insect,100;
@@ -4447,6 +4596,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()<6) {
@@ -4462,6 +4612,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Plant,-20;
@@ -4475,6 +4626,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddItemGroupHealRate,IG_Juice,50;
@@ -4490,6 +4642,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,5;
@@ -4503,6 +4656,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddItemGroupHealRate,IG_Candy,50;
@@ -4517,6 +4671,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace2,RC2_Goblin,30;
@@ -4529,6 +4684,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -4542,6 +4698,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -4555,6 +4712,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHPrecovRate,-100;
@@ -4568,6 +4726,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,2;
@@ -4582,6 +4741,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,2;
@@ -4600,6 +4760,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"PR_GLORIA",1,50;
@@ -4612,6 +4773,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Blind,300;
@@ -4624,6 +4786,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee,2;
@@ -4639,6 +4802,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Fish,-20;
@@ -4652,6 +4816,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Insect,5;
@@ -4666,6 +4831,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Curse,300;
@@ -4678,6 +4844,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Brute,5;
@@ -4693,6 +4860,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"WZ_METEOR",5,100;
@@ -4707,6 +4875,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,-10;
@@ -4721,6 +4890,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Stone,600;
@@ -4733,6 +4903,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPVanishRate,50,10;
@@ -4747,6 +4918,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,20;
@@ -4760,6 +4932,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Sleep,600;
@@ -4772,6 +4945,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Neutral,50;
@@ -4793,6 +4967,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"TF_POISON",1,20;
@@ -4806,6 +4981,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -4821,6 +4997,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,993,RC_Plant,100;
@@ -4834,6 +5011,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,1;
@@ -4849,6 +5027,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,1;
@@ -4861,6 +5040,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Dragon,5;
@@ -4875,6 +5055,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Silence,300+600*(readparam(bVit)>=77);
@@ -4887,6 +5068,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Demon,5;
@@ -4901,6 +5083,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,1;
@@ -4913,6 +5096,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace2,RC2_Golem,30;
@@ -4927,6 +5111,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,1;
@@ -4943,6 +5128,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,1;
@@ -4956,6 +5142,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12030,RC_Demon,100;
@@ -4970,6 +5157,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Fire,10;
@@ -4983,6 +5171,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Curse,600;
@@ -4995,6 +5184,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12027,RC_Undead,100;
@@ -5007,6 +5197,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"AL_HEAL",3,50;
@@ -5019,6 +5210,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -5032,6 +5224,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (BaseJob == Job_Novice || BaseJob == Job_SuperNovice)
@@ -5045,6 +5238,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Stun,300+600*(readparam(bDex)>=77);
@@ -5059,6 +5253,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Water,10;
@@ -5072,6 +5267,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItem,909,2000;
@@ -5085,6 +5281,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,1;
@@ -5099,6 +5296,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bIntravision;
@@ -5111,6 +5309,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHPrecovRate,10;
@@ -5124,6 +5323,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()<6)
@@ -5137,6 +5337,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Stun,600;
@@ -5149,6 +5350,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Ghost,20;
@@ -5161,6 +5363,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,15;
@@ -5174,6 +5377,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Brute,-20;
@@ -5188,6 +5392,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItem,603,10;
@@ -5202,6 +5407,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItem,644,30;
@@ -5214,6 +5420,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubSize,Size_Small,25;
@@ -5227,6 +5434,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxSPrate,10;
@@ -5240,6 +5448,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"BA_FROSTJOKER",1+4*(getskilllv("BA_FROSTJOKER") == 5),20;
@@ -5252,6 +5461,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (!isequipped(4172,4257,4230,4272))
@@ -5267,6 +5477,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMdef,3;
@@ -5279,6 +5490,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"SM_BASH",1,20;
@@ -5293,6 +5505,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Silence,600;
@@ -5305,6 +5518,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -5318,6 +5532,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItemGroup,IG_Food,600;
@@ -5330,6 +5545,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Freeze,600;
@@ -5342,6 +5558,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"AL_HEAL",1+9*(getskilllv("AL_HEAL") == 10),20;
@@ -5354,6 +5571,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,-3;
@@ -5368,6 +5586,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItem,715,30;
@@ -5382,6 +5601,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,2;
@@ -5395,6 +5615,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Insect,-20;
@@ -5408,6 +5629,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Sleep,300;
@@ -5422,6 +5644,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,1;
@@ -5435,6 +5658,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12032,RC_Brute,100;
@@ -5447,6 +5671,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,10;
@@ -5460,6 +5685,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,2;
@@ -5474,6 +5700,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddItemGroupHealRate,IG_Meat,50;
@@ -5488,6 +5715,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12031,RC_Fish,100;
@@ -5502,6 +5730,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,1;
@@ -5515,6 +5744,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,1;
@@ -5528,6 +5758,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddDefMonster,1285,-50;
@@ -5544,6 +5775,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddItemGroupHealRate,IG_Herb,50;
@@ -5559,6 +5791,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,3;
@@ -5573,6 +5806,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"AC_CONCENTRATION",1+9*(getskilllv("AC_CONCENTRATION") == 10),30;
@@ -5585,6 +5819,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Angel,-20;
@@ -5598,6 +5833,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAllStats,1;
@@ -5611,6 +5847,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"PR_IMPOSITIO",3,3;
@@ -5623,6 +5860,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"PR_LEXAETERNA",1,30;
@@ -5635,6 +5873,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Formless,-20;
@@ -5648,6 +5887,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()<6) {
@@ -5665,6 +5905,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHP,300;
@@ -5695,6 +5936,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"AL_TELEPORT",1,500;
@@ -5707,6 +5949,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"MG_SIGHT",1,200;
@@ -5721,6 +5964,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_DemiHuman,-20;
@@ -5735,6 +5979,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -5749,6 +5994,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,5;
@@ -5762,6 +6008,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"AL_CRUCIS",5,30;
@@ -5774,6 +6021,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Demon,-20;
@@ -5787,6 +6035,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubSize,Size_Large,25;
@@ -5800,6 +6049,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddDamageClass,1285,40;
@@ -5816,6 +6066,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLongAtkDef,5;
@@ -5828,6 +6079,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubClass,Class_Boss,40;
@@ -5841,6 +6093,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubSize,Size_Medium,25;
@@ -5854,6 +6107,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace2,3,30;
@@ -5866,6 +6120,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12034,RC_DemiHuman,100;
@@ -5878,6 +6133,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,1;
@@ -5894,6 +6150,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,1;
@@ -5907,6 +6164,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,1;
@@ -5922,6 +6180,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,1;
@@ -5937,6 +6196,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,1;
@@ -5950,6 +6210,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12029,RC_Plant,100;
@@ -5962,6 +6223,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bIgnoreDefClass,Class_Normal;
@@ -5983,6 +6245,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"WZ_JUPITEL",3+7*(getskilllv("WZ_JUPITEL") == 10),20;
@@ -5995,6 +6258,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12033,RC_Angel,100;
@@ -6007,6 +6271,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,1;
@@ -6019,6 +6284,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Dragon,-20;
@@ -6032,6 +6298,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"AS_SONICBLOW",1,50;
@@ -6046,6 +6313,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,-3;
@@ -6060,6 +6328,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Poison,600;
@@ -6074,6 +6343,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Wind,10;
@@ -6087,6 +6357,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,1;
@@ -6100,6 +6371,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,5;
@@ -6113,6 +6385,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Undead,5;
@@ -6127,6 +6400,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Undead,-20;
@@ -6140,6 +6414,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddEff,Eff_Stun,500,ATF_SHORT;
@@ -6157,6 +6432,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,2;
@@ -6173,6 +6449,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()<6)
@@ -6186,6 +6463,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bSPrecovRate,-100;
@@ -6201,6 +6479,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"AL_BLESSING",2+8*(getskilllv("AL_BLESSING") == 10),30;
@@ -6213,6 +6492,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,30;
@@ -6228,6 +6508,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItemGroup,IG_Recovery,600;
@@ -6240,6 +6521,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"MO_CALLSPIRITS",5,2+18*(BaseClass == Job_Acolyte);
@@ -6252,6 +6534,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus4 bAutoSpell,"AL_HEAL",5,50,1;
@@ -6264,6 +6547,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee2,5;
@@ -6277,6 +6561,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Confusion,300+600*(readparam(bStr)>=77);
@@ -6289,6 +6574,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()<6)
@@ -6304,6 +6590,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,2;
@@ -6318,6 +6605,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Plant,5;
@@ -6332,6 +6620,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMdef,3;
@@ -6345,6 +6634,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace2,RC2_Kobold,30;
@@ -6357,6 +6647,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -6370,6 +6661,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,2;
@@ -6383,6 +6675,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (BaseJob == Job_Novice || BaseJob == Job_SuperNovice)
@@ -6396,6 +6689,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Blind,600;
@@ -6410,6 +6704,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bGetZenyNum,500,1;
@@ -6422,6 +6717,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -6436,6 +6732,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Confusion,600;
@@ -6448,6 +6745,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"CR_AUTOGUARD",3+7*(getskilllv("CR_AUTOGUARD") == 10),30;
@@ -6460,6 +6758,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Poison,300+600*(BaseJob == Job_Assassin);
@@ -6472,6 +6771,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Bleeding,600;
@@ -6484,6 +6784,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,100;
@@ -6498,6 +6799,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee,10;
@@ -6513,6 +6815,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,2;
@@ -6527,6 +6830,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddClass,Class_All,20;
@@ -6540,6 +6844,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee2,1;
@@ -6552,6 +6857,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Fish,5;
@@ -6566,6 +6872,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Formless,5;
@@ -6580,6 +6887,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,1;
@@ -6593,6 +6901,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,10;
@@ -6608,6 +6917,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Dark,15;
@@ -6621,6 +6931,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee,3;
@@ -6638,6 +6949,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus4 bAutoSpellWhenHit,"WZ_QUAGMIRE",1+4*(getskilllv("WZ_QUAGMIRE") == 5),50,0;
@@ -6650,6 +6962,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Formless,30;
@@ -6662,6 +6975,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Stone,300+600*(readparam(bInt)>=77);
@@ -6674,6 +6988,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_Angel,5;
@@ -6688,6 +7003,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritAtkRate,15;
@@ -6702,6 +7018,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"WZ_STORMGUST",2,20;
@@ -6715,6 +7032,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHP,300;
@@ -6729,6 +7047,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"WZ_METEOR",1,20;
@@ -6741,6 +7060,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bClassChange,100;
@@ -6753,6 +7073,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDef,1;
@@ -6766,6 +7087,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"MG_FROSTDIVER",3,50;
@@ -6778,6 +7100,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEffWhenHit,Eff_Freeze,5000;
@@ -6790,6 +7113,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Neutral,15;
@@ -6803,6 +7127,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddItemGroupHealRate,IG_Fish,50;
@@ -6817,6 +7142,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCastrate,30;
@@ -6831,6 +7157,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee,15;
@@ -6844,6 +7171,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSPGainRace,RC_DemiHuman,5;
@@ -6861,6 +7189,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,3;
@@ -6875,6 +7204,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCritical,3;
@@ -6889,6 +7219,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,5;
@@ -6902,6 +7233,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddEffWhenHit,Eff_Poison,3000,ATF_TARGET|ATF_SELF;
@@ -6914,6 +7246,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLongAtkDef,10;
@@ -6927,6 +7260,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"WZ_EARTHSPIKE",5;
@@ -6944,6 +7278,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHPrecovRate,10;
@@ -6957,6 +7292,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,25;
@@ -6970,6 +7306,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,readparam(bDex)/18;
@@ -6982,6 +7319,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,-25;
@@ -6995,6 +7333,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubRace,RC_Undead,30;
@@ -7007,6 +7346,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"RG_STRIPWEAPON",1,50;
@@ -7019,6 +7359,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,3;
@@ -7035,6 +7376,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,2;
@@ -7047,6 +7389,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12058,RC_Insect,50;
@@ -7059,6 +7402,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"MG_THUNDERSTORM",5;
@@ -7075,6 +7419,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,readparam(bInt)/18;
@@ -7087,6 +7432,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12053,RC_Fish,50;
@@ -7099,6 +7445,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"RG_STRIPARMOR",1,50;
@@ -7111,6 +7458,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus4 bAutoSpellWhenHit,"AL_PNEUMA",1,50,0;
@@ -7123,6 +7471,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"WZ_FROSTNOVA",3;
@@ -7138,6 +7487,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()<=4) {
@@ -7156,6 +7506,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,10;
@@ -7171,6 +7522,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHP,800-40*getrefine();
@@ -7186,6 +7538,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (readparam(bAgi)>=90) {
@@ -7205,6 +7558,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12043,RC_Brute,50;
@@ -7217,6 +7571,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "SA_CASTCANCEL",1;
@@ -7231,6 +7586,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "LK_BERSERK",1;
@@ -7246,6 +7602,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,getrefine()-6;
@@ -7258,6 +7615,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "AS_CLOAKING",3;
@@ -7272,6 +7630,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bCriticalAddRace,RC_DemiHuman,10;
@@ -7285,6 +7644,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBreakWeaponRate,1000;
@@ -7298,6 +7658,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAspdRate,-5;
@@ -7311,6 +7672,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus5 bAutoSpellWhenHit,"HP_ASSUMPTIO",1,50,BF_WEAPON|BF_MAGIC,0;
@@ -7325,6 +7687,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,1;
@@ -7340,6 +7703,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bIgnoreMdefClassRate,Class_Normal,100;
@@ -7358,6 +7722,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCastrate,getrefine()*-1;
@@ -7373,6 +7738,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bHPDrainRate,50,20;
@@ -7386,6 +7752,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAspdRate,5;
@@ -7399,6 +7766,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,readparam(bAgi)/18;
@@ -7411,6 +7779,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,getrefine()-5;
@@ -7423,6 +7792,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,10;
@@ -7438,6 +7808,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHealPower,30;
@@ -7451,6 +7822,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bLuk,getrefine()-5;
@@ -7466,6 +7838,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDex,2;
@@ -7479,6 +7852,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()>=9) {
@@ -7498,6 +7872,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHPrate,-40;
@@ -7513,6 +7888,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12063,RC_Formless,50;
@@ -7525,6 +7901,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()<=4) {
@@ -7548,6 +7925,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getrefine()<=4) {
@@ -7566,6 +7944,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"WZ_FIREPILLAR",5;
@@ -7581,6 +7960,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,1;
@@ -7594,6 +7974,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMaxHP,500;
@@ -7607,6 +7988,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddEffWhenHit,Eff_Confusion,3000,ATF_TARGET|ATF_SELF;
@@ -7619,6 +8001,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"SA_SPELLBREAKER",1,100;
@@ -7631,6 +8014,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12048,RC_Dragon,50;
@@ -7643,6 +8027,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMdef,-20;
@@ -7657,6 +8042,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,readparam(bLuk)/18;
@@ -7669,6 +8055,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"MG_NAPALMBEAT",5;
@@ -7685,6 +8072,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItem,12118,50;
@@ -7700,6 +8088,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,5;
@@ -7713,6 +8102,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddMonsterDropItem,12068,RC_Angel,50;
@@ -7725,6 +8115,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDex,readparam(bVit)/18;
@@ -7737,6 +8128,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,readparam(bStr)/18;
@@ -7749,6 +8141,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (BaseJob == Job_Priest)
@@ -7762,6 +8155,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,5;
@@ -7775,6 +8169,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bAgi,getrefine()-5;
@@ -7787,6 +8182,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,getrefine()-6;
@@ -7799,6 +8195,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bMagicAddRace,RC_Angel,10;
@@ -7811,6 +8208,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDefRatioAtkClass,Class_All;
@@ -7826,6 +8224,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"DC_WINKCHARM",1,50+50*(BaseJob == Job_Dancer);
@@ -7838,6 +8237,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee,10;
@@ -7851,6 +8251,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (BaseClass == Job_Swordman || BaseClass == Job_Merchant || BaseClass == Job_Thief) {
@@ -7872,6 +8273,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bDelayRate,-30;
@@ -7884,6 +8286,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAddEffWhenHit,Eff_Bleeding,3000,ATF_TARGET|ATF_SELF;
@@ -7896,6 +8299,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMagicDamageReturn,getrefine()*2;
@@ -7910,6 +8314,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bMagicAddRace,RC_Demon,2;
@@ -7922,6 +8327,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bUnbreakableWeapon;
@@ -7936,6 +8342,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Holy,40;
@@ -7951,6 +8358,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMatkRate,5;
@@ -7966,6 +8374,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,15;
@@ -7982,6 +8391,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bStr,2;
@@ -7997,6 +8407,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,2;
@@ -8010,6 +8421,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubSize,Size_All,15;
@@ -8023,6 +8435,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "MG_STONECURSE",1;
@@ -8037,6 +8450,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddMonsterDropItem,536,2000;
@@ -8050,6 +8464,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"MG_COLDBOLT",25;
@@ -8063,6 +8478,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bVit,2;
@@ -8076,6 +8492,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"MG_COLDBOLT",2,100;
@@ -8088,6 +8505,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddEle,Ele_Fire,50;
@@ -8101,6 +8519,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpellWhenHit,"AL_HEAL",1,100;
@@ -8114,6 +8533,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bCriticalLong,15;
@@ -8126,6 +8546,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bFlee,5;
@@ -8141,6 +8562,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHit,5;
@@ -8154,6 +8576,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       skill "TF_PICKSTONE",1;
@@ -8167,6 +8590,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,25;
@@ -8180,6 +8604,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (BaseJob == Job_Rogue) {
@@ -8195,6 +8620,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_1HSWORD || getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_2HSWORD) {
@@ -8211,6 +8637,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_BOW) {
@@ -8227,6 +8654,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"WZ_FIREPILLAR",40;
@@ -8240,6 +8668,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,(JobLevel/10);
@@ -8255,6 +8684,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus3 bAutoSpell,"MG_FIREBALL",5,20;
@@ -8268,6 +8698,7 @@ Body:
     Locations:
       Garment: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,5;
@@ -8284,6 +8715,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSkillAtk,"MG_FIREBOLT",25;
@@ -8299,6 +8731,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_Formless,5;
@@ -8313,6 +8746,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bAddRace,RC_DemiHuman,1;
@@ -8329,6 +8763,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bCriticalAddRace,RC_DemiHuman,5;
@@ -8347,6 +8782,7 @@ Body:
     Locations:
       Both_Accessory: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bHit,1;
@@ -8363,6 +8799,7 @@ Body:
       Head_Mid: true
       Head_Top: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (BaseClass == Job_Mage) {
@@ -8381,6 +8818,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Blind,3000;
@@ -8400,6 +8838,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       if (getiteminfo(getequipid(EQI_HAND_R), ITEMINFO_VIEW) == W_STAFF) {
@@ -8416,6 +8855,7 @@ Body:
     Locations:
       Shoes: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMatkRate,10;
@@ -8432,6 +8872,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Neutral,20;
@@ -8445,6 +8886,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Water,20;
@@ -8458,6 +8900,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Earth,20;
@@ -8471,6 +8914,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Wind,20;
@@ -8484,6 +8928,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Poison,20;
@@ -8497,6 +8942,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Holy,20;
@@ -8510,6 +8956,7 @@ Body:
     Locations:
       Left_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Dark,20;
@@ -8523,6 +8970,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,1;
@@ -8536,6 +8984,7 @@ Body:
     Locations:
       Armor: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bMatk,100;
@@ -8548,6 +8997,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bInt,1;
@@ -8561,6 +9011,7 @@ Body:
     Locations:
       Right_Hand: true
     Flags:
+      DropEffect: CLIENT
       BuyingStore: true
     Script: |
       bonus bBaseAtk,25;
