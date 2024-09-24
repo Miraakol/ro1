@@ -1,4 +1,4 @@
-new_1-1,56,114,4	script	VIP Employee#tgd	117,{
+new_1-3,98,30,4	script	VIP Employee#tgd	117,{
 	if (vip_status(VIP_STATUS_ACTIVE)) {
 	mes "[VIP Employee]";
 	mes "Welcome ^0000FF"+strcharinfo(0)+"^000000!";
