@@ -2550,8 +2550,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bLuk,2;
-      bonus bFlee2,1;
+       bonus bLuk,1;
   - Id: 4002
     AegisName: Fabre_Card
     Name: Fabre Card
@@ -2565,7 +2564,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bVit,1;
-      bonus bMaxHP,100;
   - Id: 4003
     AegisName: Pupa_Card
     Name: Pupa Card
@@ -2578,7 +2576,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bMaxHP,700;
+       bonus bMaxHP,50;
   - Id: 4004
     AegisName: Drops_Card
     Name: Drops Card
@@ -2592,7 +2590,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDex,1;
-      bonus bHit,3;
   - Id: 4005
     AegisName: Poring__Card
     Name: Santa Poring Card
@@ -2619,8 +2616,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bLuk,1;
-      bonus bCritical,1;
-      bonus bFlee2,1;
   - Id: 4007
     AegisName: Pecopeco_Egg_Card
     Name: Peco Peco Egg Card
@@ -2647,7 +2642,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bStr,1;
-      bonus bBaseAtk,10;
   - Id: 4009
     AegisName: Chonchon_Card
     Name: Chonchon Card
@@ -2661,7 +2655,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bAgi,1;
-      bonus bFlee,2;
   - Id: 4010
     AegisName: Wilow_Card
     Name: Willow Card
@@ -2676,7 +2669,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bMaxSP,80;
+      bonus bMaxSP,30;
   - Id: 4011
     AegisName: Picky__Card
     Name: Picky Egg Card
@@ -2690,7 +2683,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bVit,1;
-      bonus bMaxHP,100;
   - Id: 4012
     AegisName: Thief_Bug_Egg_Card
     Name: Thief Bug Egg Card
@@ -2703,7 +2695,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bMaxHP,400;
+      bonus bMaxHP,30;
   - Id: 4013
     AegisName: Andre_Egg_Card
     Name: Andre Egg Card
@@ -2729,8 +2721,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bMaxHP,400;
-      bonus bMaxSP,50;
+      bonus bMaxHP,100;
   - Id: 4015
     AegisName: Condor_Card
     Name: Condor Card
@@ -2743,7 +2734,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bFlee,10;
+      bonus bFlee,5;
   - Id: 4016
     AegisName: Thief_Bug_Card
     Name: Thief Bug Card
@@ -2783,7 +2774,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bInt,1;
-      bonus bMaxSP,10;
   - Id: 4019
     AegisName: Hornet_Card
     Name: Hornet Card
@@ -2797,7 +2787,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bStr,1;
-      bonus bBaseAtk,3;
   - Id: 4020
     AegisName: Farmiliar_Card
     Name: Familiar Card
@@ -2811,7 +2800,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Blind,500;
-      bonus bBaseAtk,5;
   - Id: 4021
     AegisName: Rocker_Card
     Name: Rocker Card
@@ -2825,7 +2813,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDex,1;
-      bonus bBaseAtk,5;
   - Id: 4022
     AegisName: Spore_Card
     Name: Spore Card
@@ -2865,7 +2852,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Sleep,500;
-      bonus bBaseAtk,5;
   - Id: 4025
     AegisName: Skeleton_Card
     Name: Skeleton Card
@@ -2878,8 +2864,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bBaseAtk,10;
-      bonus2 bAddEff,Eff_Stun,200;
+      bonus bBaseAtk,3;
   - Id: 4026
     AegisName: Thief_Bug_Female_Card
     Name: Female Thief Bug Card
@@ -2893,7 +2878,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bAgi,1;
-      bonus bFlee,1;
   - Id: 4027
     AegisName: Kukre_Card
     Name: Kukre Card
@@ -2932,8 +2916,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bBaseAtk,15;
-      bonus bCritical,1;
+      bonus bBaseAtk,5;
   - Id: 4030
     AegisName: Mandragora_Card
     Name: Mandragora Card
@@ -2959,7 +2942,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bMaxHPrate,10;
+      bonus bMaxHP,150;
   - Id: 4032
     AegisName: Ambernite_Card
     Name: Ambernite Card
@@ -3039,7 +3022,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Poison,500;
-      bonus bBaseAtk,5;
   - Id: 4038
     AegisName: Zombie_Card
     Name: Zombie Card
@@ -3052,7 +3034,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bHPrecovRate,20;
+      bonus bHPrecovRate,15;
   - Id: 4039
     AegisName: Stainer_Card
     Name: Stainer Card
@@ -3068,7 +3050,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Silence,2000;
-      bonus bDef,1;
   - Id: 4040
     AegisName: Creamy_Card
     Name: Creamy Card
@@ -3097,7 +3078,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Sleep,2000;
-      bonus bDef,1;
   - Id: 4042
     AegisName: Steel_Chonchon_Card
     Name: Steel Chonchon Card
@@ -3110,7 +3090,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubEle,Ele_Wind,10;
+      bonus2 bSubEle,Ele_Wind,5;
       bonus bDef,2;
   - Id: 4043
     AegisName: Andre_Card
@@ -3124,7 +3104,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bBaseAtk,20;
+      bonus bBaseAtk,10;
   - Id: 4044
     AegisName: Smokie_Card
     Name: Smokie Card
@@ -3152,7 +3132,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bLongAtkDef,35;
+      bonus bLongAtkDef,25;
   - Id: 4046
     AegisName: Martin_Card
     Name: Martin Card
@@ -3168,7 +3148,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Blind,2000;
-      bonus bDef,1;
   - Id: 4047
     AegisName: Ghostring_Card
     Name: Ghostring Card
@@ -3195,7 +3174,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      skill "TF_POISON",3;
+      skill "TF_POISON",1;
   - Id: 4049
     AegisName: Vadon_Card
     Name: Vadon Card
@@ -3264,7 +3243,6 @@ Body:
       BuyingStore: true
     Script: |
       skill "AL_HEAL",1;
-      bonus bUseSPrate,25;
   - Id: 4054
     AegisName: Angeling_Card
     Name: Angeling Card
@@ -3291,7 +3269,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Freeze,500;
-      bonus bBaseAtk,5;
   - Id: 4056
     AegisName: Dustiness_Card
     Name: Dustiness Card
@@ -3305,7 +3282,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Wind,30;
-      bonus bFlee,5;
   - Id: 4057
     AegisName: Metaller_Card
     Name: Metaller Card
@@ -3319,7 +3295,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Silence,500;
-      bonus bBaseAtk,5;
   - Id: 4058
     AegisName: Thara_Frog_Card
     Name: Thara Frog Card
@@ -3332,8 +3307,8 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_DemiHuman,30;
-      bonus2 bSubRace,RC_Player_Human,30;
+      bonus2 bSubRace,RC_DemiHuman,50;
+      bonus2 bSubRace,RC_Player_Human,50;
   - Id: 4059
     AegisName: Soldier_Andre_Card
     Name: Soldier Andre Card
@@ -3346,7 +3321,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Plant,30;
+      bonus2 bSubRace,RC_Plant,50;
   - Id: 4060
     AegisName: Goblin_Card
     Name: Goblin Card
@@ -3374,7 +3349,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bUnbreakableArmor;
-      bonus bDef,1;
   - Id: 4062
     AegisName: Anacondaq_Card
     Name: Anacondaq Card
@@ -3439,8 +3413,8 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Brute,30;
-      bonus2 bSubRace,RC_Player_Doram,30;
+      bonus2 bSubRace,RC_Brute,50;
+      bonus2 bSubRace,RC_Player_Doram,50;
   - Id: 4067
     AegisName: Megalodon_Card
     Name: Megalodon Card
@@ -3454,7 +3428,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Freeze,2000;
-      bonus bDef,1;
   - Id: 4068
     AegisName: Scorpion_Card
     Name: Scorpion Card
@@ -3507,7 +3480,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Undead,30;
-      bonus bFlee,5;
   - Id: 4072
     AegisName: Golem_Card
     Name: Golem Card
@@ -3521,7 +3493,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bUnbreakableWeapon;
-      bonus bBaseAtk,5;
   - Id: 4073
     AegisName: Pirate_Skel_Card
     Name: Pirate Skeleton Card
@@ -3534,7 +3505,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      skill "MC_DISCOUNT",5;
+      skill "MC_DISCOUNT",1;
   - Id: 4074
     AegisName: BigFoot_Card
     Name: Bigfoot Card
@@ -3547,7 +3518,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Insect,30;
+      bonus2 bSubRace,RC_Insect,50;
   - Id: 4075
     AegisName: Argos_Card
     Name: Argos Card
@@ -3561,7 +3532,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Stone,2000;
-      bonus bDef,1;
   - Id: 4076
     AegisName: Magnolia_Card
     Name: Magnolia Card
@@ -3575,7 +3545,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddEff,Eff_Curse,500;
-      bonus bBaseAtk,5;
   - Id: 4077
     AegisName: Phen_Card
     Name: Phen Card
@@ -3589,7 +3558,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bNoCastCancel;
-      bonus bCastrate,25;
+      bonus bCastrate,10;
   - Id: 4078
     AegisName: Savage_Card
     Name: Savage Card
@@ -3642,7 +3611,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Earth,30;
-      bonus bFlee,5;
   - Id: 4082
     AegisName: Desert_Wolf_Card
     Name: Desert Wolf Card
@@ -3655,8 +3623,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bAddSize,Size_Small,15;
-      bonus bBaseAtk,5;
+      bonus2 bAddSize,Size_Small,25;
   - Id: 4083
     AegisName: Rafflesia_Card
     Name: Rafflesia Card
@@ -3669,7 +3636,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Fish,30;
+      bonus2 bSubRace,RC_Fish,50;
   - Id: 4084
     AegisName: Marine_Sphere_Card
     Name: Marine Sphere Card
@@ -3682,7 +3649,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      skill "SM_MAGNUM",3;
+      skill "SM_MAGNUM",1;
   - Id: 4085
     AegisName: Orc_Skeleton_Card
     Name: Orc Skeleton Card
@@ -3724,7 +3691,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Confusion,10000;
-      bonus2 bSubEle,Ele_Earth,15;
   - Id: 4088
     AegisName: Frilldora_Card
     Name: Frilldora Card
@@ -3753,7 +3719,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Water;
-      bonus bDef,1;
   - Id: 4090
     AegisName: Munak_Card
     Name: Munak Card
@@ -3767,8 +3732,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Stone,1500;
-      bonus2 bSubEle,Ele_Earth,5;
-      bonus bDef,1;
   - Id: 4091
     AegisName: Kobold_Card
     Name: Kobold Card
@@ -3782,7 +3745,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bStr,1;
-      bonus bCritical,4;
+      bonus bCriticalRate,5;
   - Id: 4092
     AegisName: Skel_Worker_Card
     Name: Skeleton Worker Card
@@ -3796,7 +3759,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddSize,Size_Medium,15;
-      bonus bBaseAtk,5;
   - Id: 4093
     AegisName: Obeaune_Card
     Name: Obeaune Card
@@ -3821,8 +3783,8 @@ Body:
     Flags:
       DropEffect: CLIENT
       BuyingStore: true
-    Script: |
-      bonus bLongAtkRate,10;
+#    Script: |
+#      bonus bLongAtkRate,10;
   - Id: 4095
     AegisName: Marse_Card
     Name: Marse Card
@@ -3836,7 +3798,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Water,30;
-      bonus bFlee,5;
   - Id: 4096
     AegisName: Zenorc_Card
     Name: Zenorc Card
@@ -3849,8 +3810,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bAddEff,Eff_Poison,400;
-      bonus bBaseAtk,10;
+      bonus2 bAddEff,Eff_Poison,500;
   - Id: 4097
     AegisName: Matyr_Card
     Name: Matyr Card
@@ -3863,7 +3823,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bMaxHPrate,10;
+      bonus bMaxHPrate,12;
       bonus bAgi,1;
   - Id: 4098
     AegisName: Dokebi_Card
@@ -3878,7 +3838,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Wind;
-      bonus bDef,1;
   - Id: 4099
     AegisName: Pasana_Card
     Name: Pasana Card
@@ -3892,7 +3851,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Fire;
-      bonus bDef,1;
   - Id: 4100
     AegisName: Sohee_Card
     Name: Sohee Card
@@ -3905,8 +3863,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bMaxSPrate,15;
-      bonus bSPrecovRate,3;
+      bonus bMaxSPrate,20;
   - Id: 4101
     AegisName: Sand_Man_Card
     Name: Sandman Card
@@ -3920,7 +3877,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Earth;
-      bonus bDef,1;
   - Id: 4102
     AegisName: Whisper_Card
     Name: Whisper Card
@@ -3934,7 +3890,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bFlee,20;
-      bonus2 bSubEle,Ele_Ghost,-50;
+      bonus2 bSubEle,Ele_Ghost,-5;
   - Id: 4103
     AegisName: Horong_Card
     Name: Horong Card
@@ -3961,8 +3917,8 @@ Body:
     Flags:
       DropEffect: CLIENT
       BuyingStore: true
-    Script: |
-      bonus2 bAddEff,Eff_Confusion,500;
+    #Script: |
+      #bonus2 bAddEff,Eff_Confusion,500;
   - Id: 4105
     AegisName: Marc_Card
     Name: Marc Card
@@ -3989,7 +3945,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bHit,20;
+      bonus bHitRate,20;
   - Id: 4107
     AegisName: Verit_Card
     Name: Verit Card
@@ -4017,7 +3973,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Poison,30;
-      bonus bFlee,5;
   - Id: 4109
     AegisName: Jakk_Card
     Name: Jakk Card
@@ -4031,7 +3986,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Fire,30;
-      bonus bFlee,5;
   - Id: 4110
     AegisName: Ghoul_Card
     Name: Ghoul Card
@@ -4047,7 +4001,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Poison,2000;
-      bonus bDef,1;
   - Id: 4111
     AegisName: Strouf_Card
     Name: Strouf Card
@@ -4076,6 +4029,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Silence,10000;
+      bonus bCastrate,5;
   - Id: 4113
     AegisName: Marionette_Card
     Name: Marionette Card
@@ -4089,7 +4043,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Ghost,30;
-      bonus bFlee,5;
   - Id: 4114
     AegisName: Argiope_Card
     Name: Argiope Card
@@ -4103,7 +4056,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bDefEle,Ele_Poison;
-      bonus bDef,1;
+      bonus2 bSubEle,Ele_Poison,5;
   - Id: 4115
     AegisName: Hunter_Fly_Card
     Name: Hunter Fly Card
@@ -4130,7 +4083,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bSubEle,Ele_Dark,30;
-      bonus bFlee,5;
   - Id: 4117
     AegisName: Side_Winder_Card
     Name: Sidewinder Card
@@ -4156,7 +4108,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bAddRace,RC_Dragon,20;
+      bonus2 bAddRace,RC_Dragon,25;
   - Id: 4119
     AegisName: Bathory_Card
     Name: Bathory Card
@@ -4182,7 +4134,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Dragon,30;
+      bonus2 bSubRace,RC_Dragon,50;
   - Id: 4121
     AegisName: Phreeoni_Card
     Name: Phreeoni Card
@@ -4252,12 +4204,12 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bAddRace,RC_DemiHuman,7;
-      bonus2 bAddRace,RC_Player_Human,7;
-      bonus2 bAddRace,RC_Brute,7;
-      bonus2 bAddRace,RC_Player_Doram,7;
-      bonus2 bAddRace,RC_Plant,7;
-      bonus2 bAddRace,RC_Insect,7;
+      bonus2 bAddRace,RC_DemiHuman,5;
+      bonus2 bAddRace,RC_Player_Human,5;
+      bonus2 bAddRace,RC_Brute,5;
+      bonus2 bAddRace,RC_Player_Doram,5;
+      bonus2 bAddRace,RC_Plant,5;
+      bonus2 bAddRace,RC_Insect,5;
   - Id: 4126
     AegisName: Minorous_Card
     Name: Minorous Card
@@ -4271,7 +4223,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bAddSize,Size_Large,15;
-      bonus bBaseAtk,5;
   - Id: 4127
     AegisName: Nightmare_Card
     Name: Nightmare Card
@@ -4287,7 +4238,6 @@ Body:
       BuyingStore: true
     Script: |
       bonus2 bResEff,Eff_Sleep,10000;
-      bonus bAgi,1;
   - Id: 4128
     AegisName: Golden_Bug_Card
     Name: Golden Thief Bug Card
@@ -4301,7 +4251,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bNoMagicDamage,100;
-      bonus bUseSPrate,100;
+      bonus bUseSPrate,50;
   - Id: 4129
     AegisName: Baphomet__Card
     Name: Bapho Jr. Card
@@ -4315,7 +4265,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bAgi,3;
-      bonus bCritical,1;
+      bonus bCriticalRate,1;
   - Id: 4130
     AegisName: Scorpion_King_Card
     Name: Scorpion King Card
@@ -4357,7 +4307,7 @@ Body:
       BuyingStore: true
     Script: |
       bonus bNoGemStone;
-      bonus bUseSPrate,25;
+      bonus bUseSPrate,10;
   - Id: 4133
     AegisName: Daydric_Card
     Name: Raydric Card
@@ -4370,7 +4320,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubEle,Ele_Neutral,20;
+      bonus2 bSubEle,Ele_Neutral,15;
   - Id: 4134
     AegisName: Dracula_Card
     Name: Dracula Card
@@ -4383,7 +4333,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSPDrainRate,100,5;
+      bonus2 bSPDrainRate,30,5;
   - Id: 4135
     AegisName: Orc_Load_Card
     Name: Orc Lord Card
@@ -4396,7 +4346,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bShortWeaponDamageReturn,30;
+      bonus bShortWeaponDamageReturn,25;
   - Id: 4136
     AegisName: Khalitzburg_Card
     Name: Khalitzburg Card
@@ -4409,7 +4359,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Demon,30;
+      bonus2 bSubRace,RC_Demon,50;
   - Id: 4137
     AegisName: Drake_Card
     Name: Drake Card
@@ -4435,7 +4385,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_Angel,30;
+      bonus2 bSubRace,RC_Angel,50;
   - Id: 4139
     AegisName: Joker_Card
     Name: Joker Card
@@ -4476,7 +4426,6 @@ Body:
     Script: |
       bonus bDefEle,Ele_Undead;
       bonus bInt,1;
-      bonus bDef,1;
   - Id: 4142
     AegisName: Doppelganger_Card
     Name: Doppelganger Card
@@ -4544,7 +4493,7 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus bMagicDamageReturn,50;
+      bonus bMagicDamageReturn,30;
   - Id: 4147
     AegisName: Baphomet_Card
     Name: Baphomet Card
