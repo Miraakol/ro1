@@ -6913,8 +6913,6 @@ Body:
         Rate: 5335
       - Item: Animal_Blood
         Rate: 200
-      - Item: Sea_Witch_Foot
-        Rate: 20
       - Item: Scarlet_Jewel
         Rate: 250
       - Item: Turtle_Shell
