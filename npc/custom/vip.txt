@@ -4,12 +4,12 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 	mes "Welcome ^0000FF"+strcharinfo(0)+"^000000!";
 	mes "The VIP services are always on your side. How may I assist you?";
 	mes "^FF0000Expiry:^000000 " + gettimestr("%Y-%m-%d/%H:%M",21,vip_status(VIP_STATUS_EXPIRE));
-	mes "^FF0000[Free services for Level 60 below only]^000000";
+	mes "^FF0000[Free services up to Level 60]^000000";
 		next;
 			switch(select("Take a Rest -> 3000 zeny:Buff -> 3000 zeny:Use Storage -> 30 zeny:Use Teleport Service -> 1000 zeny:Cancel")){
 
 				case 1:
-					if (BaseLevel < 60) {
+					if (BaseLevel <= 60) {
 						mes "[VIP Employee]";
 						mes "You've taken quite a beating! Let me patch you up.";
 						next;
@@ -33,7 +33,7 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 					end;
 
 				case 2:
-					if (BaseLevel < 60) {
+					if (BaseLevel <= 60) {
 						mes "[VIP Employee]";
 						mes "Time for a little boost! You'll feel stronger and faster in no time.";
 						next;
@@ -74,7 +74,7 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 					end;
 
 				case 3:
-					if (BaseLevel < 60) {
+					if (BaseLevel <= 60) {
 							mes "[VIP Employee]";
 							mes "Here, let me open your Storage for you. Thank you for using VIP Services.";
 							next;
@@ -101,7 +101,7 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 					end;
 
                 case 4:
-					if (BaseLevel < 60) {
+					if (BaseLevel <= 60) {
                     	mes "[VIP Employee]";
 						mes "Please choose your destination.";
 						next;
