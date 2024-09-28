@@ -332,6 +332,7 @@ L_Change:
 	mes "[Hunter Sharon]";
 	mes "There you go! You look great in the hunter outfit";
 	jobchange Job_HUNTER;
+	delitem 1007,1; // Penetration
 	emotion 21;
 	next;
 	mes "[Hunter Sharon]";
