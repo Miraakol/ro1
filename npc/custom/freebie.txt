@@ -1,0 +1,42 @@
+new_1-1,65,116,3	script	Mayor	4_M_MAYOR,{
+	// Check if the player has already received the freebie
+	query_sql "SELECT freebie FROM freebie_db WHERE account_id = " + getcharid(3), .@freebie_check;
+
+	// If the account is already registered for the freebie, don't give it again
+	if (.@freebie_check > 0) {
+		mes "[Mayor]";
+		mes "It seems you've already received the freebie for this account.";
+		close;
+	}
+
+	// Offer the freebie to the player
+	mes "[Mayor]";
+	mes "Hello, would you like to receive a Freebie?";
+	next;
+	mes "[Mayor]";
+	mes "You can only receive this once per account.";
+	next;
+
+	// Present the choice to the player
+	mes "[Mayor]";
+	mes "Do you want to accept the freebie?";
+	next;
+	switch(select("Yes:No")) {
+		case 1:
+			// Player chooses Yes
+			// Add freebie to the player's inventory (Change the item ID and amount accordingly)
+			getitem 607, 1; // Item ID 607 (Red Potion), Quantity: 1
+
+			// Insert the account into the custom freebie_db SQL table
+			query_sql "INSERT INTO freebie_db (account_id, freebie) VALUES (" + getcharid(3) + ", 1)";
+			mes "[Mayor]";
+			mes "Congratulations! You've received your freebie.";
+			close;
+
+		case 2:
+			// Player chooses No
+			mes "[Mayor]";
+			mes "Kupal ka ba boss?!";
+			close;
+	}
+}
