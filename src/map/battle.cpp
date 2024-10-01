@@ -3226,14 +3226,14 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 			case ML_PIERCE:
 				hitrate += hitrate * 5 * skill_lv / 100;
 				break;
-			case AS_SONICBLOW:
+			/*case AS_SONICBLOW:
 				if(sd && pc_checkskill(sd,AS_SONICACCEL) > 0)
 #ifdef RENEWAL
 					hitrate += hitrate * 90 / 100;
 #else
 					hitrate += hitrate * 50 / 100;
 #endif
-				break;
+				break;*/
 #ifdef RENEWAL
 			case RG_BACKSTAP:
 				hitrate += skill_lv; // !TODO: What's the rate increase?
@@ -4669,8 +4669,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio += skillratio / 2;
 #else
 			skillratio += 200 + 50 * skill_lv;
-			if (sd && pc_checkskill(sd, AS_SONICACCEL) > 0)
-				skillratio += skillratio / 10;
+			/*if (sd && pc_checkskill(sd, AS_SONICACCEL) > 0)
+				skillratio += skillratio / 10;*/
 #endif
 			break;
 		case TF_SPRINKLESAND:

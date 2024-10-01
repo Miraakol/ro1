@@ -3319,13 +3319,13 @@ void skill_combo(struct block_list* src,struct block_list *dsrc, struct block_li
 				target_id = 0; // Will target current auto-target instead
 			}
 			break;
-		case AC_DOUBLE:
+		/*case AC_DOUBLE:
 			if (pc_checkskill(sd, HT_POWER)) {
 				duration = 2000;
 				nodelay = 1; //Neither gives walk nor attack delay
 				target_id = 0; //Does not need to be used on previous target
 			}
-			break;
+			break;*/
 		case SR_DRAGONCOMBO:
 			if (pc_checkskill(sd, SR_FALLENEMPIRE) > 0)
 				duration = 1;
@@ -19031,7 +19031,7 @@ struct s_skill_condition skill_get_requirement(map_session_data* sd, uint16 skil
 
 	// Check for cost reductions due to skills & SCs
 	switch(skill_id) {
-		case MC_MAMMONITE:
+/*		case MC_MAMMONITE:
 #ifdef RENEWAL
 		case WS_CARTTERMINATION:
 #endif
@@ -19041,7 +19041,7 @@ struct s_skill_condition skill_get_requirement(map_session_data* sd, uint16 skil
 #else
 				req.zeny -= req.zeny*10/100;
 #endif
-			break;
+			break;*/
 		case AL_HOLYLIGHT:
 			if(sc && sc->getSCE(SC_SPIRIT) && sc->getSCE(SC_SPIRIT)->val2 == SL_PRIEST)
 				req.sp *= 5;
