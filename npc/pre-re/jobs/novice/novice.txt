@@ -982,11 +982,11 @@ new_1-2,115,111,3	script	Item Tutor#nv	726,{
 			mes "[Alice]";
 			mes "Now, would you click the ^4A708Bitem^000000 tab in the Inventory Window? I just gave you a Novice Potion. You can drink it by double-clicking it. Go ahead, try it!";
 			set nov_get_item04,10;
-			getitem 569,1; //Novice_Potion
+			getitem 32051,1; //Novice_Potion
 			percentheal -50,0;
 			next;
 			mes "[Alice]";
-			if (countitem(569) < 1) {
+			if (countitem(32051) < 1) {
 				if (BaseLevel < 8) {
 					mes "Nice~!";
 					mes "And here's";
@@ -1102,9 +1102,9 @@ new_1-2,115,111,3	script	Item Tutor#nv	726,{
 			mes "[Alice]";
 			mes "However, ^ff0000do not use the Fly Wing or Butterfly Wing^000000 in these Training Grounds or you could be stuck here forever. Those items are for when you graduate, okay?";
 			set nov_get_item04,15;
-			getitem 601,10; //Wing_Of_Fly
-			getitem 602,2; //Wing_Of_Butterfly
-			getitem 569,50; //Novice_Potion
+			getitem 32052,10; //Wing_Of_Fly
+			getitem 32053,2; //Wing_Of_Butterfly
+			getitem 32051,50; //Novice_Potion
 			next;
 			mes "[Alice]";
 			mes "And lastly...";
@@ -1348,14 +1348,14 @@ new_1-2,118,108,3	script	Kafra Employee#nv1	117,{
 			close2;
 			if (nov_get_item05 < 11) {
 				set nov_get_item05,11;
-				getitem 569,100; //Novice_Potion
+				getitem 32051,100; //Novice_Potion
 				getitem 1243,1; //Novice_Knife
 				getitem 2414,1; //Novice_Boots
 				getitem 2510,1; //Novice_Hood
 				getitem 2352,1; //Novice_Plate
 				getitem 2112,1; //Novice_Guard
-				getitem 601,10; //Wing_Of_Fly
-				getitem 602,2; //Wing_Of_Butterfly
+				getitem 32052,10; //Wing_Of_Fly
+				getitem 32053,2; //Wing_Of_Butterfly
 				getitem 7059,5; //Cargo_Free_Ticket
 				getitem 7060,5; //Warp_Free_Ticket
 			}
@@ -2532,12 +2532,12 @@ new_1-2,38,182,3	script	Entrance Guard#nv	92,{
 			else {
 				set nov_2nd_cos,29;
 			}
-			getitem 602,1; //Wing_Of_Butterfly
-			getitem 601,9; //Wing_Of_Fly
+			getitem 32053,1; //Wing_Of_Butterfly
+			getitem 32052,9; //Wing_Of_Fly
 			getitem 1243,1; //Novice_Knife
 			getitem 2112,1; //Novice_Guard
 			getitem 611,2; //Spectacles
-			getitem 569,300; //Novice_Potion
+			getitem 32051,300; //Novice_Potion
 			close2;
 			savepoint "new_1-2",23,188,1,1;
 			warp "new_1-3",96,21;
@@ -2602,7 +2602,7 @@ new_1-2,38,182,3	script	Entrance Guard#nv	92,{
 				getexp 200,0;
 			}
 			percentheal 100,0;
-			getitem 569,50; //Novice_Potion
+			getitem 32051,50; //Novice_Potion
 			close2;
 			warp "new_1-3",96,21;
 			end;
