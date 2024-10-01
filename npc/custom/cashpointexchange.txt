@@ -17,7 +17,7 @@ v1.0 - First version.
 	v1.0.1 - Added changelog.
 =========================================================*/
 
-prontera,182,216,3	script	[INSERT NAME HERE]	4_RAGFES_02_M,{
+prontera,182,216,3	script	Guo Hua Ping	4_F_CHNDRESS1,{
 	
 	/*-----------------------------------------------------
 	Script
@@ -126,7 +126,7 @@ prontera,182,216,3	script	[INSERT NAME HERE]	4_RAGFES_02_M,{
 	Configuration
 	-----------------------------------------------------*/
 	OnInit:
-		.npc_name$ = "[^0000FFINSERT NAME HERE^000000]";
+		.npc_name$ = "[^0000FFGuo Hua Ping^000000]";
 		.rate = 1;		// Exchange rate (1 point * rate = total PoDs)
 		.pod_id = 32043;	// Proof of Donation item ID or constant
 		.pod_name$ = getitemname(.pod_id) +"(s)";	// Proof of Donation item name
