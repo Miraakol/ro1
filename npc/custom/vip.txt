@@ -171,6 +171,7 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 }
 
 //Town Duplicate
+prontera,160,187,5	duplicate(VIP Employee#prt)	VIP Employee#prt2	117
 morocc,159,97,4	duplicate(VIP Employee#prt)	VIP Employee#moc	113
 geffen,122,62,8	duplicate(VIP Employee#prt)	VIP Employee#gef	115
 payon,101,116,4	duplicate(VIP Employee#prt)	VIP Employee#pay	113
