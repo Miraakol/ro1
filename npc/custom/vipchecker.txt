@@ -1,0 +1,26 @@
+-	script	CheckVIP	-1,{
+	OnInit:
+		// Register the custom command @checkvip
+		bindatcmd "checkvip", strnpcinfo(3) + "::OnCheckVIP";
+		end;
+
+	OnCheckVIP:
+		// Check if the player is a VIP member
+		if (vip_status(1)) {
+			// Get the VIP expiration timestamp
+			set .@vip_expiry, vip_status(2);
+
+			// Send message to the player with VIP expiration date and time
+			dispbottom "You are a VIP member.";
+			dispbottom "Your VIP expires on: " + gettimestr("%Y-%m-%d/%H:%M",21,vip_status(VIP_STATUS_EXPIRE));
+
+			// Check if VIP is expiring soon (in the next 3 days)
+			if (.@vip_expiry - gettimetick(2) <= 259200) { // 3 days = 259200 seconds
+				dispbottom "[Warning] Your VIP is expiring soon!";
+			}
+		} else {
+			// Inform the player that they are not a VIP
+			dispbottom "You are not a VIP member.";
+		}
+		end;
+}

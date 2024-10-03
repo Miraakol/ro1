@@ -1,0 +1,47 @@
+-	script	FloatingRates	-1,{
+
+	OnInit:
+		// Set default rates (normal rates)
+		set $@normal_base_rate, 100;  // Default Base Exp rate
+		set $@normal_job_rate, 100;   // Default Job Exp rate
+		set $@normal_drop_rate, 100;  // Default Drop rate
+
+		// Set floating rates
+		set $@floating_base_rate, 200;  // Floating Base Exp rate
+		set $@floating_job_rate, 200;   // Floating Job Exp rate
+		set $@floating_drop_rate, 125;  // Floating Drop rate
+
+		// Check every hour if rates should be changed
+		bindatcmd "checkrates", strnpcinfo(0)+"::OnCheckRates", 0;
+
+		// Initial check
+		donpcevent strnpcinfo(0) + "::OnCheckRates";
+		end;
+
+	OnCheckRates:
+		// Get current day and hour
+		set .@day, gettime(4);  // 4 = Day of the week (0=Sunday, 1=Monday, ...)
+		set .@hour, gettime(3); // 3 = Hour of the day (0-23)
+
+		// Friday (5) 7 PM (19) to Monday (1) 8 AM (08)
+		if ((.@day == 5 && .@hour >= 19) || (.@day == 6) || (.@day == 0) || (.@day == 1 && .@hour < 8)) {
+			// Apply floating rates
+			setbattleflag "base_exp_rate", $@floating_base_rate;
+			setbattleflag "job_exp_rate", $@floating_job_rate;
+			setbattleflag "item_rate_common", $@floating_drop_rate;
+			setbattleflag "item_rate_heal", $@floating_drop_rate;
+			setbattleflag "item_rate_use", $@floating_drop_rate;
+			setbattleflag "item_rate_equip", $@floating_drop_rate;
+			announce "Floating rates are now active from Friday 7 PM to Monday 8 AM! Exp and Drop rates are increased!", bc_all;
+		} else {
+			// Revert to normal rates
+			setbattleflag "base_exp_rate", $@normal_base_rate;
+			setbattleflag "job_exp_rate", $@normal_job_rate;
+			setbattleflag "item_rate_common", $@normal_drop_rate;
+			setbattleflag "item_rate_heal", $@normal_drop_rate;
+			setbattleflag "item_rate_use", $@normal_drop_rate;
+			setbattleflag "item_rate_equip", $@normal_drop_rate;
+			announce "Floating rates have ended. Back to normal rates.", bc_all;
+		}
+		end;
+}

@@ -3,74 +3,80 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 	mes "[VIP Employee]";
 	mes "Welcome ^0000FF"+strcharinfo(0)+"^000000!";
 	mes "The VIP services are always on your side. How may I assist you?";
-	mes "^FF0000Expiry:^000000 " + gettimestr("%Y-%m-%d/%H:%M",21,vip_status(VIP_STATUS_EXPIRE));
+	//mes "^FF0000Expiry:^000000 " + gettimestr("%Y-%m-%d/%H:%M",21,vip_status(VIP_STATUS_EXPIRE));
 	mes "^FF0000[Free services up to Level 60]^000000";
 		next;
 			switch(select("Take a Rest -> 3000 zeny:Buff -> 3000 zeny:Use Storage -> 30 zeny:Use Teleport Service -> 1000 zeny:Cancel")){
 
 				case 1:
-					if (BaseLevel <= 60) {
-						mes "[VIP Employee]";
-						mes "You've taken quite a beating! Let me patch you up.";
-						next;
-						mes "[VIP Employee]";
-						mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
-						percentheal 100,100;
-					} else {
-						mes "[VIP Employee]";
-						mes "You've taken quite a beating! Let me patch you up.";
-						next;
-							if (Zeny >= 3000) {
-							Zeny -= 3000;
+					mes "[VIP Employee]";
+					mes "You've taken quite a beating! Would you like me to patch you up?";
+					next;
+					menu "Yes", heal_service, "No", no_service;
+
+					heal_service:
+						if (BaseLevel <= 60) {
+							percentheal 100,100; // Free heal for players level 60 and below
 							mes "[VIP Employee]";
-							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
-							percentheal 100,100;
-								} else {
-									mes "[VIP Employee]";
-									mes "You do not have enough zeny. Rest costs 3000 Zeny.";							
-							}
-					}
-					end;
+							mes "You're patched up for free. Stay safe out there!";
+						} else if (Zeny >= 3000) {
+							Zeny -= 3000; // Deducts 3000 Zeny for players above level 60
+							percentheal 100,100; // Heal after deducting Zeny
+							mes "[VIP Employee]";
+							mes "You've been healed. That cost you 3000 Zeny. Take care!";
+						} else {
+							mes "[VIP Employee]";
+							mes "You do not have enough Zeny. The healing service costs 3000 Zeny.";
+						}
+						close;
+
+					no_service:
+						mes "[VIP Employee]";
+						mes "Alright, take care!";
+						close;
 
 				case 2:
+					mes "[VIP Employee]";
+					mes "Time for a little boost! You'll feel stronger and faster in no time.";
+					next;
+					mes "[VIP Employee]";
+					mes "Would you like to proceed with the service?";
+					next;
+					if (select("Yes:No") == 2) {
+						mes "[VIP Employee]";
+						mes "Maybe next time then!";
+						close;
+					}
+
 					if (BaseLevel <= 60) {
+						// Free service for players level 60 and below
 						mes "[VIP Employee]";
-						mes "Time for a little boost! You'll feel stronger and faster in no time.";
+						mes "You're eligible for a free service.";
 						next;
+					} else if (Zeny >= 3000) {
+						// Deduct Zeny for players above level 60
+						Zeny -= 3000;
 						mes "[VIP Employee]";
-						mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
-						sc_start SC_INCREASEAGI,1800000,10;
-						sc_start SC_BLESSING,1800000,10;
-						sc_start SC_STRFOOD,1800000,5;
-						sc_start SC_AGIFOOD,1800000,5;
-						sc_start SC_VITFOOD,1800000,5;
-						sc_start SC_INTFOOD,1800000,5;
-						sc_start SC_DEXFOOD,1800000,5;
-						sc_start SC_LUKFOOD,1800000,5;
+						mes "You've been charged 3000 Zeny.";
+						next;
 					} else {
 						mes "[VIP Employee]";
-						mes "Time for a little boost! You'll feel stronger and faster in no time.";
-						next;
-							if (Zeny >= 3000) {
-							Zeny -= 3000;
-							mes "[VIP Employee]";
-							mes "Time for a little boost! You'll feel stronger and faster in no time.";
-							next;
-							mes "[VIP Employee]";
-							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
-							sc_start SC_INCREASEAGI,1800000,10;
-							sc_start SC_BLESSING,1800000,10;
-							sc_start SC_STRFOOD,1800000,5;
-							sc_start SC_AGIFOOD,1800000,5;
-							sc_start SC_VITFOOD,1800000,5;
-							sc_start SC_INTFOOD,1800000,5;
-							sc_start SC_DEXFOOD,1800000,5;
-							sc_start SC_LUKFOOD,1800000,5;
-								} else {
-									mes "[VIP Employee]";
-									mes "You do not have enough zeny. Buff costs 3000 Zeny.";
-							}
+						mes "You need 3000 Zeny for the service.";
+						close;
 					}
+					
+					// Apply buffs
+					mes "[VIP Employee]";
+					mes "Enjoy our premium services!";
+					sc_start SC_INCREASEAGI,1800000,10;
+					sc_start SC_BLESSING,1800000,10;
+					sc_start SC_STRFOOD,1800000,5;
+					sc_start SC_AGIFOOD,1800000,5;
+					sc_start SC_VITFOOD,1800000,5;
+					sc_start SC_INTFOOD,1800000,5;
+					sc_start SC_DEXFOOD,1800000,5;
+					sc_start SC_LUKFOOD,1800000,5;
+
 					end;
 
 				case 3:
@@ -101,60 +107,117 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 					end;
 
                 case 4:
-					if (BaseLevel <= 60) {
-                    	mes "[VIP Employee]";
-						mes "Please choose your destination.";
-						next;
-							switch(select("Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Morocc:Payon:Cancel")){
-								case 1: callsub S_TownWarpF,"prontera",116,72;
-								case 2: callsub S_TownWarpF,"alberta",117,56;
-								case 3: callsub S_TownWarpF,"aldebaran",168,112;
-								case 4: callsub S_TownWarpF,"comodo",209,143;
-								case 5: callsub S_TownWarpF,"geffen",120,39;
-								case 6: callsub S_TownWarpF,"izlude",91,105;
-								case 7: callsub S_TownWarpF,"morocc",156,46;
-								case 8: callsub S_TownWarpF,"payon",68,99;
-								case 9: 
-						mes "[VIP Employee]";
-						mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
-						close;
-					}
-					S_TownWarpF:
-					// getarg(0) = "map name"
-					// getarg(1) = x
-					// getarg(2) = y
-							warp getarg(0),getarg(1),getarg(2);
-							} else {
-                   			 mes "[VIP Employee]";
-							mes "Please choose your destination.";
-							next;
-							switch(select("Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Morocc:Payon:Cancel")){
-								case 1: callsub S_TownWarp,"prontera",116,72;
-								case 2: callsub S_TownWarp,"alberta",117,56;
-								case 3: callsub S_TownWarp,"aldebaran",168,112;
-								case 4: callsub S_TownWarp,"comodo",209,143;
-								case 5: callsub S_TownWarp,"geffen",120,39;
-								case 6: callsub S_TownWarp,"izlude",91,105;
-								case 7: callsub S_TownWarp,"morocc",156,46;
-								case 8: callsub S_TownWarp,"payon",68,99;
-								case 9: 
-								mes "[VIP Employee]";
-								mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
-								close;
-					}
-					S_TownWarp:
-					// getarg(0) = "map name"
-					// getarg(1) = x
-					// getarg(2) = y
-						if (Zeny >= 1000) {
-							Zeny -= 1000;
-							warp getarg(0),getarg(1),getarg(2);
-						} else {
+					mes "[VIP Employee]";
+					mes "Where would you like to go?";
+					next;
+
+					set .ItemID, 7060; // Change this to the item ID you want to require (example: Red Potion)
+					set .ItemAmount, 1; // Number of items required
+					set .ZenyCost, 1000; // Zeny cost if the item is not available
+					set .FreeLevel, 60; // Players level 60 and below warp for free
+
+					// Warp menu with multiple locations
+					switch(select("Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Morocc:Payon:Cancel")) {
+						case 1:
+							set .WarpLocation$, "Prontera";
+							set .WarpX, 116;
+							set .WarpY, 72;
+							set .WarpMap$, "prontera";
+							break;
+						case 2:
+							set .WarpLocation$, "Alberta";
+							set .WarpX, 117;
+							set .WarpY, 56;
+							set .WarpMap$, "alberta";
+							break;
+						case 3:
+							set .WarpLocation$, "Aldebaran";
+							set .WarpX, 168;
+							set .WarpY, 112;
+							set .WarpMap$, "aldebaran";
+							break;
+						case 4:
+							set .WarpLocation$, "Comodo";
+							set .WarpX, 209;
+							set .WarpY, 143;
+							set .WarpMap$, "comodo";
+							break;
+						case 5:
+							set .WarpLocation$, "Geffen";
+							set .WarpX, 120;
+							set .WarpY, 39;
+							set .WarpMap$, "geffen";
+							break;
+						case 6:
+							set .WarpLocation$, "Izlude";
+							set .WarpX, 91;
+							set .WarpY, 105;
+							set .WarpMap$, "izlude";
+							break;
+						case 7:
+							set .WarpLocation$, "Morocc";
+							set .WarpX, 156;
+							set .WarpY, 46;
+							set .WarpMap$, "morocc";
+							break;
+						case 8:
+							set .WarpLocation$, "Payon";
+							set .WarpX, 68;
+							set .WarpY, 99;
+							set .WarpMap$, "payon";
+							break;
+						case 9:
 							mes "[VIP Employee]";
-							mes "You do not have enough zeny. Town warp costs 1000 Zeny.";
+							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
+							close;
+							break;
+					}
+
+					// Check if the player is level 60 or below
+					if (BaseLevel <= .FreeLevel) {
+						mes "[VIP Employee]";
+						mes "Since you're level " + BaseLevel + ", the warp is free!";
+						if(select("Yes:No") == 1) {
+							mes "Warping you now!";
+							close2;
+							warp .WarpMap$, .WarpX, .WarpY;
+							end;
+						} else {
+							close;
 						}
 					}
-					end;
+
+					mes "[VIP Employee]";
+					mes "Do you want to warp to " + .WarpLocation$ + "?";
+					next;
+					if (countitem(.ItemID) >= .ItemAmount) {
+						if(select("Yes:No") == 1) {
+							mes "[VIP Employee]";
+							mes "Warping you now!";
+							delitem .ItemID, .ItemAmount;
+							close2;
+							warp .WarpMap$, .WarpX, .WarpY;
+							end;
+						}
+					} else {
+						mes "[VIP Employee]";
+						mes "It will cost you ^FF0000" + .ZenyCost + "^000000 Zeny instead.";
+						next;
+						if(select("Yes:No") == 1) {
+							if (Zeny >= .ZenyCost) {
+								Zeny -= .ZenyCost;
+								mes "[VIP Employee]";
+								mes "Warping you now!";
+								close2;
+								warp .WarpMap$, .WarpX, .WarpY;
+								end;
+							} else {
+								mes "[VIP Employee]";
+								mes "You don't have enough Zeny.";
+								close;
+							}
+						}
+					}
 
 				case 5:
 					mes "[VIP Employee]";
