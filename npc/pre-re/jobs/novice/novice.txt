@@ -4295,11 +4295,16 @@ new_5-3,0,0	monster	Rocker	1052,10
 new_5-3,0,0	monster	Thief Bug	1051,1
 new_5-3,0,0	monster	Thief Bug	1053,1
 new_5-3,0,0	monster	Spore	1014,1
-new_1-3,0,0	monster	Fabre	1184,5
-new_2-3,0,0	monster	Fabre	1184,5
-new_3-3,0,0	monster	Fabre	1184,5
-new_4-3,0,0	monster	Fabre	1184,5
-new_5-3,0,0	monster	Fabre	1184,5
+//new_1-3,0,0	monster	Fabre	1184,5
+//new_2-3,0,0	monster	Fabre	1184,5
+//new_3-3,0,0	monster	Fabre	1184,5
+//new_4-3,0,0	monster	Fabre	1184,5
+//new_5-3,0,0	monster	Fabre	1184,5
+new_1-3,0,0	monster	Fabre	1007,5
+new_2-3,0,0	monster	Fabre	1007,5
+new_3-3,0,0	monster	Fabre	1007,5
+new_4-3,0,0	monster	Fabre	1007,5
+new_5-3,0,0	monster	Fabre	1007,5
 
 //============================================================ 
 // Old changelog
