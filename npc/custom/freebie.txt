@@ -33,7 +33,6 @@ new_1-1,65,116,3	script	Mayor	4_M_MAYOR,{
 			// Player chooses Yes
 			// Add freebie to the player's inventory (Change the item ID and amount accordingly)
 			getitem 32044, 1; // Item ID, Quantity;
-			getitem 32043, 10000; // Item ID, Quantity;
 
 			// Insert the account into the custom freebie_db SQL table
 			query_sql "INSERT INTO freebie_db (account_id, freebie) VALUES (" + getcharid(3) + ", 1)";
