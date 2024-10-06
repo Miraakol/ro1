@@ -7,7 +7,7 @@ ADD COLUMN `claimed_freebie` TINYINT(1) NOT NULL DEFAULT 0;*/
 
 // NPC to store account_id and character base level only once
 
-new_1-1,47,114,5	script	CBT Boy#register	4_M_YURI,{
+prontera,168,229,4	script	CBT Boy#register	4_M_YURI,{
 	
 	// Get the player's account ID and character base level
 	set .@account_id, getcharid(3); // getcharid(3) returns the player's account ID
@@ -62,7 +62,7 @@ new_1-1,47,114,5	script	CBT Boy#register	4_M_YURI,{
 
 // NPC that gives freebies based on account level thresholds: 20, 40, 60, 80
 
-new_1-1,50,114,5	script	CBT Boy#freebie	4_M_YURI,{
+prontera,170,227,4	script	CBT Boy#freebie	4_M_YURI,{
 	
 	// Get the player's account ID
 	set .@account_id, getcharid(3); // Account ID
