@@ -1,0 +1,49 @@
+-	script	WallController	-1,{
+
+	OnInit:
+		set .map$, "new_1-1";        // Change to your desired map
+		set .x1, 68;                 // Starting X coordinate of the cell range
+		set .y1, 110;                // Starting Y coordinate of the cell range
+		set .x2, 68;                 // Ending X coordinate of the cell range
+		set .y2, 113;                // Ending Y coordinate of the cell range
+		set .cell_type, cell_walkable; // 0 for blocking movement, 1 for unblocking movement
+		// Set the permission to use the commands, default to GM Level 99
+		.set_permission = 99;
+		// Register custom commands with the NPC handler
+		bindatcmd("wallup", strnpcinfo(3) + "::OnCommandWallUp");
+		bindatcmd("walldown", strnpcinfo(3) + "::OnCommandWallDown");
+		end;
+
+	OnCommandWallUp:
+		// Check permission
+		if (getgmlevel() < .set_permission) {
+			dispbottom "You do not have permission to use this command.";
+			end;
+		} else{
+			setcell .map$, .x1, .y1, .x2, .y2, .cell_type, 0;
+			dispbottom "Cells have been blocked on the map.";
+		}
+		end;
+
+	OnCommandWallDown:
+		// Check permission
+		if (getgmlevel() < .set_permission) {
+			dispbottom "You do not have permission to use this command.";
+			end;
+		} else {
+			announce "The gates will open in 5 seconds...",bc_all;
+			sleep2 1000; // Wait 1 second
+			announce "4 seconds...",bc_all;
+			sleep2 1000; // Wait 1 second
+			announce "3 seconds...",bc_all;
+			sleep2 1000; // Wait 1 second
+			announce "2 seconds...",bc_all;
+			sleep2 1000; // Wait 1 second
+			announce "1 second...",bc_all;
+			sleep2 1000; // Wait 1 second
+			announce "Attention, Adventurers of Midgard! gates are NOW OPEN!",bc_all;
+		setcell .map$, .x1, .y1, .x2, .y2, .cell_type, 1; // Unblock cells for movement
+		dispbottom "Cells have been unblocked on the map.";
+		}
+		end;
+}
