@@ -320,7 +320,7 @@ function	script	F_KafTele	{
 		else
 			warp "izlude", 91, 105;
 	}
-	else if (@wrpD$[.@j] == "Juno") warp "yuno", 158, 125;
+	//else if (@wrpD$[.@j] == "Juno") warp "yuno", 158, 125;
 	else if (@wrpD$[.@j] == "Mjolnir Dead Pit") warp "mjolnir_02", 99, 351;
 	else if (@wrpD$[.@j] == "Morocc") warp "morocc", 156, 46;
 	else if (@wrpD$[.@j] == "Orc Dungeon") warp "gef_fild10", 52, 326;
@@ -622,7 +622,8 @@ function	script	F_KafSet	{
 		setarray @viewpY[0], 99, 60, 0, 0;
 	} else if (.@map$ == "aldebaran") {
 		setarray @wrpP[0], 1200, 1200, 1800, 1700;
-		setarray @wrpD$[0], "Geffen", "Juno" , "Izlude", "Mjolnir Dead Pit";
+		//setarray @wrpD$[0], "Geffen", "Juno" , "Izlude", "Mjolnir Dead Pit";
+		setarray @wrpD$[0], "Geffen" , "Izlude", "Mjolnir Dead Pit";
 	} else if (.@map$ == "comodo" ) {
 		setarray @wrpD$[0], "Morocc", "Comodo Pharos Beacon", "Umbala";
 		setarray @wrpP[0], 1800, 1200, 1800;
