@@ -43,7 +43,7 @@ new_1-1,65,116,3	script	Mayor	4_M_MAYOR,{
 		case 2:
 			// Player chooses No
 			mes "[Mayor]";
-			mes "Kupal ka ba boss?!";
+			mes "No worries, feel free to come back anytime if you change your mind.";
 			close;
 	}
 }
