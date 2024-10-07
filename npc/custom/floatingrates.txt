@@ -1,47 +1,54 @@
--	script	FloatingRates	-1,{
+// Server rate change event script
+// Increases rates to 2x every Friday at 5 PM, and returns to 1x every Monday at 5 AM
 
-	OnInit:
-		// Set default rates (normal rates)
-		set $@normal_base_rate, 100;  // Default Base Exp rate
-		set $@normal_job_rate, 100;   // Default Job Exp rate
-		set $@normal_drop_rate, 100;  // Default Drop rate
+-	script	RateChanger	-1,{
 
-		// Set floating rates
-		set $@floating_base_rate, 200;  // Floating Base Exp rate
-		set $@floating_job_rate, 200;   // Floating Job Exp rate
-		set $@floating_drop_rate, 125;  // Floating Drop rate
+OnInit:
+	// To force the event to run even if you have to shutdown your server for some reason...
+	if (gettime(4) != 5 && gettime(4) != 6 && gettime(4) != 0) end;
 
-		// Check every hour if rates should be changed
-		bindatcmd "checkrates", strnpcinfo(0)+"::OnCheckRates", 0;
+    // Schedule rate change on Fridays at 5 PM (17:00) and Monday at 5 AM (05:00)
+    OnFri1700:
+        setBattleFlag "base_exp_rate", 200, true;
+        setBattleFlag "job_exp_rate", 200, true;
+		setBattleFlag "item_rate_common", 125, true;
+		setBattleFlag "item_rate_common_boss", 125, true;
+		setBattleFlag "item_rate_common_mvp", 125, true;
+		setBattleFlag "item_rate_heal", 125, true;
+		setBattleFlag "item_rate_heal_boss", 125, true;
+		setBattleFlag "item_rate_heal_mvp", 125, true;
+		setBattleFlag "item_rate_use", 125, true;
+		setBattleFlag "item_rate_use_boss", 125, true;
+		setBattleFlag "item_rate_use_mvp", 125, true;
+		setBattleFlag "item_rate_equip", 125, true;
+		setBattleFlag "item_rate_equip_boss", 125, true;
+		setBattleFlag "item_rate_equip_mvp", 125, true;
+		setBattleFlag "item_rate_card", 125, true;
+		setBattleFlag "item_rate_card_boss", 125, true;
+		setBattleFlag "item_rate_card_mvp", 125, true;
+        announce "Server rates have been increased to 2x!", bc_all;
+		announce "Floating Rates Enabled!", bc_all;
+        end;
 
-		// Initial check
-		donpcevent strnpcinfo(0) + "::OnCheckRates";
-		end;
+    OnMon0500:
+        setBattleFlag "base_exp_rate", 100, true;
+        setBattleFlag "job_exp_rate", 100, true;
+		setBattleFlag "item_rate_common", 100, true;
+		setBattleFlag "item_rate_common_boss", 100, true;
+		setBattleFlag "item_rate_common_mvp", 100, true;
+		setBattleFlag "item_rate_heal", 100, true;
+		setBattleFlag "item_rate_heal_boss", 100, true;
+		setBattleFlag "item_rate_heal_mvp", 100, true;
+		setBattleFlag "item_rate_use", 100, true;
+		setBattleFlag "item_rate_use_boss", 100, true;
+		setBattleFlag "item_rate_use_mvp", 100, true;
+		setBattleFlag "item_rate_equip", 100, true;
+		setBattleFlag "item_rate_equip_boss", 100, true;
+		setBattleFlag "item_rate_equip_mvp", 100, true;
+		setBattleFlag "item_rate_card", 100, true;
+		setBattleFlag "item_rate_card_boss", 100, true;
+		setBattleFlag "item_rate_card_mvp", 100, true;
+        announce "Floating Rates Disabled", bc_all;
+        end;
 
-	OnCheckRates:
-		// Get current day and hour
-		set .@day, gettime(4);  // 4 = Day of the week (0=Sunday, 1=Monday, ...)
-		set .@hour, gettime(3); // 3 = Hour of the day (0-23)
-
-		// Friday (5) 7 PM (19) to Monday (1) 8 AM (08)
-		if ((.@day == 5 && .@hour >= 19) || (.@day == 6) || (.@day == 0) || (.@day == 1 && .@hour < 8)) {
-			// Apply floating rates
-			setbattleflag "base_exp_rate", $@floating_base_rate;
-			setbattleflag "job_exp_rate", $@floating_job_rate;
-			setbattleflag "item_rate_common", $@floating_drop_rate;
-			setbattleflag "item_rate_heal", $@floating_drop_rate;
-			setbattleflag "item_rate_use", $@floating_drop_rate;
-			setbattleflag "item_rate_equip", $@floating_drop_rate;
-			announce "Floating rates are now active from Friday 7 PM to Monday 8 AM! Exp and Drop rates are increased!", bc_all;
-		} else {
-			// Revert to normal rates
-			setbattleflag "base_exp_rate", $@normal_base_rate;
-			setbattleflag "job_exp_rate", $@normal_job_rate;
-			setbattleflag "item_rate_common", $@normal_drop_rate;
-			setbattleflag "item_rate_heal", $@normal_drop_rate;
-			setbattleflag "item_rate_use", $@normal_drop_rate;
-			setbattleflag "item_rate_equip", $@normal_drop_rate;
-			announce "Floating rates have ended. Back to normal rates.", bc_all;
-		}
-		end;
 }

@@ -13,12 +13,14 @@ new_1-1,65,116,3	script	Mayor	4_M_MAYOR,{
 	if (.@freebie_check > 0) {
 		mes "[Mayor]";
 		mes "It seems you've already received the freebie for this account.";
+		percentheal 100,100;
 		close;
 	}
 
 	// Offer the freebie to the player
 	mes "[Mayor]";
 	mes "Hello, would you like to receive a ^0000FFFreebie^000000?";
+	percentheal 100,100;
 	next;
 	mes "[Mayor]";
 	mes "You can only receive this ^FF0000once per account^000000.";
