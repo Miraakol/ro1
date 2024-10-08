@@ -26,7 +26,6 @@ OnInit:
 		setBattleFlag "item_rate_card", 125, true;
 		setBattleFlag "item_rate_card_boss", 125, true;
 		setBattleFlag "item_rate_card_mvp", 125, true;
-        announce "Server rates have been increased to 2x!", bc_all;
 		announce "Floating Rates Enabled!", bc_all;
         end;
 
