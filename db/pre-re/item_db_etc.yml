@@ -3307,8 +3307,8 @@ Body:
       DropEffect: CLIENT
       BuyingStore: true
     Script: |
-      bonus2 bSubRace,RC_DemiHuman,50;
-      bonus2 bSubRace,RC_Player_Human,50;
+      bonus2 bSubRace,RC_DemiHuman,30;
+      bonus2 bSubRace,RC_Player_Human,30;
   - Id: 4059
     AegisName: Soldier_Andre_Card
     Name: Soldier Andre Card
