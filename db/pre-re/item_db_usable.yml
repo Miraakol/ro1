@@ -11346,6 +11346,10 @@ Body:
     Type: Cash
     Buy: 20
     Weight: 10
+    Trade:
+      NoDrop: true
+      NoSell: true
+      NoAuction: true
     Script: |
       getitem 12212,100;
   - Id: 13572
@@ -12525,6 +12529,7 @@ Body:
       NoDrop: true
       NoSell: true
       NoGuildStorage: true
+      NoAuction: true
     Script: |
       getitem 7776,10;
   - Id: 13711

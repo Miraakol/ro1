@@ -177,14 +177,12 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 					if (BaseLevel <= .FreeLevel) {
 						mes "[VIP Employee]";
 						mes "Since you're level " + BaseLevel + ", the warp is free!";
-						if(select("Yes:No") == 1) {
+						next;
+							mes "[VIP Employee]";
 							mes "Warping you now!";
 							close2;
 							warp .WarpMap$, .WarpX, .WarpY;
 							end;
-						} else {
-							close;
-						}
 					}
 
 					mes "[VIP Employee]";
@@ -236,9 +234,9 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 //Town Duplicate
 prontera,160,187,5	duplicate(VIP Employee#prt)	VIP Employee#prt2	117
 morocc,159,97,4	duplicate(VIP Employee#prt)	VIP Employee#moc	113
-geffen,122,62,8	duplicate(VIP Employee#prt)	VIP Employee#gef	115
-payon,101,116,4	duplicate(VIP Employee#prt)	VIP Employee#pay	113
+geffen,123,62,8	duplicate(VIP Employee#prt)	VIP Employee#gef	115
+payon,102,116,4	duplicate(VIP Employee#prt)	VIP Employee#pay	113
 alberta,113,63,6	duplicate(VIP Employee#prt)	VIP Employee#alb	112
 izlude,134,90,3	duplicate(VIP Employee#prt)	VIP Employee#iz	117
-aldebaran,143,116,4	duplicate(VIP Employee#prt)	VIP Employee#alde	113
+aldebaran,146,119,4	duplicate(VIP Employee#prt)	VIP Employee#alde	113
 comodo,192,150,4	duplicate(VIP Employee#prt)	VIP Employee#com	721
