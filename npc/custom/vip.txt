@@ -1,5 +1,5 @@
 prontera,146,92,6	script	VIP Employee#prt	117,{
-	if (vip_status(VIP_STATUS_ACTIVE)) {
+	if (vip_status(VIP_STATUS_ACTIVE) || getgroupid() == 99) {
 	mes "[VIP Employee]";
 	mes "Welcome ^0000FF"+strcharinfo(0)+"^000000!";
 	mes "The VIP services are always on your side. How may I assist you?";
@@ -117,56 +117,68 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 					set .FreeLevel, 60; // Players level 60 and below warp for free
 
 					// Warp menu with multiple locations
-					switch(select("Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Morocc:Payon:Cancel")) {
+					switch(select("Main Office:Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Morocc:Payon:Cancel")) {
 						case 1:
+							set .WarpLocation$, "Main Office";
+							set .WarpX, 199;
+							set .WarpY, 182;
+							set .WarpMap$, "main_office";
+							// Make "Main Office" free of charge
+							mes "[VIP Employee]";
+							mes "Warping you to the Main Office for free!";
+							close2;
+							warp .WarpMap$, .WarpX, .WarpY;
+							end;
+							break;
+						case 2:
 							set .WarpLocation$, "Prontera";
 							set .WarpX, 116;
 							set .WarpY, 72;
 							set .WarpMap$, "prontera";
 							break;
-						case 2:
+						case 3:
 							set .WarpLocation$, "Alberta";
 							set .WarpX, 117;
 							set .WarpY, 56;
 							set .WarpMap$, "alberta";
 							break;
-						case 3:
+						case 4:
 							set .WarpLocation$, "Aldebaran";
 							set .WarpX, 168;
 							set .WarpY, 112;
 							set .WarpMap$, "aldebaran";
 							break;
-						case 4:
+						case 5:
 							set .WarpLocation$, "Comodo";
 							set .WarpX, 209;
 							set .WarpY, 143;
 							set .WarpMap$, "comodo";
 							break;
-						case 5:
+						case 6:
 							set .WarpLocation$, "Geffen";
 							set .WarpX, 120;
 							set .WarpY, 39;
 							set .WarpMap$, "geffen";
 							break;
-						case 6:
+						case 7:
 							set .WarpLocation$, "Izlude";
 							set .WarpX, 91;
 							set .WarpY, 105;
 							set .WarpMap$, "izlude";
 							break;
-						case 7:
+						case 8:
 							set .WarpLocation$, "Morocc";
 							set .WarpX, 156;
 							set .WarpY, 46;
 							set .WarpMap$, "morocc";
 							break;
-						case 8:
+						case 9:
 							set .WarpLocation$, "Payon";
 							set .WarpX, 68;
 							set .WarpY, 99;
 							set .WarpMap$, "payon";
 							break;
-						case 9:
+						case 10:
 							mes "[VIP Employee]";
 							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
 							close;
