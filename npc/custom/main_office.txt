@@ -1,0 +1,6 @@
+main_office,199,176,0	script	mainoffice#Exit	45,1,1,{
+	end;
+OnTouch:
+	warp "SavePoint",0,0;
+	end;
+}
