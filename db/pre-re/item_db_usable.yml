@@ -4811,6 +4811,9 @@ Body:
     Type: Usable
     Buy: 2
     Weight: 10
+    Delay:
+      Duration: 60000
+      Status: Reuse_Limit_D
     Trade:
       NoDrop: true
       NoTrade: true
