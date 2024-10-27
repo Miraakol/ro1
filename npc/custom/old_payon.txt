@@ -296,8 +296,11 @@ payon_in01,131,77,4	script	Falcon Master#oldpay	59,{
 
 			if(checkfalcon() != 0) goto sL_GotFalc;
 			if(getskilllv(127)==0) goto sL_NoSkill;
+			if(Zeny < 2500) goto sL_NoZeny; // Check if the player has 2500 Zeny
+
 			mes "[Falcon Master]";
-			mes "It looks like you meet all the requirements to handle a Falcon.  Here you are";
+			mes "It looks like you meet all the requirements to handle a Falcon.  Here you are.";
+			Zeny -= 2500; // Deduct 2500 Zeny
 			setfalcon;
 			next;
 			mes "[Falcon Master]";
@@ -316,6 +319,11 @@ payon_in01,131,77,4	script	Falcon Master#oldpay	59,{
 				mes "[Falcon Master]";
 				mes "I'm sorry but you do not have the Falcon Taming skill.  Please come back when you have learned it.";
 				close;
+			sL_NoZeny:
+				mes "[Falcon Master]";
+				mes "You don't have enough zeny! You need at least 2500 zeny to get a Falcon.";
+				close;
+
 	M_End:
 		mes "[Falcon Master]";
 		mes "Have a nice day.";
@@ -1864,7 +1872,7 @@ payon_in01,123,41,2	script	Young Man#3oldpay	89,{
 payon,84,153,4	duplicate(SmileHelper)	Smile Assistance#payold	92
 
 // Bunny Band --------------------------------------------------------------------------------------------
-payon,97,116,4	duplicate(bunny)	Kafra Employee#bunnyold	83
+payon,96,116,4	duplicate(bunny)	Kafra Employee#bunnyold	83
 
 
 // Juice Maker -------------------------------------------------------------------------------------------
