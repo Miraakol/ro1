@@ -17,7 +17,7 @@ v1.0 - First version.
 	v1.0.1 - Added changelog.
 =========================================================*/
 
-prontera,182,216,3	script	Guo Hua Ping	4_F_CHNDRESS1,{
+main_office,217,200,3	script	Guo Hua Ping	4_F_CHNDRESS1,{
 	
 	/*-----------------------------------------------------
 	Script
