@@ -44,3 +44,55 @@
 Header:
   Type: BARTER_DB
   Version: 1
+
+Body:
+  - Name: Advanced Barter Shop
+    Items:
+      - Index: 0
+        Item: Battle_Manual_PC
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Coin_PC
+            Amount: 30
+      - Index: 1
+        Item: Job_Manual50_PC
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Coin_PC
+            Amount: 30
+      - Index: 2
+        Item: Bubble_Gum_PC
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Coin_PC
+            Amount: 30
+      - Index: 3
+        Item: Blessing_10_Scroll_PC
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Coin_PC
+            Amount: 10
+      - Index: 4
+        Item: Inc_Agi_10_Scroll_PC
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Coin_PC
+            Amount: 10
+      - Index: 5
+        Item: Insurance_PC
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Coin_PC
+            Amount: 30
+      - Index: 6
+        Item: Kafra_Card
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Coin_PC
+            Amount: 50
+      - Index: 7
+        Item: Megaphone_
+        RequiredItems:
+          - Index: 0
+            Item: Gold_Coin_PC
+            Amount: 20
