@@ -5,7 +5,7 @@ CREATE TABLE `freebie_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 */
 
-new_1-1,65,116,3	script	Mayor	4_M_MAYOR,{
+new_1-1,65,116,3	script	Mayor#ng	4_M_MAYOR,{
 	// Check if the player has already received the freebie
 	query_sql "SELECT freebie FROM freebie_db WHERE account_id = " + getcharid(3), .@freebie_check;
 
@@ -49,3 +49,6 @@ new_1-1,65,116,3	script	Mayor	4_M_MAYOR,{
 			close;
 	}
 }
+
+//Town Duplicate
+main_office,186,188,6	duplicate(Mayor#ng)	Mayor#mo1	4_M_MAYOR

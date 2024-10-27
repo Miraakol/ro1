@@ -117,7 +117,7 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 					set .FreeLevel, 60; // Players level 60 and below warp for free
 
 					// Warp menu with multiple locations
-					switch(select("Main Office:Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Morocc:Payon:Cancel")) {
+					switch(select("Main Office:Prontera:Alberta:Aldebaran:Comodo:Geffen:Izlude:Lutie:Morocc:Payon:Cancel")) {
 						case 1:
 							set .WarpLocation$, "Main Office";
 							set .WarpX, 199;
@@ -167,18 +167,24 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 							set .WarpMap$, "izlude";
 							break;
 						case 8:
+							set .WarpLocation$, "Lutie";
+							set .WarpX, 147;
+							set .WarpY, 128;
+							set .WarpMap$, "xmas";
+							break;
+						case 9:
 							set .WarpLocation$, "Morocc";
 							set .WarpX, 156;
 							set .WarpY, 46;
 							set .WarpMap$, "morocc";
 							break;
-						case 9:
+						case 10:
 							set .WarpLocation$, "Payon";
 							set .WarpX, 68;
 							set .WarpY, 99;
 							set .WarpMap$, "payon";
 							break;
-						case 10:
+						case 11:
 							mes "[VIP Employee]";
 							mes "We, here at VIP Services, are always endeavoring to provide you with the best services. We hope that we meet your adventuring needs and standards of excellence.";
 							close;
@@ -237,13 +243,17 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 			
 	} else {
 		mes "[VIP Employee]";
-		mes "Sorry, but you are not a VIP Member.";
+		mes "Hi, ^0000FF"+strcharinfo(0)+"^000000.";
+		mes "It looks like you are currently not a VIP member. Join our VIP program to enjoy exclusive benefits!";
 		end;
 	}
 	close;
+	
 }
 
 //Town Duplicate
+main_office,196,215,6	duplicate(VIP Employee#prt)	VIP Employee#mo1	117
+main_office,219,93,3	duplicate(VIP Employee#prt)	VIP Employee#mo2	117
 prontera,160,187,5	duplicate(VIP Employee#prt)	VIP Employee#prt2	117
 morocc,159,97,4	duplicate(VIP Employee#prt)	VIP Employee#moc	113
 geffen,123,62,8	duplicate(VIP Employee#prt)	VIP Employee#gef	115

@@ -7,7 +7,8 @@ ADD COLUMN `claimed_freebie` TINYINT(1) NOT NULL DEFAULT 0;*/
 
 // NPC to store account_id and character base level only once
 
-prontera,168,229,4	script	CBT Boy#register	4_M_YURI,{
+/*
+main_office,191,184,6	script	CBT Boy#register	4_M_YURI,{
 	
 	// Get the player's account ID and character base level
 	set .@account_id, getcharid(3); // getcharid(3) returns the player's account ID
@@ -18,31 +19,31 @@ prontera,168,229,4	script	CBT Boy#register	4_M_YURI,{
 
 	// If the account ID is found, inform the player that their data is already stored
 	if (.@existing_account_id == .@account_id) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "It looks like you've already registered for CBT Rewards!";
 		close;
 	}
 	
 	// If no record exists, proceed to store the player's data
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "Hello, ^0000FF" + strcharinfo(0) + "^000000 I can give you a CBT Freebies depeding on your character's base level.";
 	next;
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "^FF0000The higher your level, the better the rewards you can get!^000000";
 	next;
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "We will give you the CBT Freebies at the official launch of the game on ^FF0000December 25,2024 8:00PM PHT^000000.";
 	next;
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "For more info about the event you may check our official socials:";
 	mes "<URL>Facebook Page<INFO>https://www.facebook.com/profile.php?id=61565292660055</INFO></URL>";
 	next;
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "Would you like to register for CBT Rewards?";
 	next;
 	// Present Yes/No options to the player
 	if(select("Yes:No") == 2) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "Alright, come back before the CBT is over!";
 		close;
 	}
@@ -51,18 +52,19 @@ prontera,168,229,4	script	CBT Boy#register	4_M_YURI,{
 	query_sql "INSERT INTO `custom_player_data` (`account_id`, `char_level`) VALUES (" + .@account_id + ", " + .@char_level + ")";
 	
 	// Confirm data storage
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "You have successfully registered for CBT Rewards!";
 	next;
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "See you at the OBT";
 	mes "^FF0000December 25,2024 8:00PM PHT!^000000";
 	close;
 }
+*/
 
 // NPC that gives freebies based on account level thresholds: 20, 40, 60, 80
 
-prontera,170,227,4	script	CBT Boy#freebie	4_M_YURI,{
+main_office,188,184,6	script	Kap Nino#freebie	4_M_YURI,{
 	
 	// Get the player's account ID
 	set .@account_id, getcharid(3); // Account ID
@@ -72,52 +74,52 @@ prontera,170,227,4	script	CBT Boy#freebie	4_M_YURI,{
 	
 	// If the account is not found in the database
 	if (getarraysize(.@char_level) == 0) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "I'm sorry, ^0000FF"+strcharinfo(0)+"^000000. You have not register for CBT Rewards Event.";
 		close;
 	}
 	
 	// If the freebie has already been claimed
 	if (.@claimed_freebie == 1) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "It looks like you've already claimed your CBT Freebies!";
 		close;
 	}
 
 	// Proceed with giving the freebie based on the character level
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "Hello there! ^0000FF"+strcharinfo(0)+"^000000 I see you're ready to claim your CBT Freebies.";
 	next;
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "Upon checking our database...";
 	next;
 	
 	// Rewards based on level thresholds: 20, 40, 60, 80
 	if (.@char_level < 20) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "You're under ^FF0000level 20^000000.";
 		mes "Unfortunately, you are not eligble to get the CBT Rewards.";
 		end;
 	} else if (.@char_level >= 20 && .@char_level < 40) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "You're between ^FF0000level 20 and 39^000000. Here's your Level 20 CBT Rewards!";
 		// Give items (example: 5 Blue Potions and basic equipment)
 		getitem 32054,1;
 		next;
 	} else if (.@char_level >= 40 && .@char_level < 60) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "You're between ^FF0000level 40 and 59^000000. Here's your Level 40 CBT Rewards!";
 		// Give items (example: 10 Blue Potions and mid-level equipment)
 		getitem 32055,1;
 		next;
 	} else if (.@char_level >= 60 && .@char_level < 80) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "You're between ^FF0000level 60 and 79^000000. Here's your Level 60 CBT Rewards!";
 		// Give items (example: 10 Blue Potions and advanced equipment)
 		getitem 32056,1;
 		next;
 	} else if (.@char_level >= 80) {
-		mes "[CBT Boy]";
+		mes "[Kap Nino]";
 		mes "You're ^FF0000level 80 or higher^000000. Here's your Level 80 CBT Rewards!";
 		// Give items (example: 15 Blue Potions and elite equipment)
 		getitem 32057,1;
@@ -128,10 +130,10 @@ prontera,170,227,4	script	CBT Boy#freebie	4_M_YURI,{
 	query_sql "UPDATE `custom_player_data` SET `claimed_freebie` = 1 WHERE `account_id` = " + .@account_id;
 	
 	// Confirmation message
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "You have successfully claimed your CBT Freebies!";
 	next;
-	mes "[CBT Boy]";
+	mes "[Kap Nino]";
 	mes "Thank you for participating the Pixel Classic CBT!";
 	close;
 
