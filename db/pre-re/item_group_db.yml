@@ -330,9 +330,9 @@ Body:
           - Index: 36
             Item: Piece_Of_Cake
             Rate: 12
-#          - Index: 37
-#            Item: Fish_Slice
-#            Rate: 12
+          - Index: 37
+            Item: Fish_Slice
+            Rate: 12
 #          - Index: 38
 #            Item: Red_Slim_Potion
 #            Rate: 12
@@ -396,9 +396,9 @@ Body:
           - Index: 58
             Item: Spectacles
             Rate: 12
-#          - Index: 59
-#            Item: Portable_Furnace
-#            Rate: 12
+          - Index: 59
+            Item: Portable_Furnace
+            Rate: 12
           - Index: 60
             Item: Iron_Hammer
             Rate: 12
@@ -498,9 +498,9 @@ Body:
           - Index: 92
             Item: Berserk_Potion
             Rate: 12
-#          - Index: 93
-#            Item: Heart_Of_Her
-#            Rate: 12
+          - Index: 93
+            Item: Heart_Of_Her
+            Rate: 12
 #          - Index: 94
 #            Item: Korea_Rice_Cake
 #            Rate: 12
@@ -1266,9 +1266,9 @@ Body:
 #          - Index: 348
 #            Item: Town_Sword_
 #            Rate: 1
-          - Index: 349
-            Item: Star_Dust_Blade
-            Rate: 1
+#          - Index: 349
+#            Item: Star_Dust_Blade
+#            Rate: 1
           - Index: 350
             Item: Slayer
             Rate: 3
@@ -1506,9 +1506,9 @@ Body:
           - Index: 428
             Item: Halberd_
             Rate: 3
-#          - Index: 429
-#            Item: Staff_Of_Soul
-#            Rate: 3
+          - Index: 429
+            Item: Staff_Of_Soul
+            Rate: 3
 #          - Index: 430
 #            Item: Gae_Bolg
 #            Rate: 1
@@ -1962,9 +1962,9 @@ Body:
           - Index: 580
             Item: Mirror_Shield_
             Rate: 3
-#          - Index: 581
-#            Item: Memorize_Book
-#            Rate: 3
+          - Index: 581
+            Item: Memorize_Book
+            Rate: 3
           - Index: 582
             Item: Novice_Guard
             Rate: 3
@@ -2037,9 +2037,9 @@ Body:
           - Index: 605
             Item: Turban
             Rate: 3
-#          - Index: 606
-#            Item: Turban_
-#            Rate: 3
+          - Index: 606
+            Item: Turban_
+            Rate: 3
           - Index: 607
             Item: Goggle
             Rate: 3
@@ -2061,9 +2061,9 @@ Body:
           - Index: 613
             Item: Gemmed_Sallet
             Rate: 3
-#          - Index: 614
-#            Item: Gemmed_Sallet_
-#            Rate: 3
+          - Index: 614
+            Item: Gemmed_Sallet_
+            Rate: 3
           - Index: 615
             Item: Circlet
             Rate: 3
@@ -2328,9 +2328,9 @@ Body:
 #          - Index: 702
 #            Item: Full_Plate_Armor
 #            Rate: 3
-          - Index: 703
-            Item: Novice_Plate
-            Rate: 3
+#          - Index: 703
+#            Item: Novice_Plate
+#            Rate: 3
 #          - Index: 704
 #            Item: Orleans_Gown
 #            Rate: 1
@@ -2364,9 +2364,9 @@ Body:
 #          - Index: 714
 #            Item: Grave
 #            Rate: 3
-          - Index: 715
-            Item: Novice_Boots
-            Rate: 3
+#          - Index: 715
+#            Item: Novice_Boots
+#            Rate: 3
 #          - Index: 716
 #            Item: Novice_Shoes
 #            Rate: 1
@@ -2595,9 +2595,9 @@ Body:
           - Index: 791
             Item: Glitter_Shell
             Rate: 12
-#          - Index: 792
-#            Item: Tail_Of_Steel_Scorpion
-#            Rate: 12
+          - Index: 792
+            Item: Tail_Of_Steel_Scorpion
+            Rate: 12
           - Index: 793
             Item: Claw_Of_Monkey
             Rate: 12
@@ -2634,27 +2634,27 @@ Body:
           - Index: 804
             Item: Poison_Spore
             Rate: 12
-#          - Index: 805
-#            Item: Red_Socks_With_Holes
-#            Rate: 12
+          - Index: 805
+            Item: Red_Socks_With_Holes
+            Rate: 12
           - Index: 806
             Item: Matchstick
             Rate: 12
           - Index: 807
             Item: Fang_Of_Garm
             Rate: 12
-#          - Index: 808
-#            Item: Yarn
-#            Rate: 12
+          - Index: 808
+            Item: Yarn
+            Rate: 12
           - Index: 809
             Item: Fine_Grit
             Rate: 12
           - Index: 810
             Item: Alice's_Apron
             Rate: 12
-#          - Index: 811
-#            Item: Talon_Of_Griffin
-#            Rate: 12
+          - Index: 811
+            Item: Talon_Of_Griffin
+            Rate: 12
           - Index: 812
             Item: Stone
             Rate: 12
@@ -2673,9 +2673,9 @@ Body:
           - Index: 817
             Item: Cart_Free_Ticket
             Rate: 12
-#          - Index: 818
-#            Item: Soft_Feather
-#            Rate: 12
+          - Index: 818
+            Item: Soft_Feather
+            Rate: 12
           - Index: 819
             Item: Dragon_Fly_Wing
             Rate: 12
@@ -2685,9 +2685,9 @@ Body:
           - Index: 821
             Item: Ice_Piece
             Rate: 12
-#          - Index: 822
-#            Item: Stone_Piece
-#            Rate: 12
+          - Index: 822
+            Item: Stone_Piece
+            Rate: 12
           - Index: 823
             Item: Burn_Tree
             Rate: 12
@@ -2751,12 +2751,12 @@ Body:
 #          - Index: 843
 #            Item: Fright_Paper_Blade
 #            Rate: 12
-          - Index: 844
-            Item: Broken_Pharaoh_Symbol
-            Rate: 12
-          - Index: 845
-            Item: Tutankhamen's_Mask
-            Rate: 12
+#          - Index: 844
+#            Item: Broken_Pharaoh_Symbol
+#            Rate: 12
+#          - Index: 845
+#            Item: Tutankhamen's_Mask
+#            Rate: 12
 #          - Index: 846
 #            Item: Harpy's_Feather
 #            Rate: 12
@@ -2883,9 +2883,9 @@ Body:
 #          - Index: 887
 #            Item: Packing_Paper
 #            Rate: 12
-          - Index: 888
-            Item: Cacao
-            Rate: 12
+#          - Index: 888
+#            Item: Cacao
+#            Rate: 12
 #          - Index: 889
 #            Item: Thin_Stem
 #            Rate: 12
@@ -8272,9 +8272,9 @@ Body:
           - Index: 36
             Item: Piece_Of_Cake
             Rate: 14
-#          - Index: 37
-#            Item: Fish_Slice
-#            Rate: 14
+          - Index: 37
+            Item: Fish_Slice
+            Rate: 14
 #          - Index: 38
 #            Item: Red_Slim_Potion
 #            Rate: 14
@@ -8338,9 +8338,9 @@ Body:
           - Index: 58
             Item: Spectacles
             Rate: 14
-#          - Index: 59
-#            Item: Portable_Furnace
-#            Rate: 14
+          - Index: 59
+            Item: Portable_Furnace
+            Rate: 14
           - Index: 60
             Item: Iron_Hammer
             Rate: 14
@@ -8446,9 +8446,9 @@ Body:
           - Index: 94
             Item: Berserk_Potion
             Rate: 14
-#          - Index: 95
-#            Item: Heart_Of_Her
-#            Rate: 14
+          - Index: 95
+            Item: Heart_Of_Her
+            Rate: 14
 #          - Index: 96
 #            Item: Korea_Rice_Cake
 #            Rate: 14
@@ -9181,9 +9181,9 @@ Body:
 #          - Index: 339
 #            Item: Town_Sword_
 #            Rate: 1
-          - Index: 340
-            Item: Star_Dust_Blade
-            Rate: 1
+#          - Index: 340
+#            Item: Star_Dust_Blade
+#            Rate: 1
           - Index: 341
             Item: Slayer_
             Rate: 7
@@ -9322,9 +9322,9 @@ Body:
           - Index: 386
             Item: Halberd_
             Rate: 7
-#          - Index: 387
-#            Item: Staff_Of_Soul
-#            Rate: 7
+          - Index: 387
+            Item: Staff_Of_Soul
+            Rate: 7
 #          - Index: 388
 #            Item: Gae_Bolg
 #            Rate: 1
@@ -9652,9 +9652,9 @@ Body:
           - Index: 496
             Item: Mirror_Shield_
             Rate: 7
-#          - Index: 497
-#            Item: Memorize_Book
-#            Rate: 7
+          - Index: 497
+            Item: Memorize_Book
+            Rate: 7
           - Index: 498
             Item: Novice_Guard
             Rate: 7
@@ -9715,9 +9715,9 @@ Body:
           - Index: 517
             Item: Turban
             Rate: 7
-#          - Index: 518
-#            Item: Turban_
-#            Rate: 7
+          - Index: 518
+            Item: Turban_
+            Rate: 7
           - Index: 519
             Item: Goggle
             Rate: 7
@@ -9739,9 +9739,9 @@ Body:
           - Index: 525
             Item: Gemmed_Sallet
             Rate: 7
-#          - Index: 526
-#            Item: Gemmed_Sallet_
-#            Rate: 7
+          - Index: 526
+            Item: Gemmed_Sallet_
+            Rate: 7
           - Index: 527
             Item: Circlet
             Rate: 7
@@ -9967,9 +9967,9 @@ Body:
 #          - Index: 601
 #            Item: Novice_Breast
 #            Rate: 7
-          - Index: 602
-            Item: Novice_Plate
-            Rate: 7
+#          - Index: 602
+#            Item: Novice_Plate
+#            Rate: 7
           - Index: 603
             Item: Sandals_
             Rate: 7
@@ -10219,9 +10219,9 @@ Body:
           - Index: 685
             Item: Glitter_Shell
             Rate: 14
-#          - Index: 686
-#            Item: Tail_Of_Steel_Scorpion
-#            Rate: 14
+          - Index: 686
+            Item: Tail_Of_Steel_Scorpion
+            Rate: 14
           - Index: 687
             Item: Claw_Of_Monkey
             Rate: 14
@@ -10258,27 +10258,27 @@ Body:
           - Index: 698
             Item: Poison_Spore
             Rate: 14
-#          - Index: 699
-#            Item: Red_Socks_With_Holes
-#            Rate: 14
+          - Index: 699
+            Item: Red_Socks_With_Holes
+            Rate: 14
           - Index: 700
             Item: Matchstick
             Rate: 14
           - Index: 701
             Item: Fang_Of_Garm
             Rate: 14
-#          - Index: 702
-#            Item: Yarn
-#            Rate: 14
+          - Index: 702
+            Item: Yarn
+            Rate: 14
           - Index: 703
             Item: Fine_Grit
             Rate: 14
           - Index: 704
             Item: Alice's_Apron
             Rate: 14
-#          - Index: 705
-#            Item: Talon_Of_Griffin
-#            Rate: 14
+          - Index: 705
+            Item: Talon_Of_Griffin
+            Rate: 14
           - Index: 706
             Item: Stone
             Rate: 14
@@ -10297,9 +10297,9 @@ Body:
           - Index: 711
             Item: Cart_Free_Ticket
             Rate: 14
-#          - Index: 712
-#            Item: Soft_Feather
-#            Rate: 14
+          - Index: 712
+            Item: Soft_Feather
+            Rate: 14
           - Index: 713
             Item: Dragon_Fly_Wing
             Rate: 14
@@ -10309,9 +10309,9 @@ Body:
           - Index: 715
             Item: Ice_Piece
             Rate: 14
-#          - Index: 716
-#            Item: Stone_Piece
-#            Rate: 14
+          - Index: 716
+            Item: Stone_Piece
+            Rate: 14
           - Index: 717
             Item: Burn_Tree
             Rate: 14
@@ -10375,12 +10375,12 @@ Body:
 #          - Index: 737
 #            Item: Fright_Paper_Blade
 #            Rate: 14
-          - Index: 738
-            Item: Broken_Pharaoh_Symbol
-            Rate: 14
-          - Index: 739
-            Item: Tutankhamen's_Mask
-            Rate: 14
+#          - Index: 738
+#            Item: Broken_Pharaoh_Symbol
+#            Rate: 14
+#          - Index: 739
+#            Item: Tutankhamen's_Mask
+#            Rate: 14
 #          - Index: 740
 #            Item: Harpy's_Feather
 #            Rate: 14
@@ -10507,9 +10507,9 @@ Body:
 #          - Index: 781
 #            Item: Packing_Paper
 #            Rate: 14
-          - Index: 782
-            Item: Cacao
-            Rate: 14
+#          - Index: 782
+#            Item: Cacao
+#            Rate: 14
 #          - Index: 783
 #            Item: Thin_Stem
 #            Rate: 14
