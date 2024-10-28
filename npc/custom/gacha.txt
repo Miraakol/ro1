@@ -1,0 +1,68 @@
+prontera,150,150,5	script	Zeny Gacha	2_SLOT_MACHINE,{
+	
+	mes "[Zeny Gacha]";
+	mes "Welcome to the Zeny Gacha!";
+	mes "Each roll costs ^FF000010,000 Zeny^000000!";
+	next;
+
+	// Loop the gacha as long as the player has enough Zeny
+	while (Zeny >= 10000) {
+		mes "[Zeny Gacha]";
+		mes "You have ^FF0000" + Zeny + "^000000 Zeny. Do you want to try your luck?";
+		next;
+		
+		// Check if the player's weight is above 50% of their maximum weight limit
+		if (Weight * 2 > MaxWeight) {
+			mes "[Zeny Gacha]";
+			mes "Your inventory is too heavy!";
+			mes "You must be under 50% of your max weight capacity to play.";
+			close;
+		}
+
+		if (select("Yes:No") == 2) {
+			mes "[Zeny Gacha]";
+			mes "Come back anytime!";
+			close;
+		}
+		
+		// Lotto-style gacha pool setup with 8 items
+		setarray .gacha_items[0],501,502,503,504,505,506,32060,32043;  // Item IDs in gacha pool
+		setarray .gacha_rates[0],5000,2500,1000,500,250,125,13,7; // Rates out of 10,000
+
+		// Lotto: Total rate is 10,000 (to use 0.01% precision)
+		set .total_rate, 10000;
+		set .roll, rand(1, .total_rate);
+		set .cumulative_rate, 0;
+		
+		// Determine the gacha outcome based on cumulative probabilities
+		for (set .i, 0; .i < getarraysize(.gacha_items); set .i, .i + 1) {
+			set .cumulative_rate, .cumulative_rate + .gacha_rates[.i];
+			if (.roll <= .cumulative_rate) {
+				set @item, .gacha_items[.i];
+				break;
+			}
+		}
+
+		// Deduct Zeny and give the item
+		set Zeny, Zeny - 10000;
+		getitem @item, 1;
+
+		// Check if the player got the rarest item (Item 7 or Item 8)
+		if (@item == 32060 || @item == 32043) {
+			announce "[Zeny Gacha] " + strcharinfo(0) + " has won the rare jackpot item: " + getitemname(@item) + "!", 0;
+			specialeffect2 68;
+		}
+
+		mes "[Zeny Gacha]";
+		mes "Congratulations! You received";
+		mes "^0000FF" + getitemname(@item) + "^000000!";
+		mes "You have ^FF0000" + Zeny + "^000000 Zeny remaining.";
+		specialeffect2 268;
+		specialeffect2 274;
+		next;
+	}
+
+	mes "[Zeny Gacha]";
+	mes "You don't have enough Zeny to continue.";
+	close;
+}

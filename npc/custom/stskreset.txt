@@ -1,0 +1,54 @@
+main_office,209,126,4	script	Rendon	4_M_FAIRYANG,{
+    //           Skills, Stats, Both, Limit
+    setarray .@Reset,    1000000,   1000000,   1500000,   0;
+    // Cash Points required for reset
+    setarray .@CashCost, 500,     500,     800;   // Adjust these values as needed
+    mes "[Rendon]";
+    if(.@Reset[3] && reset_limit > .@Reset[3]) {
+        mes "Sorry, you can only reset "+callfunc("F_InsertPlural",.@Reset[3],"time")+" in your life.";
+        close;
+    }
+    mes "I am the Reset Girl.";
+    mes "Reset Stats: "+ callfunc("F_InsertComma",.@Reset[1]) +"z and "+.@CashCost[1]+" Cash Points.";
+    mes "Reset Skills: "+ callfunc("F_InsertComma",.@Reset[0]) +"z and "+.@CashCost[0]+" Cash Points.";
+    mes "Reset Both: "+ callfunc("F_InsertComma",.@Reset[2]) +"z and "+.@CashCost[2]+" Cash Points.";
+    if(.@Reset[3]) mes "You may only reset "+callfunc("F_InsertPlural",.@Reset[3],"time")+", so use "+((.@Reset[3]>1)?"them":"it")+" wisely.";
+	next;
+	mes "[Rendon]";
+    mes "Please select the service you want:";
+    next;
+    set .@i,(select("^FF3355Reset Skills:Reset Stats:Reset Both^000000:Cancel"));
+    if(.@i > 3) close;
+    mes "[Rendon]";
+    
+    // Check if the player has enough Zeny and Cash Points
+    if (Zeny < .@Reset[.@i-1] || #CASHPOINTS < .@CashCost[.@i-1]) {
+        mes "Sorry, you don't have enough Zeny or Cash Points.";
+        close;
+    }
+    
+    // Add confirmation before proceeding
+    mes "You are about to reset your skills/stats for "+ callfunc("F_InsertComma",.@Reset[.@i-1]) +" Zeny and "+.@CashCost[.@i-1]+" Cash Points.";
+    mes "Are you sure you want to proceed?";
+	next;
+    if(select("Yes:No") == 2) {
+		mes "[Rendon]";
+        mes "Take your time to decide.";
+        close;
+    }
+
+    // Deduct Zeny and Cash Points
+    set Zeny, Zeny-.@Reset[.@i-1];
+    set #CASHPOINTS, #CASHPOINTS - .@CashCost[.@i-1];
+    
+    if(.@i&1){
+        sc_end_class;
+        ResetSkill;
+    }
+    if(.@i&2) ResetStatus;
+    
+	mes "[Rendon]";
+    mes "There you go!";
+    if(.@Reset[3]) set reset_limit,reset_limit + 1;
+    close;
+}

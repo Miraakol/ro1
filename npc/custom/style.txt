@@ -1,0 +1,5 @@
+main_office,214,273,2	script	Ricky Reyes#style	2_M_DYEINGER,{
+	mes "[Ricky Reyes]";
+	mes "Coming Soon!";
+	end;
+}

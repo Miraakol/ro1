@@ -1,0 +1,112 @@
+main_office,216,113,3	script	Kuya Kim#breeder	4_MAL_SOLDIER,{
+
+	mes "[Kuya Kim]";
+	mes "Welcome! I can rent you a Falcon, Peco Peco, or Cart.";
+	mes "Please select the mount you want to rent:";
+	next;
+	switch(select("Falcon:Peco Peco:Cart:Cancel")) {
+	case 1: // Falcon Rental
+		if (ismounting()) {
+			mes "[Kuya Kim]";
+			mes "You must first remove your current mount.";
+			close;
+		}
+		else if (!checkfalcon() && getskilllv("HT_FALCON")) {
+			mes "[Kuya Kim]";
+			mes "Renting a Falcon will cost 2,500 Zeny. Do you want to proceed?";
+			next;
+			if (select("Yes:No") == 1) {
+				if (Zeny >= 2500) {
+					set Zeny, Zeny - 2500;
+					setfalcon;
+					specialeffect2 EF_TEIHIT3;
+					mes "[Kuya Kim]";
+					mes "Enjoy your Falcon!";
+				} else {
+					mes "[Kuya Kim]";
+					mes "You don't have enough Zeny.";
+				}
+			} else {
+				mes "[Kuya Kim]";
+				mes "No worries. Let me know if you change your mind.";
+			}
+			close;
+		}
+		else {
+			mes "[Kuya Kim]";
+			mes "You don't meet the requirements to rent a Falcon.";
+			close;
+		}
+		break;
+	case 2: // Peco Peco Rental
+		if (ismounting()) {
+			mes "[Kuya Kim]";
+			mes "You must first remove your current mount.";
+			close;
+		}
+		else if (!checkriding() && getskilllv("KN_RIDING")) {
+			mes "[Kuya Kim]";
+			mes "Renting a Peco Peco will cost 2,500 Zeny. Do you want to proceed?";
+			next;
+			if (select("Yes:No") == 1) {
+				if (Zeny >= 2500) {
+					set Zeny, Zeny - 2500;
+					setriding;
+					specialeffect2 EF_TEIHIT3;
+					mes "[Kuya Kim]";
+					mes "Enjoy your Peco Peco!";
+				} else {
+					mes "[Kuya Kim]";
+					mes "You don't have enough Zeny.";
+				}
+			} else {
+				mes "[Kuya Kim]";
+				mes "No worries. Let me know if you change your mind.";
+			}
+			close;
+		}
+		else {
+			mes "[Kuya Kim]";
+			mes "You don't meet the requirements to rent a Peco Peco.";
+			close;
+		}
+		break;
+	case 3: // Cart Rental
+		if (ismounting()) {
+			mes "[Kuya Kim]";
+			mes "You must first remove your current mount.";
+			close;
+		}
+		else if (!checkcart() && getskilllv("MC_PUSHCART")) {
+			mes "[Kuya Kim]";
+			mes "Renting a Cart will cost 800 Zeny. Do you want to proceed?";
+			next;
+			if (select("Yes:No") == 1) {
+				if (Zeny >= 800) {
+					set Zeny, Zeny - 800;
+					setcart;
+					specialeffect2 EF_TEIHIT3;
+					mes "[Kuya Kim]";
+					mes "Enjoy your Cart!";
+				} else {
+					mes "[Kuya Kim]";
+					mes "You don't have enough Zeny.";
+				}
+			} else {
+				mes "[Kuya Kim]";
+				mes "No worries. Let me know if you change your mind.";
+			}
+			close;
+		}
+		else {
+			mes "[Kuya Kim]";
+			mes "You don't meet the requirements to rent a Cart.";
+			close;
+		}
+		break;
+	case 4: // Cancel
+		mes "[Kuya Kim]";
+		mes "Alright, let me know if you change your mind.";
+		close;
+	}
+}

@@ -1,0 +1,243 @@
+// Advance Punching Bag with Parameter settings
+// by pajodex
+// Video preview : https://www.youtube.com/watch?v=RoLhYx-Iny8
+
+main_office,211,98,0	script	Set Parameters#0	844,{
+function get_size_name;
+function get_race_name;
+function get_ele_name;
+	ignoretimeout 1;
+	mes "Current punching bag info:";
+	.@dupid = atoi(strnpcinfo(2));
+	getunitdata .gid[.@dupid], .@data;
+	mes "Size : "+ get_size_name(.@data[UMOB_SIZE]);
+	mes "Level : "+ .@data[UMOB_LEVEL];
+	mes "Race : "+ get_race_name(.@data[UMOB_RACE]);
+	mes "Element : "+ get_ele_name(.@data[UMOB_ELETYPE]) +" Lv. "+ .@data[UMOB_ELELEVEL];
+	mes "Stats : ";
+	mes "==============================";
+	mes "Str - "+ .@data[UMOB_STR] +"    Agi - "+ .@data[UMOB_AGI] +"    Vit - "+ .@data[UMOB_VIT];
+	mes "Int - "+ .@data[UMOB_INT] +"    Dex - "+ .@data[UMOB_DEX] +"    Luk - "+ .@data[UMOB_LUK];
+	mes "Def - "+ .@data[UMOB_DEF] +"    Mdef - "+ .@data[UMOB_MDEF];
+	next;
+	if ( select("> Set parameter:Cancel") == 2 ) {
+		mes "Bye";
+		close;
+	}
+	do {
+		mes "Select which parameter to change.";
+		next;
+		switch(select("> Size [ ^ff0000"+(.@size_select ? get_size_name(.@UMOB_SIZE):get_size_name(.UMOB_SIZE))+"^000000 ]:> Level [ ^ff0000"+(.@UMOB_LEVEL ? .@UMOB_LEVEL:.UMOB_LEVEL)+"^000000 ]:> Race [ ^ff0000"+(.@race_select ? get_race_name(.@UMOB_RACE):get_race_name(.UMOB_RACE))+"^000000 ]:> Element [ ^ff0000"+(.@ele_select ? get_ele_name(.@UMOB_ELETYPE):get_ele_name(.UMOB_ELETYPE))+" Lv "+(.@UMOB_ELELEVEL ? .@UMOB_ELELEVEL:.UMOB_ELELEVEL)+"^000000 ]:> Stats:> Enter Mob ID:^0000ffDone^000000")) {
+		case 1:
+			.@UMOB_SIZE = select("- Small:- Medium:- Large")-1;
+			.@size_select = true;
+			break;
+		case 2:
+			mes "Input level (1-"+.maxlv+"):";
+			next;
+			input .@UMOB_LEVEL, 1, .maxlv;
+			break;
+		case 3:
+			.@UMOB_RACE = select("- Formless:- Undead:- Brute:- Plant:- Insect:- Fish:- Demon:- Demihuman:- Angel:- Dragon:- Player") - 1;
+			.@race_select = true;
+			break;
+		case 4:
+			mes "Select Element:";
+			next;
+			.@UMOB_ELETYPE = select("- Neutral:- Water:- Earth:- Fire:- Wind:- Poison:- Holy:- Shadow:- Ghost:- Undead") - 1;
+			.@ele_select = true;
+			mes "Select Level:";
+			next;
+			.@UMOB_ELELEVEL = select("Lv 1:Lv 2:Lv 3:Lv 4");
+			break;
+		case 5:
+			mes "Select:";
+			next;
+			switch(select("> STR [ ^ff0000"+(.@UMOB_STR ? .@UMOB_STR:.UMOB_STR)+"^000000 ]:> AGI [ ^ff0000"+(.@UMOB_AGI ? .@UMOB_AGI:.UMOB_AGI)+"^000000 ]:> VIT [ ^ff0000"+(.@UMOB_VIT ? .@UMOB_VIT:.UMOB_VIT)+"^000000 ]:> INT [ ^ff0000"+(.@UMOB_INT ? .@UMOB_INT:.UMOB_INT)+"^000000 ]:> DEX [ ^ff0000"+(.@UMOB_DEX ? .@UMOB_DEX:.UMOB_DEX)+"^000000 ]:> LUK [ ^ff0000"+(.@UMOB_LUK ? .@UMOB_LUK:.UMOB_LUK)+"^000000 ]:> DEF [ ^ff0000"+(.@UMOB_DEF ? .@UMOB_DEF:.UMOB_DEF)+"^000000 ]:> MDEF [ ^ff0000"+(.@UMOB_MDEF ? .@UMOB_MDEF:.UMOB_MDEF)+"^000000 ]")) {
+				case 1: .@data$ = "STR"; break;
+				case 2: .@data$ = "AGI"; break;
+				case 3: .@data$ = "VIT"; break;
+				case 4: .@data$ = "INT"; break;
+				case 5: .@data$ = "DEX"; break;
+				case 6: .@data$ = "LUK"; break;
+				case 7: .@data$ = "DEF"; break;
+				case 8: .@data$ = "MDEF"; break;
+			}
+			mes "Value (1-"+.max_stat+":";
+			next;
+			input .@val, 1, .max_stat;
+			setd ".@UMOB_"+.@data$, .@val;
+			break;
+		case 6:
+			mes "Enter Monster ID to simulate:";
+			next;
+			input .@val;
+			if ( (.@name_english$ = getmonsterinfo(.@val, MOB_NAME)) == "null" ) {
+				mes "Cannot find Monster ID "+.@val+" on the database!";
+				next;
+				break;
+			}
+			query_sql("SELECT `element_level` FROM `"+(checkre(0) ? "mob_db_re":"mob_db")+"` WHERE `id` = '"+.@val+"'", .@UMOB_ELELEVEL);
+			.@UMOB_LEVEL = getmonsterinfo(.@val, MOB_LV);
+			.@UMOB_SIZE = getmonsterinfo(.@val, MOB_SIZE);
+			.@UMOB_RACE = getmonsterinfo(.@val, MOB_RACE);
+			.@UMOB_ELETYPE = getmonsterinfo(.@val, MOB_ELEMENT);
+			.@UMOB_DEF = getmonsterinfo(.@val, MOB_DEF);
+			.@UMOB_MDEF = getmonsterinfo(.@val, MOB_MDEF);
+			.@UMOB_STR = getmonsterinfo(.@val, MOB_STR);
+			.@UMOB_AGI = getmonsterinfo(.@val, MOB_AGI);
+			.@UMOB_VIT = getmonsterinfo(.@val, MOB_VIT);
+			.@UMOB_INT = getmonsterinfo(.@val, MOB_INT);
+			.@UMOB_DEX = getmonsterinfo(.@val, MOB_DEX);
+			.@UMOB_LUK = getmonsterinfo(.@val, MOB_LUK);
+			mes "Fetching and applying data of monster '"+.@name_english$+"("+.@val+")' on punching bag...";
+			next;
+			break;
+	
+		default: // Finalize
+			.@done = true;
+			break;
+		}
+	} while ( !.@done );
+	mes "Please review before I spawn:";
+	mes "Size : "+ get_size_name((.@size_select ? .@UMOB_SIZE:.UMOB_SIZE));
+	mes "Level : "+ (.@UMOB_LEVEL ? .@UMOB_LEVEL:.UMOB_LEVEL);
+	mes "Race : "+ get_race_name((.@race_select ? .@UMOB_RACE:.UMOB_RACE));
+	mes "Element : "+ get_ele_name((.@ele_select ? .@UMOB_ELETYPE:.UMOB_ELETYPE)) +" Lv. "+ (.@UMOB_ELELEVEL ? .@UMOB_ELELEVEL:.UMOB_ELELEVEL);
+	mes "Stats : ";
+	mes "==============================";
+	mes "Str - "+ (.@UMOB_STR ? .@UMOB_STR:.UMOB_STR) +"    Agi - "+ (.@UMOB_AGI ? .@UMOB_AGI:.UMOB_AGI) +"    Vit - "+ (.@UMOB_VIT ? .@UMOB_VIT:.UMOB_VIT);
+	mes "Int - "+ (.@UMOB_INT ? .@UMOB_INT:.UMOB_INT) +"    Dex - "+ (.@UMOB_DEX ? .@UMOB_DEX:.UMOB_DEX) +"    Luk - "+ (.@UMOB_LUK ? .@UMOB_LUK:.UMOB_LUK);
+	mes "Def - "+ (.@UMOB_DEF ? .@UMOB_DEF:.UMOB_DEF) +"    Mdef - "+ (.@UMOB_MDEF ? .@UMOB_MDEF:.UMOB_MDEF);
+	next;
+	if (select("> Finalize!:> Cancel")==2) close;
+	mes "Done!";
+	close2;
+	.UMOB_SIZE = (.@size_select) ? .@UMOB_SIZE:.UMOB_SIZE;
+	.UMOB_LEVEL = (.@UMOB_LEVEL) ? .@UMOB_LEVEL:.UMOB_LEVEL;
+	.UMOB_RACE = (.@race_select) ? .@UMOB_RACE:.UMOB_RACE;
+	.UMOB_ELETYPE = (.@ele_select) ? .@UMOB_ELETYPE:.UMOB_ELETYPE;
+	.UMOB_ELELEVEL = (.@UMOB_ELELEVEL) ? .@UMOB_ELELEVEL:.UMOB_ELELEVEL;
+	.UMOB_STR = (.@UMOB_STR) ? .@UMOB_STR:.UMOB_STR;
+	.UMOB_AGI = (.@UMOB_AGI) ? .@UMOB_AGI:.UMOB_AGI;
+	.UMOB_VIT = (.@UMOB_VIT) ? .@UMOB_VIT:.UMOB_VIT;
+	.UMOB_INT = (.@UMOB_INT) ? .@UMOB_INT:.UMOB_INT;
+	.UMOB_DEX = (.@UMOB_DEX) ? .@UMOB_DEX:.UMOB_DEX;
+	.UMOB_LUK = (.@UMOB_LUK) ? .@UMOB_LUK:.UMOB_LUK;
+	.UMOB_DEF = (.@UMOB_DEF) ? .@UMOB_DEF:.UMOB_DEF;
+	.UMOB_MDEF = (.@UMOB_MDEF) ? .@UMOB_MDEF:.UMOB_MDEF;
+	killmonster strnpcinfo(4),strnpcinfo(0)+"::OnMyMobDead";
+	donpcevent strnpcinfo(0)+"::OnMyMobDead";
+	end;
+	
+OnInit:
+	// Max level players can input
+	.maxlv = 99; 
+
+	// Max stats players can input 
+	.max_stat = 999;
+	
+	// Max hp - don't change if you dont know what you are doing
+	.UMOB_MAXHP = 2000000000;
+
+	// Default values on initial spawn
+	.UMOB_SIZE = 1;
+	.UMOB_LEVEL = 10;
+	.UMOB_RACE = 3;
+	.UMOB_ELETYPE = 1;
+	.UMOB_ELELEVEL = 1;
+	.UMOB_STR = 5;
+	.UMOB_AGI = 5;
+	.UMOB_VIT = 5;
+	.UMOB_INT = 5;
+	.UMOB_DEX = 5;
+	.UMOB_LUK = 5;
+	.UMOB_DEF = 10;
+	.UMOB_MDEF = 10;
+
+OnMyMobDead:
+	getunitdata(getnpcid(0), .@d);
+	monster strnpcinfo(4),.@d[UNPC_X],.@d[UNPC_Y],"Punching Bag",(!checkre(0))?1905:2411,1,strnpcinfo(0)+"::OnMyMobDead";
+	//monster strnpcinfo(4),.@d[UNPC_X],.@d[UNPC_Y],"Punching Bag",(!checkre(0))?1627:1627,1,strnpcinfo(0)+"::OnMyMobDead";
+	.@dupid = atoi(strnpcinfo(2));
+	.gid[.@dupid] = $@mobid[0];
+	.mhp[.@dupid] = .UMOB_MAXHP;
+	setunitdata .gid[.@dupid],UMOB_MODE,.@d[UMOB_MODE]|0x4000000|0x0200000; // Set MD_STATUS_IMMUNE (0x4000000) because EDP/burn/%MHP based status can skew the DPS counter so much.
+	setunitdata .gid[.@dupid],UMOB_MAXHP,.UMOB_MAXHP;
+	setunitdata .gid[.@dupid],UMOB_SIZE,.UMOB_SIZE;
+	setunitdata .gid[.@dupid],UMOB_LEVEL,.UMOB_LEVEL;
+	setunitdata .gid[.@dupid],UMOB_RACE,.UMOB_RACE;
+	setunitdata .gid[.@dupid],UMOB_ELETYPE,.UMOB_ELETYPE;
+	setunitdata .gid[.@dupid],UMOB_ELELEVEL,.UMOB_ELELEVEL;
+	setunitdata .gid[.@dupid],UMOB_STR,.UMOB_STR;
+	setunitdata .gid[.@dupid],UMOB_AGI,.UMOB_AGI;
+	setunitdata .gid[.@dupid],UMOB_VIT,.UMOB_VIT;
+	setunitdata .gid[.@dupid],UMOB_INT,.UMOB_INT;
+	setunitdata .gid[.@dupid],UMOB_DEX,.UMOB_DEX;
+	setunitdata .gid[.@dupid],UMOB_LUK,.UMOB_LUK;
+	setunitdata .gid[.@dupid],UMOB_DEF,.UMOB_DEF;
+	setunitdata .gid[.@dupid],UMOB_MDEF,.UMOB_MDEF;
+	initnpctimer;
+	end;
+	
+OnTimer5000:
+	.@dupid = atoi(strnpcinfo(2));
+	if(unitexists(.gid[.@dupid])){
+		getunitdata(.gid[.@dupid],.@d);
+		.@diff = (.mhp[.@dupid] - .@d[UMOB_HP]);
+		if(.@diff > 0){
+			npctalk "Punching Bag : I've taken " + F_InsertComma(.@diff/5) + " DPS in last 5 seconds.";
+			setunitdata .gid[.@dupid],UMOB_HP,.mhp[.@dupid];
+			specialeffect EF_HEAL;
+		}
+	}
+	initnpctimer;
+
+	function	get_size_name	{
+		switch ( getarg(0) ) {
+			case 0 : .@val$ = "Small"; break;
+			case 1 : .@val$ = "Medium"; break;
+			case 2 : .@val$ = "Large"; break;
+		}
+		return .@val$;
+	}
+	
+	function	get_race_name	{
+		switch ( getarg(0) ) {
+			case 0: .@val$ = "Formless"; break;
+			case 1: .@val$ = "Undead"; break;
+			case 2: .@val$ = "Brute"; break;
+			case 3: .@val$ = "Plant"; break;
+			case 4: .@val$ = "Insect"; break;
+			case 5: .@val$ = "Fish"; break;
+			case 6: .@val$ = "Demon"; break;
+			case 7: .@val$ = "Demihuman"; break;
+			case 8: .@val$ = "Angel"; break;
+			case 9: .@val$ = "Dragon"; break;
+			case 10: .@val$ = "Player"; break;
+		}
+		return .@val$;
+	}
+	
+	function	get_ele_name	{
+		switch ( getarg(0) ) {
+			case 0: .@val$ = "Neutral"; break;
+			case 1: .@val$ = "Water"; break;
+			case 2: .@val$ = "Earth"; break;
+			case 3: .@val$ = "Fire"; break;
+			case 4: .@val$ = "Wind"; break;
+			case 5: .@val$ = "Poison"; break;
+			case 6: .@val$ = "Holy"; break;
+			case 7: .@val$ = "Shadow"; break;
+			case 8: .@val$ = "Ghost"; break;
+			case 9: .@val$ = "Undead"; break;
+		}
+		return .@val$;
+	}
+}
+
+main_office,202,98,0	duplicate(Set Parameters#0)	Set Parameters#1	844
+main_office,192,98,0	duplicate(Set Parameters#0)	Set Parameters#2	844
+main_office,211,88,0	duplicate(Set Parameters#0)	Set Parameters#3	844
+main_office,202,88,0	duplicate(Set Parameters#0)	Set Parameters#4	844
+main_office,192,88,0	duplicate(Set Parameters#0)	Set Parameters#5	844
