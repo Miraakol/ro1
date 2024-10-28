@@ -1,0 +1,76 @@
+/*
+CREATE TABLE IF NOT EXISTS credit_claim_log (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    account_id INT NOT NULL,
+    claimed_amount INT NOT NULL,
+    claim_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+*/
+
+// NPC: Credit Claim NPC with Confirmation Menu
+// Purpose: Allows players to claim their credits as Red Potions with a Yes/No confirmation.
+
+main_office,217,197,3	script	Cassie#fluxcredits	4_F_01,{
+	
+	mes "[Cassie]";
+	mes "Hello, ^0000FF"+strcharinfo(0)+"^000000!";
+	mes "You can claim your ^0000FFDonation Credits^000000 here.";
+	next;
+	mes "[Cassie]";
+	mes "Let me check if you have ^0000FFDonation Credits^000000 to claim...";
+	next;
+	mes "[Cassie]";
+	mes "..........";
+	next;
+	mes "[Cassie]";
+	mes "..........";
+	mes "..........";
+	next;
+	mes "[Cassie]";
+	mes "..........";
+	mes "..........";
+	mes "..........";	
+	next;
+	
+	// Retrieve the player's account ID and check credits balance
+	set .@account_id, getcharid(3);
+	query_sql("SELECT balance FROM cp_credits WHERE account_id = " + .@account_id, .@balance);
+	
+	if (.@balance <= 0) {
+		mes "[Cassie]";
+		mes "It seems you don't have any ^0000FFDonation Credits^000000 to claim.";
+		close;
+	} else {
+		mes "[Cassie]";
+		mes "It seems you have ^0000FFDonation Credits^000000 to claim.";
+		next;
+		mes "[Cassie]";
+		mes "You have " + .@balance + " ^0000FFDonation Credits^000000.";
+		mes "You will receive " + .@balance + " ^0000FFPixel Coin(s)^000000.";
+		mes "Do you want to claim it now?";
+		next;
+		
+		// Present Yes/No menu
+		switch(select("Yes:No")) {
+			case 1:
+				// Yes - proceed with claiming
+				getitem 32043, .@balance; // 32043 is the item ID for Pixel Coin
+				
+				// Update database to reset balance
+				query_sql("UPDATE cp_credits SET balance = 0 WHERE account_id = " + .@account_id);
+				
+				// Insert log entry
+				query_sql("INSERT INTO credit_claim_log (account_id, claimed_amount) VALUES (" + .@account_id + ", " + .@balance + ")");
+				
+				mes "[Cassie]";
+				mes "Your ^0000FFDonation Credits^000000 have been claimed successfully!";
+				close;
+
+			case 2:
+				// No - exit without claiming
+				mes "[Cassie]";
+				mes "Alright! You can come back anytime to claim your ^0000FFDonation Credits^000000.";
+				close;
+		}
+	}
+}
