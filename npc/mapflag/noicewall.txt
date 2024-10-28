@@ -147,3 +147,8 @@ nguild_prt	mapflag	noicewall
 //============================================================
 poring_w01	mapflag	noicewall
 poring_w02	mapflag	noicewall
+
+//============================================================
+// Pixel Classic
+//============================================================
+main_office	mapflag	noicewall

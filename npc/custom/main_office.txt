@@ -4,3 +4,82 @@ OnTouch:
 	warp "SavePoint",0,0;
 	end;
 }
+
+prontera,140,97,6	script	Manager#prt	4_M_MANAGER,{
+	mes "[Manager]";
+	mes "Would you like to be warped to the ^0000FFMain Office^000000?";
+	next;
+	switch(select("Yes", "No")) {
+		case 1:
+			warp "main_office",199,182;
+			end;
+		case 2:
+			mes "[Manager]";
+			mes "Very well, let me know if you change your mind.";
+			close;
+	}
+}
+
+main_office,100,301,4	script	Caloy#mo1	4_M_PHILMAN,{
+
+	mes "[Caloy]";
+	mes "Hello, " + strcharinfo(0) + "!";
+	mes "How may I be of assistance?";
+	next;
+	
+	switch(select("Consumables:Close")){
+	
+		case 1:
+			mes "[Caloy]";
+			mes "Here, let me open the Shop for you.";
+			close2;
+			set .@item_id, 32060;
+			if (countitem(.@item_id) >= 0) {
+				mes "[Caloy]";
+				mes "Hello, " + strcharinfo(0) + "!";	
+				mes "Currently, you have ^FF0000" + countitem(.@item_id) + "^000000 ^FF0000Gold Coin(s)^000000.";
+			}
+			callshop "Advanced Barter Shop";
+			break;
+			
+		case 2:
+			mes "[Caloy]";
+			mes "Alright, goodbye!";
+			mes "Take care and come back anytime.";
+			close;
+			break;
+	}
+}
+
+// Weapon/Armor Refiners
+//============================================================
+main_office,215,217,4	script	Hollgrehenn#mo1	4_M_03,{
+	if( getbattleflag( "feature.refineui" ) ){
+		mes "[Hollgrehenn]";
+		mes "I'm a blacksmith who can refine weapons and equipment.";
+		mes "Do you have any items that you'd like to refine?";
+		close2;
+		refineui();
+		end;
+	}else{
+		callfunc "refinemain","Hollgrehenn",0;
+		end;
+	}
+}
+
+//Main Office
+main_office,174,206,0	warp	mainoffice#basement	2,2,main_office,166,115
+main_office,166,118,0	warp	mainoffice#basement2	2,2,main_office,174,202
+main_office,166,206,0	warp	mainoffice#2ndfloor	2,2,main_office,70,290
+main_office,70,294,0	warp	mainoffice#2ndfloor2	2,2,main_office,166,202
+main_office,62,294,0	warp	mainoffice#3rdfloor	2,2,main_office,174,289
+main_office,174,294,0	warp	mainoffice#3rdfloor2	2,2,main_office,62,290
+
+//duplicate
+payon,96,122,4	duplicate(Manager#prt)	Manager#pay	4_M_MANAGER
+morocc,167,104,4	duplicate(Manager#prt)	Manager#moc	4_M_MANAGER
+geffen,128,64,4	duplicate(Manager#prt)	Manager#gef	4_M_MANAGER
+alberta,104,61,4	duplicate(Manager#prt)	Manager#alb	4_M_MANAGER
+izlude,137,93,4	duplicate(Manager#prt)	Manager#iz	4_M_MANAGER
+aldebaran,133,119,4	duplicate(Manager#prt)	Manager#alde	4_M_MANAGER
+comodo,200,150,4	duplicate(Manager#prt)	Manager#cmd	4_M_MANAGER
