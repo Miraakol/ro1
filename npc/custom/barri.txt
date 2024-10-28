@@ -3,10 +3,33 @@
 // Video preview : https://www.youtube.com/watch?v=RoLhYx-Iny8
 
 main_office,211,98,0	script	Set Parameters#0	844,{
+
+	// Set the Zeny cost here
+	.@cost = 1000;
+
+	mes "To set the parameters, you need to pay " + .@cost + " Zeny.";
+	next;
+	
+	// Prompt the player with Yes or No option
+	if (select("Yes:No") == 2) {
+		mes "You chose not to pay. See you next time!";
+		close;
+	}
+
+	// Check if the player has enough Zeny if they chose "Yes"
+	if (Zeny < .@cost) {
+		mes "You don't have enough Zeny. You need " + .@cost + " Zeny to set parameters.";
+		close;
+	} else {
+		// Deduct Zeny from the player
+		Zeny -= .@cost;
+		mes "You paid " + .@cost + " Zeny to set parameters.";
+		next;
+	}
+
 function get_size_name;
 function get_race_name;
 function get_ele_name;
-	ignoretimeout 1;
 	mes "Current punching bag info:";
 	.@dupid = atoi(strnpcinfo(2));
 	getunitdata .gid[.@dupid], .@data;
