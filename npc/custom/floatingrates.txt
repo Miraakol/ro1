@@ -1,53 +1,111 @@
-// Server rate change event script
-// Increases rates to 2x every Friday at 5 PM, and returns to 1x every Monday at 5 AM
-
--	script	RateChanger	-1,{
-
+-	script	FloatingRates	-1,{
 OnInit:
-	// To force the event to run even if you have to shutdown your server for some reason...
-	if (gettime(4) != 5 && gettime(4) != 6 && gettime(4) != 0) end;
+    // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 5 = Friday, 6 = Saturday)
+    set .@day, gettime(DT_DAYOFWEEK);
+    // Get the current hour (24-hour format)
+    set .@hour, gettime(DT_HOUR);
 
-    // Schedule rate change on Fridays at 5 PM (17:00) and Monday at 5 AM (05:00)
-    OnFri1700:
-        setBattleFlag "base_exp_rate", 200, true;
-        setBattleFlag "job_exp_rate", 200, true;
-		setBattleFlag "item_rate_common", 125, true;
-		setBattleFlag "item_rate_common_boss", 125, true;
-		setBattleFlag "item_rate_common_mvp", 125, true;
-		setBattleFlag "item_rate_heal", 125, true;
-		setBattleFlag "item_rate_heal_boss", 125, true;
-		setBattleFlag "item_rate_heal_mvp", 125, true;
-		setBattleFlag "item_rate_use", 125, true;
-		setBattleFlag "item_rate_use_boss", 125, true;
-		setBattleFlag "item_rate_use_mvp", 125, true;
-		setBattleFlag "item_rate_equip", 125, true;
-		setBattleFlag "item_rate_equip_boss", 125, true;
-		setBattleFlag "item_rate_equip_mvp", 125, true;
-		setBattleFlag "item_rate_card", 125, true;
-		setBattleFlag "item_rate_card_boss", 125, true;
-		setBattleFlag "item_rate_card_mvp", 125, true;
-		announce "Floating Rates Enabled!", bc_all;
-        end;
+    // Check if it's within the weekend window: Friday 5:00 PM to Monday 5:00 AM
+    if ((.@day == 5 && .@hour >= 17) || .@day == 6 || .@day == 0 || (.@day == 1 && .@hour < 5)) {
 
-    OnMon0500:
-        setBattleFlag "base_exp_rate", 100, true;
-        setBattleFlag "job_exp_rate", 100, true;
-		setBattleFlag "item_rate_common", 100, true;
-		setBattleFlag "item_rate_common_boss", 100, true;
-		setBattleFlag "item_rate_common_mvp", 100, true;
-		setBattleFlag "item_rate_heal", 100, true;
-		setBattleFlag "item_rate_heal_boss", 100, true;
-		setBattleFlag "item_rate_heal_mvp", 100, true;
-		setBattleFlag "item_rate_use", 100, true;
-		setBattleFlag "item_rate_use_boss", 100, true;
-		setBattleFlag "item_rate_use_mvp", 100, true;
-		setBattleFlag "item_rate_equip", 100, true;
-		setBattleFlag "item_rate_equip_boss", 100, true;
-		setBattleFlag "item_rate_equip_mvp", 100, true;
-		setBattleFlag "item_rate_card", 100, true;
-		setBattleFlag "item_rate_card_boss", 100, true;
-		setBattleFlag "item_rate_card_mvp", 100, true;
-        announce "Floating Rates Disabled", bc_all;
-        end;
+        // Apply weekend rates
+        setBattleFlag "base_exp_rate",200;
+        setBattleFlag "job_exp_rate",200;
+        setBattleFlag "item_rate_common",125;
+        setBattleFlag "item_rate_common_boss",125;
+        setBattleFlag "item_rate_common_mvp",125;
+        setBattleFlag "item_rate_heal",125;
+        setBattleFlag "item_rate_heal_boss",125;
+        setBattleFlag "item_rate_heal_mvp",125;
+        setBattleFlag "item_rate_use",125;
+        setBattleFlag "item_rate_use_boss",125;
+        setBattleFlag "item_rate_use_mvp",125;
+        setBattleFlag "item_rate_equip",125;
+        setBattleFlag "item_rate_equip_boss",125;
+        setBattleFlag "item_rate_equip_mvp",125;
+        setBattleFlag "item_rate_card",125;
+        setBattleFlag "item_rate_card_boss",125;
+        setBattleFlag "item_rate_card_mvp",125;
+        setBattleFlag "item_rate_mvp",125;
+        setBattleFlag "item_rate_adddrop",125;
+        setBattleFlag "item_rate_treasure",125,true;
+		announce "Weekend Rates Enabled!",bc_all,0xFFFF00;
+    }
+    // Else, reset to normal rates if it's outside the weekend window
+    else {
 
+        // Reset to default rates
+        setBattleFlag "base_exp_rate",100;
+        setBattleFlag "job_exp_rate",100;
+        setBattleFlag "item_rate_common",100;
+        setBattleFlag "item_rate_common_boss",100;
+        setBattleFlag "item_rate_common_mvp",100;
+        setBattleFlag "item_rate_heal",100;
+        setBattleFlag "item_rate_heal_boss",100;
+        setBattleFlag "item_rate_heal_mvp",100;
+        setBattleFlag "item_rate_use",100;
+        setBattleFlag "item_rate_use_boss",100;
+        setBattleFlag "item_rate_use_mvp",100;
+        setBattleFlag "item_rate_equip",100;
+        setBattleFlag "item_rate_equip_boss",100;
+        setBattleFlag "item_rate_equip_mvp",100;
+        setBattleFlag "item_rate_card",100;
+        setBattleFlag "item_rate_card_boss",100;
+        setBattleFlag "item_rate_card_mvp",100;
+        setBattleFlag "item_rate_mvp",100;
+        setBattleFlag "item_rate_adddrop",100;
+        setBattleFlag "item_rate_treasure",100,true;
+		announce "Weekend Rates Disabled!",bc_all,0xFFFF00;
+    }
+    end;
+
+OnFri1700:
+    // Apply weekend rates at Friday 5 PM
+    setBattleFlag "base_exp_rate",200;
+    setBattleFlag "job_exp_rate",200;
+    setBattleFlag "item_rate_common",125;
+    setBattleFlag "item_rate_common_boss",125;
+    setBattleFlag "item_rate_common_mvp",125;
+    setBattleFlag "item_rate_heal",125;
+    setBattleFlag "item_rate_heal_boss",125;
+    setBattleFlag "item_rate_heal_mvp",125;
+    setBattleFlag "item_rate_use",125;
+    setBattleFlag "item_rate_use_boss",125;
+    setBattleFlag "item_rate_use_mvp",125;
+    setBattleFlag "item_rate_equip",125;
+    setBattleFlag "item_rate_equip_boss",125;
+    setBattleFlag "item_rate_equip_mvp",125;
+    setBattleFlag "item_rate_card",125;
+    setBattleFlag "item_rate_card_boss",125;
+    setBattleFlag "item_rate_card_mvp",125;
+    setBattleFlag "item_rate_mvp",125;
+    setBattleFlag "item_rate_adddrop",125;
+    setBattleFlag "item_rate_treasure",125,true;
+	announce "Weekend Rates Enabled!",bc_all,0xFFFF00;
+    end;
+
+OnMon0500:
+    // Reset to default rates on Monday 5 AM
+    setBattleFlag "base_exp_rate",100;
+    setBattleFlag "job_exp_rate",100;
+    setBattleFlag "item_rate_common",100;
+    setBattleFlag "item_rate_common_boss",100;
+    setBattleFlag "item_rate_common_mvp",100;
+    setBattleFlag "item_rate_heal",100;
+    setBattleFlag "item_rate_heal_boss",100;
+    setBattleFlag "item_rate_heal_mvp",100;
+    setBattleFlag "item_rate_use",100;
+    setBattleFlag "item_rate_use_boss",100;
+    setBattleFlag "item_rate_use_mvp",100;
+    setBattleFlag "item_rate_equip",100;
+    setBattleFlag "item_rate_equip_boss",100;
+    setBattleFlag "item_rate_equip_mvp",100;
+    setBattleFlag "item_rate_card",100;
+    setBattleFlag "item_rate_card_boss",100;
+    setBattleFlag "item_rate_card_mvp",100;
+    setBattleFlag "item_rate_mvp",100;
+    setBattleFlag "item_rate_adddrop",100;
+    setBattleFlag "item_rate_treasure",100,true;
+	announce "Weekend Rates Disabled!",bc_all,0xFFFF00;
+    end;
 }
