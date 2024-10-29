@@ -1,0 +1,42 @@
+// Auto Elevator Warper with Menu Script
+
+// Entrance to Elevator
+main_office,170,185,0	script	Auto_Elevator#mo1	-1,4,4,{
+	end;
+	
+	OnTouch:
+		mes "[Elevator]";
+		mes "Please select your desired floor.";
+		next;
+		
+		// Floor options menu
+		menu "Ground Floor", Ground_Floor, 
+		     "First Floor", First_Floor, 
+		     "Second Floor", Second_Floor,
+		     "Third Floor", Third_Floor;
+
+		// Ground Floor location
+		Ground_Floor:
+			warp "main_office",170,107;
+			end;
+
+		// First Floor location
+		First_Floor:
+			warp "main_office",170,195;
+			end;
+
+		// Second Floor location
+		Second_Floor:
+			warp "main_office",66,283;
+			end;
+
+		// Third Floor location
+		Third_Floor:
+			warp "main_office",170,283;
+			end;
+}
+
+//duplicate
+main_office,170,97,0	duplicate(Auto_Elevator#mo1)	Auto_Elevator#mo2	-1,4,4
+main_office,66,273,0	duplicate(Auto_Elevator#mo1)	Auto_Elevator#mo3	-1,4,4
+main_office,170,273,0	duplicate(Auto_Elevator#mo1)	Auto_Elevator#mo4	-1,4,4
