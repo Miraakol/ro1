@@ -947,6 +947,7 @@ payon_in02,21,31,1	script	Hunter#htnGM2	59,{
 	}
 }
 
+/*
 job_hunte,178,32,1	script	Guide#hnt	107,5,2,{
 OnTouch_:
 	if (HNTR_Q == 12) {
@@ -1001,8 +1002,59 @@ OnTouch_:
 	}
 	end;
 }
+*/
 
-job_hunte,178,38,1	script	Waiting Room#hnt	66,{
+job_hunte,178,32,5	script	Waiting Room#hnt	107,{
+	if (HNTR_Q == 12) {
+		mes "[Guide]";
+		mes "Good day. Welcome to the Hunter testing site. The test begins when you enter the next room.";
+		next;
+		mes "[Guide]";
+		mes "As explained before, hunt 4 or more of the monsters named ^3355FFJob change monster^000000. Upon doing so, a switch in the center of the map will then appear.";
+		next;
+		mes "[Guide]";
+		mes "When you destroy the switch, the exit will appear in the 12 o'clock direction of the map. Complete everything within the given time and escape.";
+		next;
+		mes "[Guide]";
+		mes "If you faint in the middle, fall into a trap, or go over the time limit, you'll fail. Then you must then retake the test.";
+		next;
+		mes "[Guide]";
+		mes "We will provide the arrows, so just make sure that you bring a bow. Well, then. Please enter when you are ready.";
+		savepoint "job_hunte",176,22,1,1;
+		close;
+	}
+	else if (HNTR_Q > 12 && HNTR_Q < 16) {
+		mes "[Guide]";
+		mes "Hmm...";
+		mes "Did you mess up?";
+		mes "I'll recover some";
+		mes "of your HP and SP for now.";
+		percentheal 100,100;
+		next;
+		mes "[Guide]";
+		mes "If it's too hard, it wouldn't hurt to try again next time. Would you like to resign for now?";
+		next;
+		if (select( "Keep trying.", "Resign." ) == 1) {
+			mes "[Guide]";
+			mes "Okay. Do your best and become a great Hunter. Please enter the waiting room. If someone is already taking the test, you must wait until that person is done.";
+			close;
+		}
+		mapannounce "job_hunte",strcharinfo(0)+ " has resigned. Next person, please enter.",bc_map;
+		mes "[Guide]";
+		mes "Very well. I'll send you to Payon. Hope to see you next time. Don't forget to save when you leave.";
+		// donpcevent "Waiting Room#hnt::OnStart";
+		close2;
+		HNTR_Q = 13;
+		savepoint "payon",104,99,1,1;
+		warp "payon_in02",21,27;
+	}
+	else if (HNTR_Q > 15) {
+		mes "[Guide]";
+		mes "You shouldn't be here. How about finding the required job change item first?";
+		close2;
+		savepoint "payon",104,99,1,1;
+		warp "payon_in02",21,27;
+	}
 	end;
 
 OnInit:
