@@ -10,14 +10,14 @@ main_office,170,185,0	script	Auto_Elevator#mo1	-1,4,4,{
 		next;
 		
 		// Floor options menu
-		menu "Ground Floor", Ground_Floor, 
+		menu "Basement", Basement_Floor, 
 		     "First Floor", First_Floor, 
 		     "Second Floor", Second_Floor,
 		     "Third Floor", Third_Floor,
 			 "Cancel", Cancel;
 
 		// Ground Floor location
-		Ground_Floor:
+		Basement_Floor:
 			warp "main_office",170,107;
 			end;
 
