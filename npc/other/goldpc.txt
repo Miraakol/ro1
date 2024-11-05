@@ -1,0 +1,80 @@
+//===== rAthena Script =======================================
+//= Gold PC Bonus NPC
+//===== Description: =========================================
+//= NPC that can be spawned via the Gold PC Timer Button.
+//===== Changelog: ===========================================
+//= 1.0 Initial release [Lemongrass]
+//= 1.1 Replay version [eppc0330]
+//= 1.2 Translation of the replay version [Lemongrass]
+//= 1.3 Cleanup of NPC logic [Lemongrass]
+//= 1.4 Added replay version of buff NPC [eppc0330]
+//============================================================
+
+main_office,91,301,4	script	Goldie#mo	4_F_02,{
+
+		mes "[Goldie]";
+		mes "Hello, " + strcharinfo(0) + "!";
+		mes "How may I be of assistance?";
+		next;
+
+	// Define a variable to switch on
+	switch(select("Points Exchange:Close")){
+	
+		case 1:
+			// Code for Case 1
+			mes "[Goldie]";
+			mes "I can convert your ^0000FFHourly Point(s)^000000 to ^0000FFGold Coin(s)^000000.";
+			mes "Would you like to proceed?";
+			next;
+			menu "Yes, let's proceed.",-,"No, maybe later.",cancel;
+			
+			// Proceed with conversion
+			mes "[Goldie]";
+			mes "How many ^0000FFHourly Point(s)^000000 would you like to convert?";
+			next;
+			input .@amount;
+
+			if (.@amount <= 0) {
+				mes "[Goldie]";
+				mes "Please enter a valid number.";
+				close;
+			}
+
+			if (#GoldPC_Points < .@amount) {
+				mes "[Goldie]";
+				mes "You do not have enough ^0000FFHourly Point(s)^000000!";
+				close;
+			}
+
+			mes "[Goldie]";
+			mes "You are about to convert "+.@amount+" Hourly Point(s) into Gold Coin(s).";
+			mes "Are you sure you want to proceed?";
+			next;
+			menu "Yes, I'm sure.",-,"No, I changed my mind.",cancel;
+
+			// Conversion logic
+			mes "[Goldie]";
+			set #GoldPC_Points, #GoldPC_Points - .@amount;
+			getitem 32060,.@amount; // Red Potion ID = 501
+			mes "Conversion successful! You received "+.@amount+" ^0000FFGold Coin(s)^000000.";
+			close;
+
+			// Cancel conversion
+			cancel:
+			mes "[Goldie]";
+			mes "Alright, come back if you change your mind.";
+			close;
+			break;
+
+		case 2:
+			// Code for Case 3
+			mes "[Goldie]";
+			mes "Alright, goodbye!";
+			mes "Take care and come back anytime.";
+			close;
+			break;
+
+	}
+	
+	end;
+}
