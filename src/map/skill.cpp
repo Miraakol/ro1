@@ -2150,9 +2150,6 @@ int skill_additional_effect( struct block_list* src, struct block_list *bl, uint
 	case SJ_STAREMPEROR:
 		sc_start(src, bl, SC_SILENCE, 50 + 10 * skill_lv, skill_lv, skill_get_time(skill_id, skill_lv));
 		break;
-	case SP_CURSEEXPLOSION:
-		status_change_end(bl, SC_SOULCURSE);
-		break;
 	case SP_SHA:
 		sc_start(src, bl, SC_SP_SHA, 100, skill_lv, skill_get_time(skill_id, skill_lv));
 		break;
@@ -16079,9 +16076,11 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 		case UNT_SOLIDTRAP:
 		case UNT_SWIFTTRAP:
 		case UNT_FLAMETRAP:
+			skill_attack(skill_get_type(sg->skill_id),ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
+			break;
 		case UNT_GROUND_GRAVITATION:
 		case UNT_JACK_FROST_NOVA:
-			skill_attack(skill_get_type(sg->skill_id),ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
+			skill_attack( skill_get_type(sg->skill_id), ss, ss, bl, sg->skill_id, sg->skill_lv, tick, 0 );
 			break;
 
 		case UNT_DUMMYSKILL:
@@ -16140,6 +16139,9 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 					if(!battle_config.gx_allhit)
 						unit->val1--;
 					skill_attack(skill_get_type(sg->skill_id),ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
+					break;
+				case HN_METEOR_STORM_BUSTER:
+					skill_attack( skill_get_type(sg->skill_id), ss, ss, bl, sg->skill_id, sg->skill_lv, tick, 0 );
 					break;
 				default:
 					skill_attack(skill_get_type(sg->skill_id),ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
@@ -18747,7 +18749,7 @@ void skill_consume_requirement(map_session_data *sd, uint16 skill_id, uint16 ski
 				case SP_SOULREAPER:
 				case SP_SOULEXPLOSION:
 				case SP_KAUTE:
-					pc_delsoulball(sd, require.spiritball, false);
+					pc_delsoulball( *sd, require.spiritball );
 					break;
 
 				// Skills that require servants.
@@ -22825,7 +22827,7 @@ void skill_select_menu( map_session_data& sd, uint16 skill_id ){
 	lv = (aslvl + 5) / 2; // The level the skill will be autocasted
 	lv = min(lv,sd.status.skill[sk_idx].lv);
 	prob = (aslvl >= 10) ? 15 : (30 - 2 * aslvl); // Probability at level 10 was increased to 15.
-	sc_start4(&sd.bl,&sd.bl,SC__AUTOSHADOWSPELL,100,id,lv,prob,aslvl,skill_get_time(SC_AUTOSHADOWSPELL,aslvl));
+	sc_start4(&sd.bl,&sd.bl,SC__AUTOSHADOWSPELL,100,id,lv,prob,(aslvl*5),skill_get_time(SC_AUTOSHADOWSPELL,aslvl));
 }
 
 int skill_elementalanalysis( map_session_data& sd, int n, uint16 skill_lv, unsigned short* item_list ){
