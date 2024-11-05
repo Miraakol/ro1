@@ -48,6 +48,15 @@ Body:
     Commands:
       changedress: true
       resurrect: true
+    # Pixel Classic
+      commands: true
+      rates: true
+      time: true
+      refresh: true
+      mobinfo: true
+      iteminfo: true
+      whodrops: true
+      whereis: true
     Permissions:
       # without this basic permissions regular players could not trade or party
       can_trade: true
