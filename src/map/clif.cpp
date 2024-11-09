@@ -256,7 +256,7 @@ static inline bool disguised(struct block_list* bl) {
 
 
 //Guarantees that the given string does not exceeds the allowed size, as well as making sure it's null terminated. [Skotlex]
-static inline unsigned int mes_len_check(char* mes, unsigned int len, unsigned int max) {
+static inline uint32 mes_len_check(char* mes, uint32 len, uint32 max) {
 	if( len > max )
 		len = max;
 
@@ -1484,23 +1484,27 @@ static void clif_set_unit_walking( struct block_list& bl, map_session_data* tsd,
 	}
 }
 
-/// Changes sprite of an NPC object (ZC_NPCSPRITE_CHANGE).
-/// 01b0 <id>.L <type>.B <value>.L
-/// type:
-///     unused
-void clif_class_change_target(struct block_list *bl,int class_,int type, enum send_target target, map_session_data *sd)
-{
-	nullpo_retv(bl);
-
-	if(!pcdb_checkid(class_))
-	{// player classes yield missing sprites
-		unsigned char buf[16];
-		WBUFW(buf,0)=0x1b0;
-		WBUFL(buf,2)=bl->id;
-		WBUFB(buf,6)=type;
-		WBUFL(buf,7)=class_;
-		clif_send(buf,packet_len(0x1b0),(sd == nullptr ? bl : &(sd->bl)),target);
+/// Changes sprite of a non player object.
+/// 01b0 <id>.L <type>.B <value>.L (ZC_NPCSPRITE_CHANGE)
+void clif_class_change( block_list& bl, int32 class_, enum send_target target, map_session_data* sd ){
+	if( pcdb_checkid( class_ ) ){
+		// player classes yield missing sprites
+		return;
 	}
+
+	PACKET_ZC_NPCSPRITE_CHANGE p = {};
+
+	p.packetType = HEADER_ZC_NPCSPRITE_CHANGE;
+	p.GID = bl.id;
+	// Unused
+	p.type = 0;
+	p.class_ = class_;
+
+	if( sd != nullptr ){
+		bl = sd->bl;
+	}
+
+	clif_send( &p, sizeof( p ), &bl, target );
 }
 
 void clif_servantball( map_session_data& sd, struct block_list* target, enum send_target send_target ){
@@ -4653,19 +4657,16 @@ void clif_joinchatok(map_session_data& sd, chat_data& cd){
 }
 
 
-/// Notifies clients in a chat about a new member (ZC_MEMBER_NEWENTRY).
-/// 00dc <users>.W <name>.24B
-void clif_addchat(struct chat_data* cd,map_session_data *sd)
-{
-	unsigned char buf[29];
+/// Notifies clients in a chat about a new member.
+/// 00dc <users>.W <name>.24B (ZC_MEMBER_NEWENTRY)
+void clif_addchat( chat_data& cd, map_session_data& sd ){
+	PACKET_ZC_MEMBER_NEWENTRY p = {};
 
-	nullpo_retv(sd);
-	nullpo_retv(cd);
+	p.packetType = HEADER_ZC_MEMBER_NEWENTRY;
+	p.count = cd.users;
+	safestrncpy( p.name, sd.status.name, sizeof( p.name ) );
 
-	WBUFW(buf, 0) = 0xdc;
-	WBUFW(buf, 2) = cd->users;
-	safestrncpy(WBUFCP(buf, 4),sd->status.name,NAME_LENGTH);
-	clif_send(buf,packet_len(0xdc),&sd->bl,CHAT_WOS);
+	clif_send( &p, sizeof( p ), &sd.bl, CHAT_WOS );
 }
 
 
@@ -4693,24 +4694,20 @@ void clif_changechatowner(struct chat_data* cd, map_session_data* sd)
 }
 
 
-/// Notify about user leaving the chatroom (ZC_MEMBER_EXIT).
-/// 00dd <users>.W <nick>.24B <flag>.B
+/// Notify about user leaving the chatroom.
+/// 00dd <users>.W <nick>.24B <flag>.B (ZC_MEMBER_EXIT)
 /// flag:
 ///     0 = left
 ///     1 = kicked
-void clif_leavechat(struct chat_data* cd, map_session_data* sd, bool flag)
-{
-	unsigned char buf[32];
+void clif_chat_leave( chat_data& cd, map_session_data& sd, bool kicked ){
+	PACKET_ZC_MEMBER_EXIT p = {};
 
-	nullpo_retv(sd);
-	nullpo_retv(cd);
+	p.packetType = HEADER_ZC_MEMBER_EXIT;
+	p.count = cd.users - 1;
+	safestrncpy( p.name, sd.status.name, sizeof( p.name ) );
+	p.kicked = kicked;
 
-	WBUFW(buf, 0) = 0xdd;
-	WBUFW(buf, 2) = cd->users-1;
-	safestrncpy(WBUFCP(buf,4),sd->status.name,NAME_LENGTH);
-	WBUFB(buf,28) = flag;
-
-	clif_send(buf,packet_len(0xdd),&sd->bl,CHAT);
+	clif_send( &p, sizeof( p ), &sd.bl, CHAT );
 }
 
 
@@ -5028,7 +5025,7 @@ void clif_getareachar_unit( map_session_data* sd,struct block_list *bl ){
 	struct unit_data *ud;
 	struct view_data *vd;
 	bool option = false;
-	unsigned int option_val = 0;
+	uint32 option_val = 0;
 
 	vd = status_get_viewdata(bl);
 	if (!vd || vd->class_ == JT_INVISIBLE)
@@ -5355,25 +5352,22 @@ void clif_changemapcell(int fd, int16 m, int x, int y, int type, enum send_targe
 }
 
 
-/// Notifies the client about an item on floor (ZC_ITEM_ENTRY).
-/// 009d <id>.L <name id>.W <identified>.B <x>.W <y>.W <amount>.W <subX>.B <subY>.B
-void clif_getareachar_item( map_session_data* sd,struct flooritem_data* fitem ){
-	nullpo_retv( sd );
-	nullpo_retv( fitem );
-
+/// Notifies the client about an item on floor.
+/// 009d <id>.L <name id>.W <identified>.B <x>.W <y>.W <amount>.W <subX>.B <subY>.B (ZC_ITEM_ENTRY)
+void clif_getareachar_item( map_session_data& sd, flooritem_data& fitem ){
 	PACKET_ZC_ITEM_ENTRY p = {};
 
 	p.packetType = HEADER_ZC_ITEM_ENTRY;
-	p.AID = fitem->bl.id;
-	p.itemId = client_nameid( fitem->item.nameid );
-	p.identify = fitem->item.identify;
-	p.x = fitem->bl.x;
-	p.y = fitem->bl.y;
-	p.amount = fitem->item.amount;
-	p.subX = fitem->subx;
-	p.subY = fitem->suby;
+	p.AID = fitem.bl.id;
+	p.itemId = client_nameid( fitem.item.nameid );
+	p.identify = fitem.item.identify;
+	p.x = fitem.bl.x;
+	p.y = fitem.bl.y;
+	p.amount = fitem.item.amount;
+	p.subX = fitem.subx;
+	p.subY = fitem.suby;
 
-	clif_send( &p, sizeof( p ), &sd->bl, SELF );
+	clif_send( &p, sizeof( p ), &sd.bl, SELF );
 }
 
 /// Notifes client about Graffiti
@@ -5558,7 +5552,7 @@ static int clif_getareachar(struct block_list* bl,va_list ap)
 
 	switch(bl->type){
 	case BL_ITEM:
-		clif_getareachar_item(sd,(struct flooritem_data*) bl);
+		clif_getareachar_item( *sd, *reinterpret_cast<flooritem_data*>( bl ) );
 		break;
 	case BL_SKILL:
 		skill_getareachar_skillunit_visibilty_single((TBL_SKILL*)bl, &sd->bl);
@@ -5646,7 +5640,7 @@ int clif_insight(struct block_list *bl,va_list ap)
 	if (clif_session_isValid(tsd)) { //Tell tsd that bl entered into his view
 		switch(bl->type){
 		case BL_ITEM:
-			clif_getareachar_item(tsd,(struct flooritem_data*)bl);
+			clif_getareachar_item( *tsd, *reinterpret_cast<flooritem_data*>( bl ) );
 			break;
 		case BL_SKILL:
 			skill_getareachar_skillunit_visibilty_single((TBL_SKILL*)bl, &tsd->bl);
@@ -10253,7 +10247,7 @@ void clif_hate_info(map_session_data *sd, unsigned char hate_level,int class_, u
 	} else if( mobdb_checkid(class_) ) {
 		clif_starskill(sd, mob_db.find(class_)->jname.c_str(), class_, hate_level, type ? 10 : 11);
 	} else {
-		ShowWarning("clif_hate_info: Received invalid class %d for this packet (char_id=%d, hate_level=%u, type=%u).\n", class_, sd->status.char_id, (unsigned int)hate_level, (unsigned int)type);
+		ShowWarning("clif_hate_info: Received invalid class %d for this packet (char_id=%d, hate_level=%u, type=%u).\n", class_, sd->status.char_id, (uint32)hate_level, (uint32)type);
 	}
 }
 
@@ -11265,7 +11259,7 @@ void clif_parse_Hotkey(int fd, map_session_data *sd) {
 
 /// Displays cast-like progress bar (ZC_PROGRESS).
 /// 02f0 <color>.L <time>.L
-void clif_progressbar(map_session_data * sd, unsigned long color, unsigned int second)
+void clif_progressbar(map_session_data * sd, unsigned long color, uint32 second)
 {
 	int fd = sd->fd;
 
@@ -11514,20 +11508,20 @@ void clif_parse_GlobalMessage(int fd, map_session_data* sd)
 }
 
 
-/// /mm /mapmove (as @rura GM command) (CZ_MOVETO_MAP).
+/// /mm /mapmove (as @rura GM command).
 /// Request to warp to a map on given coordinates.
-/// 0140 <map name>.16B <x>.W <y>.W
-void clif_parse_MapMove(int fd, map_session_data *sd)
-{
-	char command[MAP_NAME_LENGTH_EXT+25];
-	char* map_name;
-	struct s_packet_db* info = &packet_db[RFIFOW(fd,0)];
+/// 0140 <map name>.16B <x>.W <y>.W (CZ_MOVETO_MAP)
+void clif_parse_MapMove( int fd, map_session_data* sd){
+	const PACKET_CZ_MOVETO_MAP* p = reinterpret_cast<PACKET_CZ_MOVETO_MAP*>( RFIFOP( fd, 0 ) );
 
-	map_name = RFIFOCP(fd,info->pos[0]);
-	map_name[MAP_NAME_LENGTH_EXT-1]='\0';
-	safesnprintf(command,sizeof(command),"%cmapmove %s %d %d", atcommand_symbol, map_name,
-	    RFIFOW(fd,info->pos[1]), //x
-	    RFIFOW(fd,info->pos[2])); //y
+	char map_name[MAP_NAME_LENGTH_EXT];
+
+	safestrncpy( map_name, p->map, sizeof( map_name ) );
+
+	char command[CHAT_SIZE_MAX];
+
+	safesnprintf( command, sizeof( command ),"%cmapmove %s %hu %hu", atcommand_symbol, map_name, p->x, p->y );
+
 	is_atcommand(fd, sd, command, 1);
 }
 
@@ -11945,7 +11939,7 @@ void clif_parse_WisMessage(int fd, map_session_data* sd)
 void clif_parse_Broadcast(int fd, map_session_data* sd) {
 	char command[CHAT_SIZE_MAX+11];
 	struct s_packet_db* info = &packet_db[RFIFOW(fd,0)];
-	unsigned int len = RFIFOW(fd,info->pos[0])-4;
+	uint32 len = RFIFOW(fd,info->pos[0])-4;
 	char* msg = RFIFOCP(fd,info->pos[1]);
 
 	// as the length varies depending on the command used, just block unreasonably long strings
@@ -13480,7 +13474,7 @@ void clif_parse_LocalBroadcast(int fd, map_session_data* sd)
 {
 	struct s_packet_db* info = &packet_db[RFIFOW(fd,0)];
 	char command[CHAT_SIZE_MAX+16];
-	unsigned int len = RFIFOW(fd,info->pos[0])-4;
+	uint32 len = RFIFOW(fd,info->pos[0])-4;
 	char* msg = RFIFOCP(fd,info->pos[1]);
 
 	// as the length varies depending on the command used, just block unreasonably long strings
@@ -16982,7 +16976,7 @@ void clif_parse_Auction_register(int fd, map_session_data *sd)
 /// Cancels an auction (CZ_AUCTION_ADD_CANCEL).
 /// 024e <auction id>.L
 void clif_parse_Auction_cancel(int fd, map_session_data *sd){
-	unsigned int auction_id = RFIFOL(fd,packet_db[RFIFOW(fd,0)].pos[0]);
+	uint32 auction_id = RFIFOL(fd,packet_db[RFIFOW(fd,0)].pos[0]);
 	intif_Auction_cancel(sd->status.char_id, auction_id);
 }
 
@@ -16990,7 +16984,7 @@ void clif_parse_Auction_cancel(int fd, map_session_data *sd){
 /// Closes an auction (CZ_AUCTION_REQ_MY_SELL_STOP).
 /// 025d <auction id>.L
 void clif_parse_Auction_close(int fd, map_session_data *sd){
-	unsigned int auction_id = RFIFOL(fd,packet_db[RFIFOW(fd,0)].pos[0]);
+	uint32 auction_id = RFIFOL(fd,packet_db[RFIFOW(fd,0)].pos[0]);
 	intif_Auction_close(sd->status.char_id, auction_id);
 }
 
@@ -16999,7 +16993,7 @@ void clif_parse_Auction_close(int fd, map_session_data *sd){
 /// 024f <auction id>.L <money>.L
 void clif_parse_Auction_bid(int fd, map_session_data *sd){
 	struct s_packet_db* info = &packet_db[RFIFOW(fd,0)];
-	unsigned int auction_id = RFIFOL(fd,info->pos[0]);
+	uint32 auction_id = RFIFOL(fd,info->pos[0]);
 	int bid = RFIFOL(fd,info->pos[1]);
 
 	if( !pc_can_give_items(sd) ) { //They aren't supposed to give zeny [Inkfish]
@@ -17484,10 +17478,10 @@ void clif_bossmapinfo( map_session_data& sd, mob_data* md, e_bossmap_info flag )
 			break;
 		case BOSS_INFO_DEAD: {
 			const struct TimerData * timer_data = get_timer(md->spawn_timer);
-			unsigned int seconds;
+			uint32 seconds;
 			int hours, minutes;
 
-			seconds = (unsigned int)(DIFF_TICK(timer_data->tick, gettick()) / 1000 + 60);
+			seconds = (uint32)(DIFF_TICK(timer_data->tick, gettick()) / 1000 + 60);
 			hours = seconds / (60 * 60);
 			seconds = seconds - (60 * 60 * hours);
 			minutes = seconds / 60;
@@ -18642,7 +18636,7 @@ void clif_instance_changewait(int instance_id, int num)
 
 /// Notify the current status to members
 /// S 0x2cd <Instance Name>.61B <Instance Remaining Time>.L <Instance Noplayers close time>.L
-void clif_instance_status(int instance_id, unsigned int limit1, unsigned int limit2)
+void clif_instance_status(int instance_id, uint32 limit1, uint32 limit2)
 {
 #if PACKETVER >= 20071128
 	map_session_data *sd = nullptr;
@@ -18676,7 +18670,7 @@ void clif_instance_status(int instance_id, unsigned int limit1, unsigned int lim
 /// 2 = The Memorial Dungeon's entry time limit expired; it has been destroyed
 /// 3 = The Memorial Dungeon has been removed.
 /// 4 = Create failure (removes the instance window)
-void clif_instance_changestatus(int instance_id, e_instance_notify type, unsigned int limit)
+void clif_instance_changestatus(int instance_id, e_instance_notify type, uint32 limit)
 {
 #if PACKETVER >= 20071128
 	map_session_data *sd = nullptr;
@@ -19002,7 +18996,7 @@ static void clif_parse_ReqOpenBuyingStore( int fd, map_session_data* sd ){
 ///     2 = "Total amount of then possessed items exceeds the weight limit by <weight/10-maxweight*90%>. Please re-enter." (0x6ce, MSI_BUYINGSTORE_OVERWEIGHT)
 ///     8 = "No sale (purchase) information available." (0x705)
 ///     ? = nothing
-void clif_buyingstore_open_failed(map_session_data* sd, unsigned short result, unsigned int weight)
+void clif_buyingstore_open_failed(map_session_data* sd, unsigned short result, uint32 weight)
 {
 	int fd = sd->fd;
 
