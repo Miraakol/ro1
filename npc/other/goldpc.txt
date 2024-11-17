@@ -47,7 +47,7 @@ main_office,91,301,4	script	Goldie#mo	4_F_02,{
 			}
 
 			mes "[Goldie]";
-			mes "You are about to convert "+.@amount+" Hourly Point(s) into Gold Coin(s).";
+			mes "You are about to convert ^FF0000"+.@amount+"^000000 ^0000FFHourly Point(s)^000000 into ^0000FFGold Coin(s)^000000.";
 			mes "Are you sure you want to proceed?";
 			next;
 			menu "Yes, I'm sure.",-,"No, I changed my mind.",cancel;
@@ -56,7 +56,7 @@ main_office,91,301,4	script	Goldie#mo	4_F_02,{
 			mes "[Goldie]";
 			set #GoldPC_Points, #GoldPC_Points - .@amount;
 			getitem 32060,.@amount; // Red Potion ID = 501
-			mes "Conversion successful! You received "+.@amount+" ^0000FFGold Coin(s)^000000.";
+			mes "Conversion successful! You received ^FF0000"+.@amount+"^000000 ^0000FFGold Coin(s)^000000.";
 			close;
 
 			// Cancel conversion

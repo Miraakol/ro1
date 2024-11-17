@@ -1934,7 +1934,8 @@
 	export_constant(SC_CONTENTS_8);
 	export_constant(SC_CONTENTS_9);
 	export_constant(SC_CONTENTS_10);
-	
+	export_constant(SC_MYSTERY_POWDER);
+
 	/* status icons */
 	export_deprecated_constant2("SI_BLANK",-1);
 	export_deprecated_constant2("SI_PROVOKE",0);
@@ -10852,7 +10853,7 @@
 	export_constant(CD_PAY_TIME);
 	export_constant(CD_CREATE_TIME);
 	export_constant(CD_ENABLED_KAFRA);
-	for( int i = CD_ENABLED_GUARDIAN00, j = 0; i < CD_MAX; i++, j++ ){
+	for( int32 i = CD_ENABLED_GUARDIAN00, j = 0; i < CD_MAX; i++, j++ ){
 		char constant[32];
 
 		sprintf( constant, "CD_ENABLED_GUARDIAN%02d", j );
