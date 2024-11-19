@@ -1,0 +1,85 @@
+/*
+CREATE TABLE `mvp_ladder` (
+  `char_id` INT(11) NOT NULL,
+  `name` VARCHAR(23) NOT NULL,
+  `kills` INT(11) DEFAULT 0,
+  `last_kill_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`char_id`)
+);
+*/
+
+// MVP Ladder Script
+// Tracks MVP kills and displays top 3 players
+prontera,150,150,5	script	[Insert Name]	100,{
+	mes "[Insert Name]";
+	mes "Welcome to the MVP Bla Bla Bla Event!";
+	mes "What would you like to do?";
+	next;
+
+	// Display menu options
+	switch(select("How to join?:Check Leaderboard:Exit")) {
+		case 1:
+			// Option: How to join the event
+			mes "[Insert Name]";
+			mes "blablabla.";
+			mes "blablabla.";
+			close;
+		case 2:
+			// Option: What is the current ladder
+			mes "[Insert Name]";
+			callfunc("F_MVPTop3"); // Call the function to display the current ladder
+			close;
+		case 3:
+			// Option: Exit
+			mes "[Insert Name]";
+			mes "Thank you for your interest. Good luck hunting MVPs!";
+			close;
+	}
+}
+
+-	script	MVP_Kill_Tracker	-1,{
+	OnNPCKillEvent:
+		// Check if the killed monster is an MVP
+		if (getmonsterinfo(killedrid, MOB_MVPEXP) > 0) {
+			// Get the name of the killed MVP
+			.@mvp_name$ = getmonsterinfo(killedrid, MOB_NAME);
+
+			// Get the current map where the player is
+			.@map_name$ = strcharinfo(3);
+
+			// Check if the player's data exists in the database
+			query_sql("SELECT kills FROM mvp_ladder WHERE char_id = "+ getcharid(0) +"", .@kills);
+			if (.@kills) {
+				// Update kill count and last kill time
+				query_sql("UPDATE mvp_ladder SET kills = kills + 1, last_kill_time = NOW() WHERE char_id = "+ getcharid(0) +"");
+				.@new_kills = .@kills + 1;
+			} else {
+				// Insert new entry for the player
+				query_sql("INSERT INTO mvp_ladder (char_id, name, kills, last_kill_time) VALUES ("+ getcharid(0) +", '"+ escape_sql(strcharinfo(0)) +"', 1, NOW())");
+				.@new_kills = 1;
+			}
+
+			// Announce MVP kill with the name of the MVP and the map
+			//announce strcharinfo(0) + " has slain [" + .@mvp_name$ + "] at [" + .@map_name$ + "]! Total MVP kills: " + .@new_kills, bc_all;
+			announce "[" + .@mvp_name$ + "] has slain at [" + .@map_name$ + "]! MVP: " + strcharinfo(0), bc_all;
+		}
+		end;
+}
+
+// Function to fetch and display the top 3 MVP killers
+function	script	F_MVPTop3	{
+	// Get the top 3 MVP killers from the database
+	query_sql("SELECT name, kills, DATE_FORMAT(last_kill_time, '%Y-%m-%d %H:%i:%s') AS formatted_time FROM mvp_ladder ORDER BY kills DESC, last_kill_time ASC LIMIT 3", .@name$, .@kills, .@times$);
+
+	// Display results
+	for (.@i = 0; .@i < getarraysize(.@name$); .@i++) {
+		mes "^0000FF" + (.@i+1) + ". " + .@name$[.@i] + "^000000 - MVP Kills: " + .@kills[.@i] + " (Last Kill: " + .@times$[.@i] + ")";
+	}
+
+	// Handle case where there are no records
+	if (getarraysize(.@name$) == 0) {
+		mes "[Insert Name]";
+		mes "No MVP kills recorded yet!";
+	}
+	return;
+}
