@@ -1794,7 +1794,7 @@ uint8 pc_isequip(map_session_data *sd,int32 n)
 	if(item == nullptr)
 		return ITEM_EQUIP_ACK_FAIL;
 
-	if (sd->sc.count && sd->sc.getSCE(SC_SPIRIT) && sd->sc.getSCE(SC_SPIRIT)->val2 == SL_SUPERNOVICE) {
+	if (sd->sc.getSCE(SC_SPIRIT) && sd->sc.getSCE(SC_SPIRIT)->val2 == SL_SUPERNOVICE) {
 		//Spirit of Super Novice equip bonuses. [Skotlex]
 		if (sd->status.base_level >= 90 && item->equip & EQP_HELM)
 			return ITEM_EQUIP_ACK_OK; //Can equip all helms
@@ -1871,7 +1871,7 @@ uint8 pc_isequip(map_session_data *sd,int32 n)
 		}
 	}
 
-	if (sd->sc.count) {
+	if (!sd->sc.empty()) {
 		if(item->equip & EQP_ARMS && item->type == IT_WEAPON && sd->sc.getSCE(SC_STRIPWEAPON)) // Also works with left-hand weapons [DracoRPG]
 			return ITEM_EQUIP_ACK_FAIL;
 		if(item->equip & EQP_SHIELD && item->type == IT_ARMOR && sd->sc.getSCE(SC_STRIPSHIELD))
@@ -2759,7 +2759,7 @@ void pc_calc_skilltree(map_session_data *sd)
 	}
 
 	// Enable Bard/Dancer spirit linked skills.
-	if (sd->sc.count && sd->sc.getSCE(SC_SPIRIT) && sd->sc.getSCE(SC_SPIRIT)->val2 == SL_BARDDANCER) {
+	if (sd->sc.getSCE(SC_SPIRIT) && sd->sc.getSCE(SC_SPIRIT)->val2 == SL_BARDDANCER) {
 		std::vector<std::vector<uint16>> linked_skills = { { BA_WHISTLE, DC_HUMMING },
 														   { BA_ASSASSINCROSS, DC_DONTFORGETME },
 														   { BA_POEMBRAGI, DC_FORTUNEKISS },
@@ -6885,7 +6885,7 @@ enum e_setpos pc_setpos(map_session_data* sd, unsigned short mapindex, int32 x, 
 			bg_team_leave(sd, false, true);
 
 		sd->state.pmap = sd->bl.m;
-		if (sc && sc->count) { // Cancel some map related stuff.
+		if (sc != nullptr && !sc->empty()) { // Cancel some map related stuff.
 			if (sc->cant.warp)
 				return SETPOS_MAPINDEX; // You may not get out!
 
@@ -7340,7 +7340,7 @@ static void pc_checkallowskill(map_session_data *sd)
 {
 	nullpo_retv(sd);
 
-	if(!sd->sc.count)
+	if(sd->sc.empty())
 		return;
 
 	for (const auto &it : status_db) {
@@ -10663,15 +10663,6 @@ int32 pc_itemheal(map_session_data *sd, t_itemid itemid, int32 hp, int32 sp)
 		// Recovery Potion
 		if (sd->sc.getSCE(SC_INCHEALRATE))
 			bonus += bonus * sd->sc.getSCE(SC_INCHEALRATE)->val1 / 100;
-		// 2014 Halloween Event : Pumpkin Bonus
-		if (sd->sc.getSCE(SC_MTF_PUMPKIN)) {
-			if (itemid == ITEMID_PUMPKIN)
-				bonus += bonus * sd->sc.getSCE(SC_MTF_PUMPKIN)->val1 / 100;
-			else if (itemid == ITEMID_COOKIE_BAT)
-				bonus += sd->sc.getSCE(SC_MTF_PUMPKIN)->val2;
-		}
-		if (sd->sc.getSCE(SC_VITALIZE_POTION))
-			bonus += bonus * 10 / 100;
 
 		tmp = hp * bonus / 100; // Overflow check
 		if (bonus != 100 && tmp > hp)
@@ -10699,7 +10690,7 @@ int32 pc_itemheal(map_session_data *sd, t_itemid itemid, int32 hp, int32 sp)
 		if (bonus != 100 && tmp > sp)
 			sp = tmp;
 	}
-	if (sd->sc.count) {
+	if (!sd->sc.empty()) {
 		// Critical Wound and Death Hurt stack
 		if (sd->sc.getSCE(SC_CRITICALWOUND))
 			penalty += sd->sc.getSCE(SC_CRITICALWOUND)->val2;
@@ -12021,7 +12012,7 @@ bool pc_equipitem(map_session_data *sd,short n,int32 req_pos,bool equipswitch)
 		}
 		return false;
 	}
-	if( sd->sc.count && (sd->sc.cant.equip || (sd->sc.getSCE(SC_PYROCLASTIC) && sd->inventory_data[n]->type == IT_WEAPON)) ) {
+	if( !sd->sc.empty() && (sd->sc.cant.equip || (sd->sc.getSCE(SC_PYROCLASTIC) && sd->inventory_data[n]->type == IT_WEAPON))) {
 		if( equipswitch ){
 			clif_equipswitch_add( sd, n, req_pos, ITEM_EQUIP_ACK_FAIL );
 		}else{
@@ -12362,7 +12353,7 @@ bool pc_unequipitem(map_session_data *sd, int32 n, int32 flag) {
 		return false; //Nothing to unequip
 	}
 	// status change that makes player cannot unequip equipment
-	if (!(flag&2) && sd->sc.count &&( sd->sc.cant.unequip ||
+	if (!(flag&2) && !sd->sc.empty() &&( sd->sc.cant.unequip ||
 		(sd->sc.getSCE(SC_PYROCLASTIC) &&	sd->inventory_data[n]->type == IT_WEAPON)))	// can't switch weapon
 	{
 		clif_unequipitemack(*sd,n,0,false);
