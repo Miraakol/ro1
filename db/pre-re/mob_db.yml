@@ -106,10 +106,11 @@ Body:
     WalkSpeed: 200
     AttackDelay: 1564
     AttackMotion: 864
-    ClientAttackMotion: 384
     DamageMotion: 576
-    Ai: 09
+    Ai: 17
     Modes:
+      ChangeTargetMelee: true
+      ChangeTargetChase: true
       Detector: true
     Drops:
       - Item: Fine_Grit
@@ -127,7 +128,7 @@ Body:
       - Item: Solid_Shell
         Rate: 210
       - Item: Yellow_Herb
-        Rate: 200        
+        Rate: 200
       - Item: Scorpion_Card
         Rate: 1
         StealProtected: true
@@ -1494,9 +1495,11 @@ Body:
     WalkSpeed: 200
     AttackDelay: 1372
     AttackMotion: 672
-    ClientAttackMotion: 288
     DamageMotion: 432
-    Ai: 09
+    Ai: 17
+    Modes:
+      ChangeTargetMelee: true
+      ChangeTargetChase: true
     Drops:
       - Item: Branch_Of_Dead_Tree
         Rate: 100
