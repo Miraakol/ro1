@@ -1,0 +1,19 @@
+//===== rAthena Script =======================================
+//= Mapflag: Snow Town
+//===== Description: =========================================
+//= Enables snow on a map.
+//===== Changelog: ===========================================
+//= 1.0 Initial script.
+//============================================================
+
+//============================================================
+// Snow
+//============================================================
+prontera	mapflag	snow
+morocc	mapflag	snow
+geffen	mapflag	snow
+payon	mapflag	snow
+alberta	mapflag	snow
+izlude	mapflag	snow
+aldebaran	mapflag	snow
+comodo	mapflag	snow
