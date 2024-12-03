@@ -10,29 +10,28 @@ CREATE TABLE `mvp_ladder` (
 
 // MVP Ladder Script
 // Tracks MVP kills and displays top 3 players
-prontera,150,150,5	script	[Insert Name]	100,{
-	mes "[Insert Name]";
-	mes "Welcome to the MVP Bla Bla Bla Event!";
+main_office,218,186,6	script	King Nam Ho	108,{
+	mes "[King Nam Ho]";
 	mes "What would you like to do?";
 	next;
 
 	// Display menu options
-	switch(select("How to join?:Check Leaderboard:Exit")) {
-		case 1:
+	switch(select("Check Leaderboard:Exit")) {
+		/*case 1:
 			// Option: How to join the event
-			mes "[Insert Name]";
+			mes "[King Nam Ho]";
 			mes "blablabla.";
 			mes "blablabla.";
-			close;
-		case 2:
+			close;*/
+		case 1:
 			// Option: What is the current ladder
-			mes "[Insert Name]";
+			mes "[King Nam Ho]";
 			callfunc("F_MVPTop3"); // Call the function to display the current ladder
 			close;
-		case 3:
+		case 2:
 			// Option: Exit
-			mes "[Insert Name]";
-			mes "Thank you for your interest. Good luck hunting MVPs!";
+			mes "[King Nam Ho]";
+			mes "Good luck hunting MVPs!";
 			close;
 	}
 }
@@ -78,7 +77,7 @@ function	script	F_MVPTop3	{
 
 	// Handle case where there are no records
 	if (getarraysize(.@name$) == 0) {
-		mes "[Insert Name]";
+		mes "[King Nam Ho]";
 		mes "No MVP kills recorded yet!";
 	}
 	return;
