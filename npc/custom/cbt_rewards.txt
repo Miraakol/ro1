@@ -64,6 +64,7 @@ main_office,191,184,6	script	CBT Boy#register	4_M_YURI,{
 
 // NPC that gives freebies based on account level thresholds: 20, 40, 60, 80
 
+/*
 main_office,188,184,6	script	Kap Nino#freebie	4_M_YURI,{
 	
 	// Get the player's account ID
@@ -110,18 +111,24 @@ main_office,188,184,6	script	Kap Nino#freebie	4_M_YURI,{
 		mes "[Kap Nino]";
 		mes "You're between ^FF0000level 40 and 59^000000. Here's your Level 40 CBT Rewards!";
 		// Give items (example: 10 Blue Potions and mid-level equipment)
+		getitem 32054,1;
 		getitem 32055,1;
 		next;
 	} else if (.@char_level >= 60 && .@char_level < 80) {
 		mes "[Kap Nino]";
 		mes "You're between ^FF0000level 60 and 79^000000. Here's your Level 60 CBT Rewards!";
 		// Give items (example: 10 Blue Potions and advanced equipment)
+		getitem 32054,1;
+		getitem 32055,1;
 		getitem 32056,1;
 		next;
 	} else if (.@char_level >= 80) {
 		mes "[Kap Nino]";
 		mes "You're ^FF0000level 80 or higher^000000. Here's your Level 80 CBT Rewards!";
 		// Give items (example: 15 Blue Potions and elite equipment)
+		getitem 32054,1;
+		getitem 32055,1;
+		getitem 32056,1;
 		getitem 32057,1;
 		next;
 	}
@@ -138,3 +145,4 @@ main_office,188,184,6	script	Kap Nino#freebie	4_M_YURI,{
 	close;
 
 }
+*/
