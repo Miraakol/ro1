@@ -1,0 +1,23 @@
+-	script	LoginReward	-1,{
+
+	OnPCLoginEvent:
+		// Check if the account has already received the reward
+		if (#CBT_Reward_Claimed) {
+			end;
+		}
+
+		// Item ID and quantity (replace with the desired item)
+		set .Reward_ItemID, 32043; // Example: 501 = Red Potion
+		set .Reward_Quantity, 5000;
+
+		// Give the item to the player
+		getitem .Reward_ItemID, .Reward_Quantity;
+
+		// Mark the reward as claimed
+		set #CBT_Reward_Claimed, 1;
+
+		// Notify the player
+		dispbottom "Congratulations! You have received 5,000 Pixel Coins.";
+
+		end;
+}

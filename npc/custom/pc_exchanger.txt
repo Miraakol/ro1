@@ -1,0 +1,60 @@
+// Pixel Coin to Cash Points Exchange NPC
+main_office,217,202,3	script	Guo Hua Ping	4_F_CHNDRESS1,{
+	
+	mes "[Guo Hua Ping]";
+	mes "Hello, ^0088FF" + strcharinfo(0) + "^000000!";
+	mes "Would you like to exchange your Pixel Coin(s) for Cash Point(s)?";
+	next;
+		if (select("Yes:No") == 2) {
+		mes "[Guo Hua Ping]";
+		mes "Alright, let me know if you change your mind!";
+		close;
+	}
+	if (countitem(32043) <= 0) {
+		mes "[Guo Hua Ping]";
+		mes "It seems you don't have any Pixel Coins!";
+		close;
+	}
+	mes "[Guo Hua Ping]";
+	mes "^FF0000[1 Pixel Coin : 1 Cash Point]^000000";
+	mes "You currently have ^008800[" + countitem(32043) + " Pixel Coin(s)]^000000.";
+	mes "Current Cash Point(s): ^FF8800[" + #CASHPOINTS + "]^000000.";
+	next;
+
+	// Ask for the number of Pixel Coins to exchange
+	mes "[Guo Hua Ping]";
+	mes "How many Pixel Coins would you like to exchange?";
+	next;
+	input .@amount;
+
+	// Validate input
+	if (.@amount <= 0) {
+		mes "[Guo Hua Ping]";
+		mes "Invalid input. Transaction canceled.";
+		close;
+	}
+	if (.@amount > countitem(32043)) {
+		mes "[Guo Hua Ping]";
+		mes "You don't have enough Pixel Coins! Transaction canceled.";
+		close;
+	}
+
+	mes "[Guo Hua Ping]";
+	mes "You want to exchange ^FF0000" + .@amount + "^000000 Pixel Coin(s) for ^FF0000" + .@amount + "^000000 Cash Point(s), correct?";
+	next;
+	if(select("Yes:No") == 2) {
+		mes "[Guo Hua Ping]";
+		mes "Alright, let me know if you change your mind!";
+		close;
+	}
+
+	// Perform the exchange
+	delitem 32043, .@amount;
+	set #CASHPOINTS, #CASHPOINTS + .@amount;
+
+	mes "[Guo Hua Ping]";
+	mes "Exchange successful!";
+	mes "You now have ^FF8800[" + #CASHPOINTS + " Cash Points]^000000.";
+	close;
+
+}

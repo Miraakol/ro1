@@ -1,0 +1,109 @@
+main_office,188,184,6	script	Kap Nino#freebie	4_M_YURI,{
+	// NPC Introduction
+	mes "[Kap Nino]";
+	mes "Hello, ^0000FF"+strcharinfo(0)+"^000000! I can check if you have any ^FF0000CBT Reward^000000 to claim.";
+	next;
+	mes "[Kap Nino]";
+	mes "Would you like to check?";
+	next;
+	switch(select("Yes:No")) {
+		case 1:
+			// Check if freebie has already been claimed
+			if (#freebie_claimed_t) {
+				mes "[Kap Nino]";
+				mes "You've already claimed your CBT Reward.";
+				close;
+			}
+			// Proceed to check for freebies
+			callfunc("CheckFreebies");
+			close;
+		case 2:
+			// Exit
+			mes "[Kap Nino]";
+			mes "Alright, come back if you change your mind!";
+			close;
+	}
+}
+
+function	script	CheckFreebies	{
+	// SQL Query to find the highest level among all characters of the account
+	query_sql("SELECT MAX(base_level) FROM `char2` WHERE `account_id` = " + getcharid(3), .@highest_level);
+
+	// Save the highest level for display
+	set #highest_level, .@highest_level;
+
+	// Check if there are characters on the account
+	if (.@highest_level == null) {
+		mes "[Kap Nino]";
+		mes "It seems like you didn't participate in the CBT.";
+		end;
+	}
+
+	// Notify player of their highest character level
+	mes "[Kap Nino]";
+	mes "Hello there! ^0000FF"+strcharinfo(0)+"^000000 I see you're ready to claim your CBT Reward.";
+	next;
+	mes "[Kap Nino]";
+	mes "Your highest character level is ^FF0000" + .@highest_level + "^000000.";
+	next;
+
+	// Determine the freebie based on the highest level
+	if (.@highest_level >= 80) {
+		mes "[Kap Nino]";
+		mes "Congratulations! You qualify for the level 80 CBT Reward.";
+		next;
+		mes "[Kap Nino]";
+		mes "Thank you for participating in our CBT and helping us improve!";
+		next;
+		mes "[Kap Nino]";
+		mes "Here's your reward! Enjoy playing Pixel Classic!";
+		getitem 32054,1;
+		getitem 32055,1;
+		getitem 32056,1;
+		getitem 32057,1;
+		set #freebie_claimed_t, 1; // Mark freebie as claimed only for eligible
+	} else if (.@highest_level >= 60) {
+		mes "[Kap Nino]";
+		mes "Congratulations! You qualify for the level 60 CBT Reward.";
+		next;
+		mes "[Kap Nino]";
+		mes "Thank you for participating in our CBT and helping us improve!";
+		next;
+		mes "[Kap Nino]";
+		mes "Here's your reward! Enjoy playing Pixel Classic!";
+		getitem 32054,1;
+		getitem 32055,1;
+		getitem 32056,1;
+		set #freebie_claimed_t, 1; // Mark freebie as claimed only for eligible
+	} else if (.@highest_level >= 40) {
+		mes "[Kap Nino]";
+		mes "Congratulations! You qualify for the level 40 CBT Reward.";
+		next;
+		mes "[Kap Nino]";
+		mes "Thank you for participating in our CBT and helping us improve!";
+		next;
+		mes "[Kap Nino]";
+		mes "Here's your reward! Enjoy playing Pixel Classic!";
+		getitem 32054,1;
+		getitem 32055,1;
+		set #freebie_claimed_t, 1; // Mark freebie as claimed only for eligible
+	} else if (.@highest_level >= 20) {
+		mes "[Kap Nino]";
+		mes "Congratulations! You qualify for the level 20 CBT Reward.";
+		next;
+		mes "[Kap Nino]";
+		mes "Thank you for participating in our CBT and helping us improve!";
+		next;
+		mes "[Kap Nino]";
+		mes "Here's your reward! Enjoy playing Pixel Classic!";
+		getitem 32054,1;
+		set #freebie_claimed_t, 1; // Mark freebie as claimed only for eligible
+	} else {
+		mes "[Kap Nino]";
+		mes "Your highest character level is below 20.";
+		next;
+		mes "[Kap Nino]";
+		mes "Unfortunately, you are not eligible to claim the reward this time.";
+	}
+	end;
+}
