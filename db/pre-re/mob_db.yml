@@ -4923,6 +4923,8 @@ Body:
         Rate: 5300
       - Item: Katar_
         Rate: 5
+      - Item: Claw_Of_Desert_Wolf
+        Rate: 5500
       - Item: Meat
         Rate: 1200
       - Item: Mink_Coat
