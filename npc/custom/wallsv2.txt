@@ -7,43 +7,90 @@
 		set .x2, 68;                 // Ending X coordinate of the cell range
 		set .y2, 113;                // Ending Y coordinate of the cell range
 		set .cell_type, cell_walkable; // 0 for blocking movement, 1 for unblocking movement
-		// Set the permission to use the commands, default to GM Level 99
-		.set_permission = 99;
-		// Register custom commands with the NPC handler
+		set .barricade_id, 1905;     // Barricade mob ID
+		.set_permission = 99;        // Default GM Level 99 permission
+		set .is_walled_up, 0;        // Flag to check if wall is up
 		bindatcmd("wallup", strnpcinfo(3) + "::OnCommandWallUp");
 		bindatcmd("walldown", strnpcinfo(3) + "::OnCommandWallDown");
+		
+		// Automatically wall up when server starts
+		//donpcevent strnpcinfo(3) + "::OnAutoWallUp";
+		end;
+
+	OnAutoWallUp:
+		// Automatically perform wall-up actions on server start
+		if (.is_walled_up) {
+			dispbottom "The map is already walled up on server start.";
+			end;
+		}
+		setcell .map$, .x1, .y1, .x2, .y2, .cell_type, 0; // Block cells
+		
+		// Summon barricades
+		for (set .i, .y1; .i <= .y2; set .i, .i + 1) {
+			monster .map$, .x1, .i, "Barricade", .barricade_id, 1, "";
+		}
+		set .is_walled_up, 1; // Mark the wall as up
+		announce "The map has been walled up automatically on server start.", bc_all;
 		end;
 
 	OnCommandWallUp:
-		// Check permission
 		if (getgmlevel() < .set_permission) {
 			dispbottom "You do not have permission to use this command.";
 			end;
-		} else{
-			setcell .map$, .x1, .y1, .x2, .y2, .cell_type, 0;
-			dispbottom "Cells have been blocked on the map.";
 		}
+		if (.is_walled_up) {
+			dispbottom "The map is already walled up!";
+			end;
+		}
+		setcell .map$, .x1, .y1, .x2, .y2, .cell_type, 0; // Block cells
+		dispbottom "Cells have been blocked on the map.";
+		
+		// Summon barricades
+		for (set .i, .y1; .i <= .y2; set .i, .i + 1) {
+			monster .map$, .x1, .i, "Barricade", .barricade_id, 1, "";
+		}
+		set .is_walled_up, 1; // Mark the wall as up
 		end;
 
 	OnCommandWallDown:
-		// Check permission
 		if (getgmlevel() < .set_permission) {
 			dispbottom "You do not have permission to use this command.";
 			end;
-		} else {
-			announce "The gates will open in 5 seconds...",bc_all;
-			sleep2 1000; // Wait 1 second
-			announce "4 seconds...",bc_all;
-			sleep2 1000; // Wait 1 second
-			announce "3 seconds...",bc_all;
-			sleep2 1000; // Wait 1 second
-			announce "2 seconds...",bc_all;
-			sleep2 1000; // Wait 1 second
-			announce "1 second...",bc_all;
-			sleep2 1000; // Wait 1 second
-			announce "Attention, Adventurers of Midgard! gates are NOW OPEN!",bc_all;
-		setcell .map$, .x1, .y1, .x2, .y2, .cell_type, 1; // Unblock cells for movement
-		dispbottom "Cells have been unblocked on the map.";
 		}
+		if (!.is_walled_up) {
+			dispbottom "The map is not walled up yet!";
+			end;
+		}
+		// Display confirmation dialog
+		mes "Do you really want to wall down and open the gates?";
+		mes "This will unblock the cells and remove all barricades.";
+		next;
+		if(select("Yes:No") == 2) {
+			dispbottom "Action cancelled.";
+			close;
+		}
+		
+		// Close the message box immediately upon confirmation
+		close2;
+		
+		// Proceed with wall down
+		announce "The gates will open in 5 seconds...", bc_all;
+		sleep2 1000; // Wait 1 second
+		announce "4 seconds...", bc_all;
+		sleep2 1000; // Wait 1 second
+		announce "3 seconds...", bc_all;
+		sleep2 1000; // Wait 1 second
+		announce "2 seconds...", bc_all;
+		sleep2 1000; // Wait 1 second
+		announce "1 second...", bc_all;
+		sleep2 1000; // Wait 1 second
+		announce "Attention, Adventurers of Midgard! Gates are NOW OPEN! Good luck on your adventure!", bc_all;
+
+		setcell .map$, .x1, .y1, .x2, .y2, .cell_type, 1; // Unblock cells
+		
+		// Use @killmonster2 to remove all barricades
+		atcommand "@killmonster2 " + .map$;
+		dispbottom "Cells have been unblocked on the map and barricades removed.";
+		set .is_walled_up, 0; // Mark the wall as down
 		end;
 }

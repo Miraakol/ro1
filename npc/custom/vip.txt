@@ -76,6 +76,12 @@ prontera,146,92,6	script	VIP Employee#prt	117,{
 					sc_start SC_INTFOOD,1800000,5;
 					sc_start SC_DEXFOOD,1800000,5;
 					sc_start SC_LUKFOOD,1800000,5;
+					//sc_start SC_FOOD_STR_CASH,1800000,10;
+					//sc_start SC_FOOD_AGI_CASH,1800000,10;
+					//sc_start SC_FOOD_INT_CASH,1800000,10;
+					//sc_start SC_FOOD_DEX_CASH,1800000,10;
+					//sc_start SC_FOOD_LUK_CASH,1800000,10;
+					//sc_start SC_FOOD_VIT_CASH,1800000,10;
 
 					end;
 
