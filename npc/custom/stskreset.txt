@@ -1,8 +1,8 @@
 main_office,209,126,4	script	Rendon	4_M_FAIRYANG,{
     //           Skills, Stats, Both, Limit
-    setarray .@Reset,    1000000,   1000000,   1500000,   0;
+    setarray .@Reset,    0,   0,   0,   0;
     // Cash Points required for reset
-    setarray .@CashCost, 500,     500,     800;   // Adjust these values as needed
+    setarray .@CashCost, 0,     0,     0;   // Adjust these values as needed
     mes "[Rendon]";
     if(.@Reset[3] && reset_limit > .@Reset[3]) {
         mes "Sorry, you can only reset "+callfunc("F_InsertPlural",.@Reset[3],"time")+" in your life.";
